@@ -15,15 +15,16 @@ import entities.Book
 import entities.ReportField
 
 @Composable
-fun TableRow(index: Int, book: Book?, status: Boolean?) {
+fun TableRow(index: Int, value: String, book: Book?, status: Boolean?) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         TableCell(index.toString(), 0.1f)
-        TableCell(book?.isbn ?: "-", 0.4f, status == true)
-        TableCell(book?.title ?: "-", 0.4f, status == true)
-        TableCell(book?.author ?: "-", 0.4f, status == true)
+        TableCell(book?.isbn ?: "-", 0.5f, status == true)
+        TableCell(value, 0.1f, status == true)
+        TableCell(book?.title ?: "-", 0.6f, status == true)
+        TableCell(book?.author ?: "-", 0.6f, status == true)
         TableCell((if (status == true) "1 " else "0"), 0.1f, status == true)
     }
 }

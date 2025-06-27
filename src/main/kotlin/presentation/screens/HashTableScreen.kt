@@ -53,8 +53,8 @@ fun HashTableScreen(vm: AppViewModel) {
             ) {
                 itemsIndexed(vm.rows.value) { index, entry ->
                     val ib = entry.value
-                    if (ib == null) TableRow(index, null, null)
-                    else TableRow(index, vm.books.value[ib], entry.status)
+                    if (ib == null) TableRow(index, "", null, null)
+                    else TableRow(index, ib.toString(), vm.books.value[ib], entry.status)
                 }
             }
         }

@@ -4,10 +4,13 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.border
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.gestures.detectTransformGestures
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.FloatingActionButton
 import androidx.compose.material.Icon
 import androidx.compose.material.Scaffold
@@ -38,6 +41,7 @@ import entities.Instance
 import presentation.components.AddInstanceDialog
 import presentation.components.SearchInstanceDialog
 import presentation.components.ToolStrip
+import presentation.components.TreeRow
 import presentation.components.drawVisibleNodes
 import presentation.components.layoutTree
 import presentation.viewmodel.AppViewModel
@@ -49,12 +53,7 @@ fun TreeScreen(vm: AppViewModel) {
     val showAddDialog = remember { mutableStateOf(false) }
     val showSearchDialog = remember { mutableStateOf(false) }
     val listInstance = remember { mutableStateOf<List<Instance>>(emptyList()) }
-
-    var scale by remember { mutableStateOf(0.01f) }
-    var offset by remember { mutableStateOf(Offset.Zero) }
     val root by remember { mutableStateOf(vm.tree.nodes) }
-    val layout = remember(root) { layoutTree(root).first }
-    val textMeasurer = rememberTextMeasurer()
 
     Scaffold(
         topBar = {
@@ -75,77 +74,15 @@ fun TreeScreen(vm: AppViewModel) {
                 }
             )
         },
-        floatingActionButton = {
-            Column(
-                verticalArrangement = Arrangement.spacedBy(2.dp),
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
-                FloatingActionButton(onClick = { scale = min(scale * 1.2f, 3f) }) {
-                    Icon(Icons.Default.Add, contentDescription = "zoom+")
-                }
-                FloatingActionButton(onClick = {
-                    offset = -Offset(layout?.x ?: 0f, layout?.y ?: 0f) * scale
-                }) {
-                    Icon(Icons.Default.Home, contentDescription = "go in root")
-                }
-                FloatingActionButton(onClick = { scale = max(scale * 0.8f, 0.0001f) }) {
-                    Icon(Icons.Default.Close, contentDescription = "zoom-")
-                }
-                Text("$offset")
-            }
-        }
     ) {
 
-        val windowState = rememberWindowState()
-        val density = LocalDensity.current
-
-        val visibleRect = remember(scale, offset, windowState.size) {
-            with(density) {
-                val width = windowState.size.width.toPx() * 1.5f
-                val height = windowState.size.height.toPx() * 1.5f
-                val off = Offset(width, height)
-                Rect(
-                    offset = (-offset - off) / scale,
-                    size = Size(
-                        2 * width / scale,
-                        2 * height / scale
-                    )
-                )
-            }
+        Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+            TreeRow(node = root, onSearch = {
+                listInstance.value = vm.getInstances(it)
+                showSearchDialog.value = true
+            })
         }
 
-        val transformModifier = Modifier
-            .fillMaxSize()
-            .pointerInput(Unit) {
-                detectTransformGestures { _, pan, zoom, _ ->
-                    scale = (scale * zoom).coerceIn(0.0001f, 5f)
-                    offset += pan
-                }
-            }
-
-        Box(modifier = transformModifier) {
-            Canvas(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .graphicsLayer {
-                        scaleX = scale
-                        scaleY = scale
-                        translationX = offset.x
-                        translationY = offset.y
-                    }
-                    .border(width = 2.dp, color = Color.Black)
-                    .pointerInput(Unit) {
-                        detectTapGestures { offset ->
-                            listInstance.value = vm.getInstances(layout?.clicked(offset))
-                            showSearchDialog.value = true
-                        }
-                    }
-            ) {
-                layout?.let {
-                    drawVisibleNodes(it, textMeasurer, visibleRect)
-                }
-            }
-        }
     }
     if (showAddDialog.value) {
         AddInstanceDialog({ showAddDialog.value = false }, vm)
