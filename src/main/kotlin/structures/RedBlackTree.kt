@@ -1,43 +1,37 @@
 package structures
 
+import data.LogsFile
 import entities.Instance
 import entities.ReportField
-import kotlin.collections.addAll
+import structures.RedBlackTree.Node
 
-class RedBlackTree(private var root: Node = Node()) {
+class RedBlackTree<K : Comparable<K>>() {
 
     enum class TreeColor {
         RED, BLACK
     }
 
-    data class Node(
-        var key: String? = null,
+    inner class Node(
+        var key: K? = null,
         val duplicates: MutableSet<Int> = mutableSetOf(),
         var color: TreeColor = TreeColor.RED,
         var left: Node? = null,
         var right: Node? = null,
         var parent: Node? = null,
     ) {
-        constructor(key: String) : this() {
+        constructor(key: K) : this() {
             this.key = key
             this.left = Node(color = TreeColor.BLACK)
             this.right = Node(color = TreeColor.BLACK)
         }
 
         operator fun compareTo(other: Node): Int {
-            val result = when {
-                this.key!! < other.key!! -> -1
-                this.key!! > other.key!! -> 1
-                this.key!! < other.key!! -> -1
-                this.key!! > other.key!! -> 1
-                else -> 0
-            }
-            return result
+            return this.key!!.compareTo(other.key!!)
         }
 
         override operator fun equals(other: Any?): Boolean {
             if (this === other) return true
-            if (other !is Node) return false
+            if (other !is RedBlackTree<K>.Node) return false
             return this.key == other.key
         }
 
@@ -45,6 +39,8 @@ class RedBlackTree(private var root: Node = Node()) {
             return "${this.key} ${this.color} ${this.duplicates}"
         }
     }
+
+    private var root: Node = Node()
 
     private fun Node?.isNullLeaf() = this != null && key == null
     private fun Node.uncleL(): Node? = this.parent?.parent?.left
@@ -106,7 +102,7 @@ class RedBlackTree(private var root: Node = Node()) {
         x.parent = y
     }
 
-    fun add(key: String, n: Int) {
+    fun add(key: K, n: Int) {
         val newNode = Node(key)
         var y = root
         var x = root
@@ -168,7 +164,7 @@ class RedBlackTree(private var root: Node = Node()) {
         root.color = TreeColor.BLACK
     }
 
-    fun delete(key: String, n: Int) {
+    fun delete(key: K, n: Int) {
         search(key)?.let {
             if (it.duplicates.size > 1) {
                 it.duplicates.remove(n)
@@ -248,7 +244,7 @@ class RedBlackTree(private var root: Node = Node()) {
         }
     }
 
-    fun search(key: String): Node? {
+    fun search(key: K): Node? {
         val newNode = Node(key)
         var y: Node? = null
         var x = root
@@ -260,39 +256,33 @@ class RedBlackTree(private var root: Node = Node()) {
         return y
     }
 
-    fun initFromArray(arr: Array<Instance?>, keyAction: (Instance) -> String) {
-        var lastProgress = -1
+    fun initFromArray(arr: Array<Instance?>, keyAction: (Instance) -> K) {
         var time = System.nanoTime()
         arr.requireNoNulls().forEachIndexed { n, x ->
-            val progress = (n * 100 / arr.size)
-            if (progress != lastProgress){
-                lastProgress = progress
-                val progressBar = buildString {
-                    append("[")
-                    repeat(50) { i ->
-                        append(if (i < progress / 2) "=" else " ")
-                    }
-                    append("] $progress%")
-                }
-                print("\r$progressBar")
-            }
             add(keyAction(x), n)
         }
-        println("\n Tree init completed in ${(System.nanoTime() - time)/1000000} ms")
+        LogsFile.writeln("Tree init completed in ${(System.nanoTime() - time) / 1000000} ms")
     }
 
-    fun filterRecursive(func: (Node) -> Array<ReportField?>): Array<ReportField> {
-        val arr = mutableListOf<ReportField?>()
-        fr(arr, root, func)
-        return arr.filterNotNull().toTypedArray()
+    fun filterRecursive(arr: MutableList<ReportField>, func: (Node, Check, Boolean) -> Check) {
+        fr(arr, root, Check.All, true, func)
     }
 
-    fun fr(arr: MutableList<ReportField?>, now: Node, func: (Node) -> Array<ReportField?>) {
-        println(now.key)
-        arr.addAll(func(now))
-        if (now.right.isNullLeaf() && now.left.isNullLeaf()) return
-        if (!now.right.isNullLeaf()) fr(arr, now.right!!, func)
-        if (!now.left.isNullLeaf()) fr(arr, now.left!!, func)
+    enum class Check {
+        LEFT, RIGHT, All, NONE
+    }
+
+    fun fr(
+        arr: MutableList<ReportField>,
+        now: Node,
+        next: Check,
+        needCheck: Boolean,
+        func: (Node, Check, Boolean) -> Check,
+    ) {
+        val next = func(now, next, needCheck)
+        if (now.right.isNullLeaf() && now.left.isNullLeaf() || next == Check.NONE) return
+        if (!now.right.isNullLeaf()) fr(arr, now.right!!, next, next == Check.RIGHT || next == Check.All, func)
+        if (!now.left.isNullLeaf()) fr(arr, now.left!!, next, next == Check.LEFT || next == Check.All, func)
     }
 
     fun print() = printTree(root, "")

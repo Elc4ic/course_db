@@ -98,13 +98,13 @@ fun DateInputField(
                         horizontalArrangement = Arrangement.End
                     ) {
                         TextButton(onClick = { showDateSelector = false }) {
-                            Text("Cancel")
+                            Text("Отмена")
                         }
                         TextButton(onClick = {
                             onDateSelected(Date(year - 1900, month, day))
                             showDateSelector = false
                         }) {
-                            Text("OK")
+                            Text("Применить")
                         }
                     }
                 }

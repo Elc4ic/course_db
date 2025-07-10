@@ -7,6 +7,7 @@ import java.util.Locale
 internal val format = SimpleDateFormat("dd MMM yyyy", Locale.ENGLISH)
 internal const val booksPath = "src/main/resources/books.txt"
 internal const val instancesPath = "src/main/resources/instances.txt"
+internal const val reportPath = "src/main/resources/report.txt"
 internal const val countOfVisibleItemsInPicker = 5
 internal const val itemHeight = 35f
 internal const val listHeight = countOfVisibleItemsInPicker * itemHeight

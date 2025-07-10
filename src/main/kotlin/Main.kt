@@ -7,6 +7,7 @@ import androidx.compose.ui.window.application
 import kotlinx.coroutines.flow.MutableSharedFlow
 import presentation.screens.HashTableScreen
 import presentation.screens.ReportScreen
+import presentation.screens.TreeDrawScreen
 import presentation.screens.TreeScreen
 import presentation.viewmodel.AppViewModel
 
@@ -16,16 +17,16 @@ fun main() = application {
     val windowFocusRequestSharedFlow = remember { MutableSharedFlow<String>() }
     val vm = remember { AppViewModel() }
 
-    val windows: Array<@Composable () -> Unit> = arrayOf(
-        { HashTableScreen(vm) },
-        { TreeScreen(vm) },
-        { ReportScreen(vm) }
+    val windows: Map<String, @Composable () -> Unit> = mapOf(
+        "Книги" to { HashTableScreen(vm) },
+        "Экземпляры" to { TreeDrawScreen(vm) },
+        "Отчет" to { ReportScreen(vm) }
     )
 
     windows.forEach { windowType ->
         key(windowType) {
             Window(
-                title = windowType.toString(),
+                title = windowType.key,
                 onCloseRequest = ::exitApplication,
             ) {
                 LaunchedEffect(Unit) {
@@ -34,7 +35,7 @@ fun main() = application {
                             window.toFront()
                         }
                 }
-                windowType.invoke()
+                windowType.value.invoke()
             }
         }
     }

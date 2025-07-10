@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import entities.Book
 import entities.ReportField
@@ -48,6 +49,8 @@ fun TableReportRow(index: Int, row: ReportField) {
 @Composable
 fun RowScope.TableCell(text: String, weight: Float, off: Boolean = true) {
     Text(
+        overflow = TextOverflow.Ellipsis,
+        maxLines = 1,
         text = text,
         color = if (off) Color.Black else Color.LightGray,
         modifier = Modifier

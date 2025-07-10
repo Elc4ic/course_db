@@ -1,32 +1,16 @@
 package presentation.components
 
-import androidx.compose.foundation.Canvas
-import androidx.compose.foundation.background
-import androidx.compose.foundation.gestures.detectTransformGestures
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.offset
-import androidx.compose.foundation.text.selection.SelectionContainer
-import androidx.compose.material.Text
-import androidx.compose.runtime.*
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.DrawScope
-import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.TextLayoutResult
 import androidx.compose.ui.text.TextMeasurer
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.drawText
-import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import presentation.components.drawTreeNode
-import structures.RedBlackTree.Node
 import structures.RedBlackTree.TreeColor
 import kotlin.math.max
 import kotlin.math.min
@@ -81,7 +65,7 @@ fun DrawScope.drawVisibleNodes(
     node: PositionedNode,
     textMeasurer: TextMeasurer,
     visibleRect: Rect,
-    radius: Float = 200f,
+    radius: Float = 40f,
     textCache: MutableMap<String, TextLayoutResult> = mutableMapOf(),
 ) {
 
@@ -97,7 +81,7 @@ fun DrawScope.drawVisibleNodes(
                 end = Offset(left.x, left.y),
                 strokeWidth = 2f
             )
-            drawVisibleNodes(left, textMeasurer, visibleRect, radius * 0.9f, textCache)
+            drawVisibleNodes(left, textMeasurer, visibleRect, radius, textCache)
         }
     }
 
@@ -113,7 +97,7 @@ fun DrawScope.drawVisibleNodes(
                 end = Offset(right.x, right.y),
                 strokeWidth = 2f
             )
-            drawVisibleNodes(right, textMeasurer, visibleRect, radius * 0.9f, textCache)
+            drawVisibleNodes(right, textMeasurer, visibleRect, radius, textCache)
         }
     }
 
@@ -135,7 +119,7 @@ fun DrawScope.drawVisibleNodes(
             text = node.node.key.toString(),
             style = TextStyle(
                 color = Color.White,
-                fontSize = 9.sp,
+                fontSize = 5.sp,
                 textAlign = TextAlign.Center
             )
         )

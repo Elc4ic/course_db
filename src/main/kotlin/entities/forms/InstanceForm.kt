@@ -1,5 +1,6 @@
 package entities.forms
 
+import data.LogsFile
 import data.format
 import entities.Instance
 import presentation.viewmodel.AppViewModel
@@ -14,9 +15,9 @@ data class InstanceForm(
     var isValid: Boolean = false,
 ) {
     fun validate(vm: AppViewModel) {
+        errors.clear()
         isValid = false
 
-        errors.clear()
         ISBN.validateISBN(isbn, errors)
         if(vm.hashTable.value.get(isbn) == null){
             errors += "Нет книги с таким ISBN"
@@ -25,13 +26,14 @@ data class InstanceForm(
         try {
             val i = invNum.toInt()
             when {
-                invNum.isBlank() -> errors += "Инвентарный номер пуст\n"
-                i < 0 -> errors += "Не валидный инвентарный номер\n"
+                invNum.isBlank() -> errors += "Инвентарный номер пуст"
+                i < 0 -> errors += "Не валидный инвентарный номер"
             }
         } catch (e: Exception) {
-            errors += "Не валидный инвентарный номер\n"
+            errors += "Не валидный инвентарный номер"
         }
-        if (status.isBlank()) errors += "Нет статуса\n"
+        if (status.isBlank()) errors += "Нет статуса"
+        errors.forEach{ LogsFile.writeln("Ошибка ввода экземпляра книги: " + it) }
         if (errors.isEmpty()) isValid = true
     }
 

@@ -2,14 +2,18 @@ package presentation.viewmodel
 
 import androidx.compose.runtime.mutableStateOf
 import data.FileConverter
+import data.LogsFile
 import data.booksPath
+import data.format
 import data.instancesPath
+import data.reportPath
 import entities.Book
 import entities.Instance
 import entities.ReportField
 import structures.HashTable
 import structures.HashTable.Entry
 import structures.RedBlackTree
+import structures.RedBlackTree.Check
 import structures.RedBlackTree.Node
 import java.util.Date
 
@@ -28,8 +32,8 @@ class AppViewModel {
 
     private val _hashTable = mutableStateOf(HashTable(_books.value.size))
     private val _rows = mutableStateOf(arrayOf<Entry>())
-    private val _tree = RedBlackTree()
-    private val _filterTree = RedBlackTree()
+    private val _tree = RedBlackTree<String>()
+    private val _filterTree = RedBlackTree<Date>()
 
     init {
         initHashTable()
@@ -45,10 +49,12 @@ class AppViewModel {
 
     private fun initTree() {
         _tree.initFromArray(_instances.value) { it.isbn }
+        _tree.print()
     }
 
     private fun initFilterTree() {
-        _filterTree.initFromArray(_instances.value) { it.date }
+        _filterTree.initFromArray(_instances.value) { it.dateF }
+        _filterTree.print()
     }
 
     //books functions
@@ -58,12 +64,22 @@ class AppViewModel {
         _rows.value = _hashTable.value.rows.clone()
     }
 
-    fun deleteBook() {
-        _hashTable.value.get(bookField.value)?.let {
-            _books.value[it] = null
-            _hashTable.value.remove(bookField.value, it)
-            _rows.value = _hashTable.value.rows.clone()
+    fun deleteBook(isbn: String, title: String, author: String) {
+        val index = _hashTable.value.get(isbn) ?: return
+        val book = _books.value[index] ?: return
+        if (book.title != title || book.author != author) return
+        LogsFile.writeln("Удаление книги: $book")
+        _books.value[index] = _books.value.last()
+        _books.value.copyOfRange(0, _books.value.size - 2)
+        _hashTable.value.remove(bookField.value, index)
+        _tree.search(isbn)?.duplicates?.forEach { ni ->
+            val instance = _instances.value[ni]
+            _tree.delete(isbn, ni)
+            instance?.dateF?.let { _filterTree.delete(it, ni) }
+            _instances.value[ni] = null
         }
+        _instances.value = _instances.value.filter { it != null }.toTypedArray()
+        _rows.value = _hashTable.value.rows.clone()
     }
 
     fun searchBook(): Book? {
@@ -80,20 +96,25 @@ class AppViewModel {
         _tree.add(instance.isbn, _books.value.size - 1)
     }
 
-    fun deleteInstance() {
-        val index = _tree.search(instanceField.value)?.duplicates?.first()
-        index?.let {
-            _instances.value[index] = null
-            _hashTable.value.remove(instanceField.value, it)
+    fun deleteInstance(isbn: String, invNum: String) {
+        val index = _tree.search(isbn)?.duplicates?.first {
+            invNum == _instances.value[it]?.inventoryNumber
         }
-
+        index?.let {
+            val instance = _instances.value[index]
+            _instances.value[index] = _instances.value.last()
+            _instances.value.copyOfRange(0, _instances.value.size - 2)
+            _tree.delete(isbn, it)
+            instance?.dateF?.let { _filterTree.delete(it, index) }
+        }
+        _tree.print()
     }
 
     fun searchInstance(): List<Instance> {
         return getInstances(_tree.search(instanceField.value))
     }
 
-    fun getInstances(node: Node?): List<Instance> {
+    fun getInstances(node: RedBlackTree<*>.Node?): List<Instance> {
         return node?.duplicates?.mapNotNull { _instances.value[it] } ?: emptyList()
     }
 
@@ -103,39 +124,60 @@ class AppViewModel {
 
     //filter functions
     fun filter() {
-        _report.value = _filterTree.filterRecursive { node ->
-            val arr = Array<ReportField?>(node.duplicates.size) { null }
-
-            for (i in node.duplicates) {
-                try {
-                    var index = 0
-                    val instance = _instances.value[i]
-                    if (instance == null) continue
-                    val bookIndex = _hashTable.value.get(instance.isbn)
-                    val book = _books.value[bookIndex!!]
-                    if (book == null) continue
-                    if (instance.inventoryNumber == filterInvNumField.value &&
-                        book.author == filterAuthorField.value &&
-                        instance.dateF >= filterFromField.value &&
-                        instance.dateF <= filterToField.value
-                    ) {
-                        arr[index] = ReportField(
-                            instance.isbn,
-                            book.title,
-                            book.author,
-                            instance.inventoryNumber,
-                            instance.status,
-                            instance.date
-                        )
-                        index++
+        _filterTree.print()
+        val arr = mutableListOf<ReportField>()
+        _filterTree.filterRecursive(arr) { node, next, needCheck ->
+            if (needCheck) {
+                for (i in node.duplicates) {
+                    try {
+                        val instance = _instances.value[i]
+                        if (instance == null) continue
+                        val bookIndex = _hashTable.value.get(instance.isbn)
+                        val book = _books.value[bookIndex!!]
+                        if (book == null) continue
+                        if (instance.inventoryNumber == filterInvNumField.value &&
+                            book.author == filterAuthorField.value &&
+                            instance.dateF >= filterFromField.value &&
+                            instance.dateF <= filterToField.value
+                        ) {
+                            arr += ReportField(
+                                instance.isbn,
+                                book.title,
+                                book.author,
+                                instance.inventoryNumber,
+                                instance.status,
+                                instance.date
+                            )
+                        }
+                    } catch (e: Exception) {
+                        LogsFile.writeln("Нет связи между книгой и экземпляром: ${e.message}")
                     }
-                } catch (e: Exception) {
-                    println("Нет связи между книгой и экземпляром")
                 }
             }
-            arr
-        }
+            val rightDateFlag = node.right?.key != null && node.right?.key!! <= filterToField.value
+            val leftDateFlag = node.left?.key != null && node.left?.key!! >= filterFromField.value
+            var n = when (next) {
+                Check.All -> {
+                    if (leftDateFlag && rightDateFlag) Check.All
+                    else if (leftDateFlag) Check.LEFT
+                    else if (rightDateFlag) Check.RIGHT
+                    else Check.NONE
+                }
 
+                Check.LEFT -> if (leftDateFlag) Check.LEFT else Check.NONE
+                Check.RIGHT -> if (rightDateFlag) Check.RIGHT else Check.NONE
+                Check.NONE -> Check.NONE
+            }
+            if (node.right?.key != null && node.left?.key != null) {
+                println("$n ${node.left?.key} ${node.right?.key}")
+            }
+            n
+        }
+        _report.value = arr.toTypedArray()
+    }
+
+    fun saveReport() {
+        FileConverter.saveReportToFile(reportPath, _report.value)
     }
 
     val books get() = _books

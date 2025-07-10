@@ -2,6 +2,7 @@ package data
 
 import entities.Book
 import entities.Instance
+import entities.ReportField
 import java.io.File
 import kotlin.text.trim
 
@@ -17,7 +18,7 @@ object FileConverter {
                 val author = arr[2].trim()
                 array.add(Book(isbn, title, author))
             } catch (e: Exception) {
-                println("$s is not valid book")
+                LogsFile.writeln("not valid book in file: $s")
             }
         }
         return array.toTypedArray()
@@ -34,14 +35,17 @@ object FileConverter {
                 val date = arr[3].trim()
                 array.add(Instance(isbn, invNum, status, date))
             } catch (e: Exception) {
-                println("$s is not valid instance\nexception: $e")
+                LogsFile.writeln("not valid instance in file: $s")
             }
         }
         return array.toTypedArray()
     }
 
     fun saveBooksToFile(path: String, array: Array<Book?>) {
-        File(path).printWriter().use { out ->
+        val file = File(path)
+        file.delete()
+        file.createNewFile()
+        file.printWriter().use { out ->
             array.forEach { it?.let { out.println("${it.isbn}|${it.title}|${it.author}") } }
         }
     }
@@ -49,6 +53,15 @@ object FileConverter {
     fun saveInstancesToFile(path: String, array: Array<Instance?>) {
         File(path).printWriter().use { out ->
             array.forEach { it?.let { out.println("${it.isbn}|${it.inventoryNumber}|${it.status}|${it.date}") } }
+        }
+    }
+
+    fun saveReportToFile(path: String, array: Array<ReportField>) {
+        val file = File(path)
+        file.delete()
+        file.createNewFile()
+        file.printWriter().use { out ->
+            array.forEach { out.println("${it.isbn} ${it.title} ${it.author} ${it.invNum} ${it.status} ${it.date}") }
         }
     }
 }

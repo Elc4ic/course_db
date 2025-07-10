@@ -1,7 +1,7 @@
 package structures
 
+import data.LogsFile
 import entities.Book
-import kotlin.math.abs
 import kotlin.math.absoluteValue
 
 class HashTable(val initSize: Int = 10, val resizeRationLow: Float = 0.25f, val resizeRationHigh: Float = 0.8f) {
@@ -17,7 +17,7 @@ class HashTable(val initSize: Int = 10, val resizeRationLow: Float = 0.25f, val 
     private var table: Array<Entry> = Array(size) { Entry(null, null) }
 
     fun hash(key: String, j: Int = 0): Int {
-        val hash = key.hashCode().absoluteValue
+        val hash = key.sumOf { it.code }
         return (hash + j) % size
     }
 
@@ -93,25 +93,11 @@ class HashTable(val initSize: Int = 10, val resizeRationLow: Float = 0.25f, val 
 
     fun initFromArray(array: Array<Book?>, keyAction: (Book) -> String) {
         clear()
-        var lastProgress = -1
         var time = System.nanoTime()
         array.requireNoNulls().forEachIndexed { n, x ->
-            val progress = (n * 100 / array.size)
-            if (progress != lastProgress) {
-                lastProgress = progress
-                val progressBar = buildString {
-                    append("[")
-                    repeat(50) { i ->
-                        append(if (i < progress / 2) "=" else " ")
-                    }
-                    append("] $progress%")
-                    append(" XT_size = $size")
-                }
-                print("\r$progressBar")
-            }
             put(keyAction(x), n)
         }
-        println("\n Xt init completed in ${(System.nanoTime() - time) / 1000000} ms")
+        LogsFile.writeln("Xt init completed in ${(System.nanoTime() - time) / 1000000} ms")
     }
 
     fun size() = table.filter { it.status }.size

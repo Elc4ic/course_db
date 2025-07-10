@@ -1,5 +1,7 @@
 package entities.forms
 
+import data.LogsFile
+
 data class BookForm(
     var isbn: String = "",
     var title: String = "",
@@ -11,21 +13,23 @@ data class BookForm(
         errors.clear()
         isValid = false
 
-        errors.clear()
         ISBN.validateISBN(isbn, errors)
 
-        if (title.isBlank()) errors += "Нет названия\n"
-        if (author.isBlank()) errors += "Нет автора\n"
+        if (title.isBlank()) errors += "Нет названия"
+        if (author.isBlank()) errors += "Нет автора"
+        errors.forEach { LogsFile.writeln("Ошибка ввода книги: " + it) }
         if (errors.isEmpty()) isValid = true
     }
+
+
 }
 
 object ISBN {
     fun validateISBN(isbn: String, errors: MutableList<String>) {
         when {
-            isbn.isBlank() -> errors.add("ISBN is empty")
-            !isValidISBNFormat(isbn) -> errors.add("ISBN has invalid format")
-            !isValidISBNChecksum(isbn) -> errors.add("ISBN checksum is invalid")
+            isbn.isBlank() -> errors.add("ISBN пуст")
+            !isValidISBNFormat(isbn) -> errors.add("ISBN неверный формат")
+            !isValidISBNChecksum(isbn) -> errors.add("ISBN неправильная контрольная сумма")
         }
     }
 

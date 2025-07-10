@@ -7,6 +7,10 @@ import java.time.LocalDate
 import kotlin.random.Random
 
 class FileGenerator() {
+    val instanceFile = File(instancesPath)
+    val bookFile = File(booksPath)
+    val booksISBNs = mutableListOf<String>()
+
     private val adjectives = listOf(
         "Тайный", "Потерянный", "Последний", "Темный", "Скрытый",
         "Великий", "Забытый", "Древний", "Легендарный", "Запретный",
@@ -89,39 +93,45 @@ class FileGenerator() {
         return "$day ${months[month]} $year"
     }
 
-    fun fillInstancesFileRandomly(path: String, size: Int) {
-        val file = File(path)
-        val isNewFileCreated = file.createNewFile()
+    fun fillBookFileRandomly(size: Int) {
+        booksISBNs.clear()
+        val config = fakerConfig { locale = "ru" }
+        val faker = Faker(config)
+        val isNewFileCreated = bookFile.createNewFile()
         if (isNewFileCreated) {
             for (i in 1..size) {
                 val isbn = generateISBN()
-                val invNum = (1..10000).random()
-                val status = status.random()
-                val date = generateDate()
-                file.appendText("$isbn|$invNum|$status|$date\n")
+                booksISBNs.add(isbn)
+                val title = generateTitle()
+                val author = faker.name.nameWithMiddle()
+                bookFile.appendText("$isbn|$title|$author\n")
             }
         }
     }
 
-    fun fillBookFileRandomly(path: String, size: Int) {
-        val config = fakerConfig { locale = "ru" }
-        val faker = Faker(config)
-        val file = File(path)
-        val isNewFileCreated = file.createNewFile()
+    fun fillInstancesFileRandomly(size: Int) {
+        val isNewFileCreated = instanceFile.createNewFile()
         if (isNewFileCreated) {
             for (i in 1..size) {
-                val isbn = generateISBN()
-                val title = generateTitle()
-                val author = faker.name.nameWithMiddle()
-                file.appendText("$isbn|$title|$author\n")
+                val isbn = booksISBNs.random()
+                val invNum = (1..10).random()
+                val status = status.random()
+                val date = generateDate()
+                instanceFile.appendText("$isbn|$invNum|$status|$date\n")
             }
         }
+    }
+
+    fun generateFiles(size: Int) {
+        bookFile.delete()
+        instanceFile.delete()
+        fillBookFileRandomly(size)
+        fillInstancesFileRandomly(size)
     }
 }
 
 
 fun main() {
     val fileGenerator = FileGenerator()
-    fileGenerator.fillInstancesFileRandomly(instancesPath, 1000000)
-    fileGenerator.fillBookFileRandomly(booksPath, 1000000)
+    fileGenerator.generateFiles(10)
 }

@@ -8,19 +8,29 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.unit.dp
+import kotlinx.coroutines.delay
 import presentation.components.DateInputField
 import presentation.components.TableReportRow
+import presentation.components.ToastDialog
 import presentation.components.ToolReportStrip
 import presentation.viewmodel.AppViewModel
 
 @Composable
 fun ReportScreen(vm: AppViewModel) {
+    var toastMessage by remember { mutableStateOf("") }
+    var showToast by remember { mutableStateOf(false) }
     Scaffold(
         topBar = {
             ToolReportStrip(
                 title = "Отчет",
                 onSearch = { vm.filter() },
+                onSave = { vm.saveReport() },
                 searchBar = {
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                         TextField(
@@ -57,5 +67,9 @@ fun ReportScreen(vm: AppViewModel) {
                 TableReportRow(index, row)
             }
         }
+    }
+    if (showToast) {
+        ToastDialog(toastMessage) { showToast = false }
+        LaunchedEffect(Unit) { delay(1000); showToast = false }
     }
 }

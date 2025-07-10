@@ -10,8 +10,7 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.OutlinedTextField
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
@@ -22,8 +21,9 @@ import entities.forms.InstanceForm
 import presentation.viewmodel.AppViewModel
 
 @Composable
-fun AddBookDialog(onDismiss: () -> Unit, vm: AppViewModel) {
-    val form = mutableStateOf(BookForm())
+fun AddBookDialog(onDismiss: () -> Unit, showToast: () -> Unit, vm: AppViewModel) {
+    var form by remember { mutableStateOf(BookForm()) }
+    var showErrors by remember { mutableStateOf(false) }
 
     Dialog(onDismissRequest = onDismiss) {
         Surface(
@@ -34,36 +34,39 @@ fun AddBookDialog(onDismiss: () -> Unit, vm: AppViewModel) {
                 Text("Форма ввода книги", style = MaterialTheme.typography.h6)
                 Spacer(modifier = Modifier.height(8.dp))
                 OutlinedTextField(
-                    value = form.value.isbn,
-                    onValueChange = {  form.value = form.value.copy(isbn = it) },
+                    value = form.isbn,
+                    onValueChange = { form = form.copy(isbn = it) },
                     label = { Text("ISBN") }
                 )
                 OutlinedTextField(
-                    value = form.value.title,
-                    onValueChange = {  form.value = form.value.copy(title =  it) },
+                    value = form.title,
+                    onValueChange = { form = form.copy(title = it) },
                     label = { Text("Название") }
                 )
                 OutlinedTextField(
-                    value = form.value.author,
-                    onValueChange = {  form.value = form.value.copy(author =  it) },
+                    value = form.author,
+                    onValueChange = { form = form.copy(author = it) },
                     label = { Text("Автор") }
                 )
-                if (form.value.errors.isNotEmpty()) {
+                if (showErrors) {
                     Column {
-                        form.value.errors.forEach {
+                        form.errors.forEach {
                             Text(it)
                         }
                     }
                 }
                 Spacer(modifier = Modifier.height(8.dp))
                 Button(onClick = {
-                    form.value.validate()
-                    if (form.value.isValid) {
-                        val book = Book(form.value.isbn, form.value.title, form.value.author)
+                    showErrors = false
+                    form.validate()
+                    if (form.isValid) {
+                        val book = Book(form.isbn, form.title, form.author)
                         vm.addBook(book)
+                        showToast()
                         onDismiss()
                     }
-                    form.value = form.value.copy()
+                    form = form.copy()
+                    showErrors = true
                 }) {
                     Text("Вставить")
                 }
@@ -73,8 +76,9 @@ fun AddBookDialog(onDismiss: () -> Unit, vm: AppViewModel) {
 }
 
 @Composable
-fun AddInstanceDialog(onDismiss: () -> Unit, vm: AppViewModel) {
-    var form = mutableStateOf(InstanceForm())
+fun AddInstanceDialog(onDismiss: () -> Unit, showToast: () -> Unit, vm: AppViewModel) {
+    var form by remember { mutableStateOf(InstanceForm()) }
+    var showErrors by remember { mutableStateOf(false) }
 
     Dialog(onDismissRequest = onDismiss) {
         Surface(
@@ -82,49 +86,49 @@ fun AddInstanceDialog(onDismiss: () -> Unit, vm: AppViewModel) {
             modifier = Modifier.padding(16.dp)
         ) {
             Column(modifier = Modifier.padding(8.dp)) {
-                Text("Форма ввода книги", style = MaterialTheme.typography.h6)
+                Text("Форма ввода экземпляра", style = MaterialTheme.typography.h6)
                 Spacer(modifier = Modifier.height(8.dp))
                 OutlinedTextField(
-                    value = form.value.isbn,
-                    onValueChange = { form.value = form.value.copy(isbn = it) },
+                    value = form.isbn,
+                    onValueChange = { form = form.copy(isbn = it) },
                     label = { Text("ISBN") }
                 )
                 OutlinedTextField(
-                    value = form.value.invNum,
-                    onValueChange = { form.value = form.value.copy(invNum = it) },
+                    value = form.invNum,
+                    onValueChange = { form = form.copy(invNum = it) },
                     label = { Text("Инвентарный номер") }
                 )
                 DropdownSelector(
                     label = "Статус",
                     items = status,
-                    selected = form.value.status,
+                    selected = form.status,
                     onSelect = {
-                        form.value = form.value.copy(status =  it)
+                        form = form.copy(status = it)
                     },
                 )
                 DateInputField(
                     label = "Дата",
-                    selectedDate = form.value.date,
+                    selectedDate = form.date,
                     onDateSelected = {
-                        form.value = form.value.copy(date = it)
+                        form = form.copy(date = it)
                     },
                 )
-                if (form.value.errors.isNotEmpty()) {
-                    Column {
-                        form.value.errors.forEach {
-                            Text(it)
-                        }
+                if (showErrors) {
+                    form.errors.forEach {
+                        Text(it)
                     }
                 }
                 Spacer(modifier = Modifier.height(8.dp))
                 Button(onClick = {
-                    form.value.validate(vm)
-                    if (form.value.isValid) {
-                        println("ffff")
-                        vm.addInstance(form.value.getInstance())
+                    showErrors = false
+                    form.validate(vm)
+                    if (form.isValid) {
+                        vm.addInstance(form.getInstance())
+                        showToast()
                         onDismiss()
                     }
-                    form.value = form.value.copy()
+                    form = form.copy()
+                    showErrors = true
                 }) {
                     Text("Вставить")
                 }

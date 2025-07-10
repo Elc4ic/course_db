@@ -1,18 +1,18 @@
 package presentation.components
 
 import androidx.compose.ui.geometry.Offset
-import structures.RedBlackTree.Node
+import structures.RedBlackTree
 import kotlin.math.pow
 import kotlin.math.sqrt
 
 data class PositionedNode(
-    val node: Node,
+    val node: RedBlackTree<*>.Node,
     val x: Float,
     val y: Float,
     val left: PositionedNode? = null,
     val right: PositionedNode? = null,
 ) {
-    fun clicked(offset: Offset): Node? {
+    fun clicked(offset: Offset): RedBlackTree<*>.Node? {
         val distance = sqrt((x - offset.x).pow(2) + (y - offset.y).pow(2))
         if (distance <= 45f) return node
 
@@ -21,11 +21,11 @@ data class PositionedNode(
 }
 
 fun layoutTree(
-    node: Node?,
+    node: RedBlackTree<*>.Node?,
     depth: Int = 1,
     xOffset: Float = 0f,
-    xStep: Float = 80f,
-    yStep: Float = 120f,
+    xStep: Float = 50f,
+    yStep: Float = 80f,
 ): Pair<PositionedNode?, Float> {
     if (node == null) return null to xOffset
 
