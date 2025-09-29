@@ -16,11 +16,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogWindow
 import kotlinx.coroutines.delay
 
 @Composable
 fun ToastDialog(message: String, onDismiss: () -> Unit) {
-    Dialog(
+    DialogWindow(
         onCloseRequest = onDismiss,
         undecorated = true,
         transparent = true,

@@ -13,7 +13,7 @@ class RedBlackTree<K : Comparable<K>>() {
 
     inner class Node(
         var key: K? = null,
-        val duplicates: MutableSet<Int> = mutableSetOf(),
+        val duplicates: LinkList<Int> =  LinkList(),
         var color: TreeColor = TreeColor.RED,
         var left: Node? = null,
         var right: Node? = null,
@@ -166,7 +166,7 @@ class RedBlackTree<K : Comparable<K>>() {
 
     fun delete(key: K, n: Int) {
         search(key)?.let {
-            if (it.duplicates.size > 1) {
+            if (it.duplicates.size() > 1) {
                 it.duplicates.remove(n)
                 return
             }
@@ -288,6 +288,19 @@ class RedBlackTree<K : Comparable<K>>() {
     fun print() = printTree(root, "")
     fun printWithLeafs() = printTreeWithLeafs(root, "")
     fun lrPrint() = leftRightOrder(root)
+
+    override fun toString(): String {
+        val str = StringBuilder()
+        toStringTree(root,"",str)
+        return str.toString()
+    }
+
+    private fun toStringTree(node: Node?, indent: String,sb: StringBuilder) {
+        if (node.isNullLeaf()) return
+        toStringTree(node?.right, "$indent          ",sb)
+        sb.append("$indent $node\n")
+        toStringTree(node?.left, "$indent           ",sb)
+    }
 
     private fun leftRightOrder(root: Node?) {
         if (!root.isNullLeaf()) {

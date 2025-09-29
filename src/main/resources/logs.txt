@@ -1,102 +1,34 @@
-Время: Wed Jul 09 14:34:58 VLAT 2025 Xt init completed in 19 ms
-Время: Wed Jul 09 14:34:59 VLAT 2025 Tree init completed in 67 ms
-Время: Wed Jul 09 14:34:59 VLAT 2025 Tree init completed in 32 ms
-Время: Wed Jul 09 14:40:52 VLAT 2025 Xt init completed in 29 ms
-Время: Wed Jul 09 14:40:52 VLAT 2025 Tree init completed in 72 ms
-Время: Wed Jul 09 14:40:52 VLAT 2025 Tree init completed in 34 ms
-Время: Wed Jul 09 14:44:57 VLAT 2025 Xt init completed in 41 ms
-Время: Wed Jul 09 14:44:57 VLAT 2025 Tree init completed in 73 ms
-Время: Wed Jul 09 14:44:57 VLAT 2025 Tree init completed in 53 ms
-Время: Wed Jul 09 14:47:30 VLAT 2025 Xt init completed in 25 ms
-Время: Wed Jul 09 14:47:30 VLAT 2025 Tree init completed in 36 ms
-Время: Wed Jul 09 14:47:30 VLAT 2025 Tree init completed in 22 ms
-Время: Wed Jul 09 14:55:22 VLAT 2025 Xt init completed in 25 ms
-Время: Wed Jul 09 14:55:22 VLAT 2025 Tree init completed in 58 ms
-Время: Wed Jul 09 14:55:22 VLAT 2025 Tree init completed in 29 ms
-Время: Wed Jul 09 14:57:18 VLAT 2025 Xt init completed in 35 ms
-Время: Wed Jul 09 14:57:18 VLAT 2025 Tree init completed in 51 ms
-Время: Wed Jul 09 14:57:18 VLAT 2025 Tree init completed in 47 ms
-Время: Wed Jul 09 15:19:55 VLAT 2025 Xt init completed in 25 ms
-Время: Wed Jul 09 15:19:55 VLAT 2025 Tree init completed in 60 ms
-Время: Wed Jul 09 15:19:55 VLAT 2025 Tree init completed in 54 ms
-Время: Wed Jul 09 15:35:27 VLAT 2025 Xt init completed in 27 ms
-Время: Wed Jul 09 15:35:27 VLAT 2025 Tree init completed in 58 ms
-Время: Wed Jul 09 15:35:27 VLAT 2025 Tree init completed in 42 ms
-Время: Wed Jul 09 15:39:24 VLAT 2025 Xt init completed in 30 ms
-Время: Wed Jul 09 15:39:24 VLAT 2025 Tree init completed in 56 ms
-Время: Wed Jul 09 15:39:24 VLAT 2025 Tree init completed in 26 ms
-Время: Wed Jul 09 15:42:46 VLAT 2025 Xt init completed in 10 ms
-Время: Wed Jul 09 15:42:46 VLAT 2025 Tree init completed in 2 ms
-Время: Wed Jul 09 15:42:46 VLAT 2025 Tree init completed in 1 ms
-Время: Wed Jul 09 15:45:50 VLAT 2025 Xt init completed in 8 ms
-Время: Wed Jul 09 15:45:50 VLAT 2025 Tree init completed in 2 ms
-Время: Wed Jul 09 15:45:50 VLAT 2025 Tree init completed in 2 ms
-Время: Wed Jul 09 15:46:54 VLAT 2025 Xt init completed in 11 ms
-Время: Wed Jul 09 15:46:54 VLAT 2025 Tree init completed in 2 ms
-Время: Wed Jul 09 15:46:54 VLAT 2025 Tree init completed in 2 ms
-Время: Wed Jul 09 15:56:56 VLAT 2025 Xt init completed in 11 ms
-Время: Wed Jul 09 15:56:56 VLAT 2025 Tree init completed in 2 ms
-Время: Wed Jul 09 15:56:56 VLAT 2025 Tree init completed in 1 ms
-Время: Wed Jul 09 16:22:03 VLAT 2025 Xt init completed in 9 ms
-Время: Wed Jul 09 16:22:03 VLAT 2025 Tree init completed in 2 ms
-Время: Wed Jul 09 16:22:03 VLAT 2025 Tree init completed in 1 ms
-Время: Wed Jul 09 16:24:03 VLAT 2025 Ошибка ввода книги: ISBN неверный формат
-Время: Wed Jul 09 16:24:03 VLAT 2025 Ошибка ввода книги: Нет названия
-Время: Wed Jul 09 16:24:03 VLAT 2025 Ошибка ввода книги: Нет автора
-Время: Wed Jul 09 16:55:10 VLAT 2025 Ошибка ввода книги: ISBN неправильная контрольная сумма
-Время: Wed Jul 09 16:55:19 VLAT 2025 Ошибка ввода книги: ISBN неправильная контрольная сумма
-Время: Wed Jul 09 16:55:24 VLAT 2025 Ошибка ввода книги: ISBN неправильная контрольная сумма
-Время: Wed Jul 09 16:55:27 VLAT 2025 Ошибка ввода книги: ISBN неправильная контрольная сумма
-Время: Wed Jul 09 17:05:03 VLAT 2025 Xt init completed in 8 ms
-Время: Wed Jul 09 17:05:03 VLAT 2025 Tree init completed in 1 ms
-Время: Wed Jul 09 17:05:03 VLAT 2025 Tree init completed in 1 ms
-Время: Wed Jul 09 17:06:08 VLAT 2025 Xt init completed in 21 ms
-Время: Wed Jul 09 17:06:08 VLAT 2025 Tree init completed in 4 ms
-Время: Wed Jul 09 17:06:08 VLAT 2025 Tree init completed in 2 ms
-Время: Wed Jul 09 17:11:16 VLAT 2025 Ошибка ввода книги: ISBN неправильная контрольная сумма
-Время: Wed Jul 09 18:32:45 VLAT 2025 Xt init completed in 10 ms
-Время: Wed Jul 09 18:32:45 VLAT 2025 Tree init completed in 1 ms
-Время: Wed Jul 09 18:32:45 VLAT 2025 Tree init completed in 1 ms
-Время: Wed Jul 09 18:34:21 VLAT 2025 Удаление книги: Book(isbn='978-8-453-49314-3', title='Серебряный ключ', author='Клавдия Симонов Дементьева')
-Время: Wed Jul 09 18:37:49 VLAT 2025 Xt init completed in 9 ms
-Время: Wed Jul 09 18:37:49 VLAT 2025 Tree init completed in 1 ms
-Время: Wed Jul 09 18:37:49 VLAT 2025 Tree init completed in 1 ms
-Время: Wed Jul 09 18:38:39 VLAT 2025 Удаление книги: Book(isbn='978-4-651-30744-2', title='Невидимый ключ демон', author='Аркадий Тихонов Логинов')
-Время: Wed Jul 09 18:43:35 VLAT 2025 Xt init completed in 11 ms
-Время: Wed Jul 09 18:43:35 VLAT 2025 Tree init completed in 1 ms
-Время: Wed Jul 09 18:43:35 VLAT 2025 Tree init completed in 1 ms
-Время: Wed Jul 09 18:56:02 VLAT 2025 Xt init completed in 9 ms
-Время: Wed Jul 09 18:56:02 VLAT 2025 Tree init completed in 2 ms
-Время: Wed Jul 09 18:56:02 VLAT 2025 Tree init completed in 1 ms
-Время: Wed Jul 09 18:56:23 VLAT 2025 Ошибка ввода книги: ISBN неправильная контрольная сумма
-Время: Wed Jul 09 18:56:26 VLAT 2025 Ошибка ввода книги: ISBN неправильная контрольная сумма
-Время: Wed Jul 09 18:56:28 VLAT 2025 Ошибка ввода книги: ISBN неправильная контрольная сумма
-Время: Wed Jul 09 18:56:30 VLAT 2025 Ошибка ввода книги: ISBN неправильная контрольная сумма
-Время: Wed Jul 09 18:56:32 VLAT 2025 Ошибка ввода книги: ISBN неправильная контрольная сумма
-Время: Wed Jul 09 18:56:34 VLAT 2025 Ошибка ввода книги: ISBN неправильная контрольная сумма
-Время: Wed Jul 09 18:56:36 VLAT 2025 Ошибка ввода книги: ISBN неправильная контрольная сумма
-Время: Wed Jul 09 18:56:38 VLAT 2025 Ошибка ввода книги: ISBN неправильная контрольная сумма
-Время: Wed Jul 09 21:06:44 VLAT 2025 Xt init completed in 12 ms
-Время: Wed Jul 09 21:06:44 VLAT 2025 Tree init completed in 2 ms
-Время: Wed Jul 09 21:06:44 VLAT 2025 Tree init completed in 2 ms
-Время: Thu Jul 10 02:54:24 VLAT 2025 Xt init completed in 7 ms
-Время: Thu Jul 10 02:54:24 VLAT 2025 Tree init completed in 0 ms
-Время: Thu Jul 10 02:54:24 VLAT 2025 Tree init completed in 0 ms
-Время: Thu Jul 10 03:07:40 VLAT 2025 Xt init completed in 7 ms
-Время: Thu Jul 10 03:07:40 VLAT 2025 Tree init completed in 0 ms
-Время: Thu Jul 10 03:07:40 VLAT 2025 Tree init completed in 0 ms
-Время: Thu Jul 10 03:10:12 VLAT 2025 Xt init completed in 8 ms
-Время: Thu Jul 10 03:10:12 VLAT 2025 Tree init completed in 0 ms
-Время: Thu Jul 10 03:10:12 VLAT 2025 Tree init completed in 0 ms
-Время: Thu Jul 10 03:10:41 VLAT 2025 Xt init completed in 7 ms
-Время: Thu Jul 10 03:10:41 VLAT 2025 Tree init completed in 0 ms
-Время: Thu Jul 10 03:10:41 VLAT 2025 Tree init completed in 0 ms
-Время: Thu Jul 10 03:14:08 VLAT 2025 Xt init completed in 7 ms
-Время: Thu Jul 10 03:14:08 VLAT 2025 Tree init completed in 0 ms
-Время: Thu Jul 10 03:14:08 VLAT 2025 Tree init completed in 0 ms
-Время: Thu Jul 10 04:17:36 VLAT 2025 Xt init completed in 9 ms
-Время: Thu Jul 10 04:17:36 VLAT 2025 Tree init completed in 0 ms
-Время: Thu Jul 10 04:17:36 VLAT 2025 Tree init completed in 0 ms
-Время: Thu Jul 10 04:33:57 VLAT 2025 Xt init completed in 9 ms
-Время: Thu Jul 10 04:33:57 VLAT 2025 Tree init completed in 0 ms
-Время: Thu Jul 10 04:33:57 VLAT 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:02:54 MSK 2025 Xt init completed in 2 ms
+Время: Mon Sep 29 13:02:54 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:02:54 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:03:03 MSK 2025 Xt init completed in 2 ms
+Время: Mon Sep 29 13:03:03 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:03:03 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:03:06 MSK 2025 Xt init completed in 2 ms
+Время: Mon Sep 29 13:03:06 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:03:06 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:03:09 MSK 2025 Xt init completed in 2 ms
+Время: Mon Sep 29 13:03:10 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:03:10 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:03:13 MSK 2025 Xt init completed in 2 ms
+Время: Mon Sep 29 13:03:13 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:03:13 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:03:17 MSK 2025 Xt init completed in 2 ms
+Время: Mon Sep 29 13:03:17 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:03:17 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:03:24 MSK 2025 Удаление книги: Book(isbn='978-4-775-19011-1', title='Исчезнувший лес легенда', author='Виталий Авдеева Громова')
+Время: Mon Sep 29 13:03:26 MSK 2025 Удаление книги: Book(isbn='978-7-213-66504-2', title='Мистический вампир голем', author='Сергей Ильин Данилова')
+Время: Mon Sep 29 13:03:27 MSK 2025 Удаление книги: Book(isbn='978-5-418-14352-5', title='Потерянный ключ кодекс', author='Галина Колесников Тарасов')
+Время: Mon Sep 29 13:03:28 MSK 2025 Удаление книги: Book(isbn='978-1-215-94619-2', title='Сапфировый пустыня династия', author='Геннадий Елисеев Рогов')
+Время: Mon Sep 29 13:12:37 MSK 2025 Xt init completed in 2 ms
+Время: Mon Sep 29 13:12:37 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:12:37 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:16:26 MSK 2025 Xt init completed in 2 ms
+Время: Mon Sep 29 13:16:26 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:16:26 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:17:25 MSK 2025 Xt init completed in 2 ms
+Время: Mon Sep 29 13:17:25 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:17:25 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:17:52 MSK 2025 Xt init completed in 2 ms
+Время: Mon Sep 29 13:17:52 MSK 2025 Tree init completed in 0 ms
+Время: Mon Sep 29 13:17:52 MSK 2025 Tree init completed in 0 ms

@@ -1,11 +1,13 @@
 package presentation.components
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.onClick
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -15,10 +17,16 @@ import androidx.compose.ui.unit.dp
 import entities.Book
 import entities.ReportField
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun TableRow(index: Int, value: String, book: Book?, status: Boolean?) {
+fun TableRow(index: Int, value: String, book: Book?, status: Boolean?, onDelete: (Book) -> Unit) {
     Row(
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier.fillMaxWidth().onClick(
+            onLongClick = {
+                book?.let { onDelete(it) }
+            },
+            onClick = {},
+        ),
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         TableCell(index.toString(), 0.1f)
