@@ -1,0 +1,2 @@
+actualBooksStore:D:\Projects\course\src\main\resources\books.txt
+actualInstanceStore:D:\Projects\course\src\main\resources\instances.txt

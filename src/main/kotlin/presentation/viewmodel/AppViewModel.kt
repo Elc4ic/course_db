@@ -1,11 +1,9 @@
 package presentation.viewmodel
 
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
-import data.FileConverter
+import data.FileUtils
 import data.LogsFile
-import data.booksPath
-import data.format
-import data.instancesPath
 import data.reportPath
 import entities.Book
 import entities.Instance
@@ -14,13 +12,13 @@ import structures.HashTable
 import structures.HashTable.Entry
 import structures.RedBlackTree
 import structures.RedBlackTree.Check
-import structures.RedBlackTree.Node
 import java.util.Date
 
 
 class AppViewModel {
-    private val _books = mutableStateOf(FileConverter.initBooksFromFile(booksPath))
-    private val _instances = mutableStateOf(FileConverter.initInstancesFromFile(instancesPath))
+    private lateinit var paths: Pair<String?, String?>
+    private lateinit var _books: MutableState<Array<Book?>>
+    private lateinit var _instances: MutableState<Array<Instance?>>
     private val _report = mutableStateOf(arrayOf<ReportField>())
 
     val bookField = mutableStateOf("")
@@ -30,12 +28,16 @@ class AppViewModel {
     val filterFromField = mutableStateOf(Date())
     val filterToField = mutableStateOf(Date())
 
-    private val _hashTable = mutableStateOf(HashTable(_books.value.size))
+    private val _hashTable = mutableStateOf(HashTable())
     private val _rows = mutableStateOf(arrayOf<Entry>())
-    private val _tree = RedBlackTree<String>()
-    private val _filterTree = RedBlackTree<Date>()
+    private val _tree = mutableStateOf(RedBlackTree<String>())
+    private val _treeList = mutableStateOf(listOf<String>())
+    private val _filterTree = mutableStateOf(RedBlackTree<Date>())
 
-    init {
+    fun update() {
+        paths = FileUtils.getPaths()
+        _books = mutableStateOf(FileUtils.initBooksFromFile(paths.first!!))
+        _instances = mutableStateOf(FileUtils.initInstancesFromFile(paths.second!!))
         initHashTable()
         initTree()
         initFilterTree()
@@ -48,13 +50,14 @@ class AppViewModel {
     }
 
     private fun initTree() {
-        _tree.initFromArray(_instances.value) { it.isbn }
-        _tree.print()
+        _tree.value.initFromArray(_instances.value) { it.isbn }
+        _treeList.value = _tree.value.toString().split("\n")
+        _tree.value.print()
     }
 
     private fun initFilterTree() {
-        _filterTree.initFromArray(_instances.value) { it.dateF }
-        _filterTree.print()
+        _filterTree.value.initFromArray(_instances.value) { it.dateF }
+        _filterTree.value.print()
     }
 
     //books functions
@@ -69,17 +72,30 @@ class AppViewModel {
         val book = _books.value[index] ?: return
         if (book.title != title || book.author != author) return
         LogsFile.writeln("Удаление книги: $book")
-        _books.value[index] = _books.value.last()
-        _books.value.copyOfRange(0, _books.value.size - 2)
-        _hashTable.value.remove(bookField.value, index)
-        _tree.search(isbn)?.duplicates?.forEach { ni ->
+
+        val lastBook = _books.value.last()
+        _hashTable.value.rows.first { it.key == lastBook?.isbn }.value = index
+        _hashTable.value.remove(book.isbn, index)
+        _books.value[index] = lastBook
+        _books.value = _books.value.copyOfRange(0, _books.value.size - 1)
+
+        deleteInTreeByBook(isbn)
+
+        _rows.value = _hashTable.value.rows
+    }
+
+    fun deleteInTreeByBook(isbn: String) {
+        _tree.value.search(isbn)?.duplicates?.forEach { ni ->
+            val lastInstance = _instances.value.last()
             val instance = _instances.value[ni]
-            _tree.delete(isbn, ni)
-            instance?.dateF?.let { _filterTree.delete(it, ni) }
-            _instances.value[ni] = null
+            LogsFile.writeln("Также удаляется экземпляр: $instance")
+            _tree.value.search(lastInstance?.isbn!!)?.duplicates?.update(_instances.value.size - 1, ni)
+            _tree.value.delete(isbn, ni)
+            _instances.value[ni] = _instances.value.last()
+            _instances.value = _instances.value.copyOfRange(0, _instances.value.size - 1)
+            instance?.dateF?.let { _filterTree.value.delete(it, ni) }
         }
-        _instances.value = _instances.value.filter { it != null }.toTypedArray()
-        _rows.value = _hashTable.value.rows.clone()
+        _treeList.value = _tree.value.toString().split("\n")
     }
 
     fun searchBook(): Book? {
@@ -87,31 +103,31 @@ class AppViewModel {
     }
 
     fun saveBooks() {
-        FileConverter.saveBooksToFile(booksPath, _books.value)
+        FileUtils.saveBooksToFile(paths.first!!, _books.value)
     }
 
     //instances functions
     fun addInstance(instance: Instance) {
         _instances.value += instance
-        _tree.add(instance.isbn, _books.value.size - 1)
+        _tree.value.add(instance.isbn, _books.value.size - 1)
     }
 
     fun deleteInstance(isbn: String, invNum: String) {
-        val index = _tree.search(isbn)?.duplicates?.first {
+        val index = _tree.value.search(isbn)?.duplicates?.first {
             invNum == _instances.value[it]?.inventoryNumber
         }
         index?.let {
             val instance = _instances.value[index]
             _instances.value[index] = _instances.value.last()
             _instances.value.copyOfRange(0, _instances.value.size - 2)
-            _tree.delete(isbn, it)
-            instance?.dateF?.let { _filterTree.delete(it, index) }
+            _tree.value.delete(isbn, it)
+            instance?.dateF?.let { _filterTree.value.delete(it, index) }
         }
-        _tree.print()
+        _tree.value.print()
     }
 
     fun searchInstance(): List<Instance> {
-        return getInstances(_tree.search(instanceField.value))
+        return getInstances(_tree.value.search(instanceField.value))
     }
 
     fun getInstances(node: RedBlackTree<*>.Node?): List<Instance> {
@@ -119,22 +135,20 @@ class AppViewModel {
     }
 
     fun saveInstances() {
-        FileConverter.saveInstancesToFile(instancesPath, _instances.value)
+        FileUtils.saveInstancesToFile(paths.second!!, _instances.value)
     }
 
     //filter functions
     fun filter() {
-        _filterTree.print()
+        _filterTree.value.print()
         val arr = mutableListOf<ReportField>()
-        _filterTree.filterRecursive(arr) { node, next, needCheck ->
+        _filterTree.value.filterRecursive(arr) { node, next, needCheck ->
             if (needCheck) {
                 for (i in node.duplicates) {
                     try {
-                        val instance = _instances.value[i]
-                        if (instance == null) continue
+                        val instance = _instances.value[i] ?: continue
                         val bookIndex = _hashTable.value.get(instance.isbn)
-                        val book = _books.value[bookIndex!!]
-                        if (book == null) continue
+                        val book = _books.value[bookIndex!!] ?: continue
                         if (instance.inventoryNumber == filterInvNumField.value &&
                             book.author == filterAuthorField.value &&
                             instance.dateF >= filterFromField.value &&
@@ -177,15 +191,16 @@ class AppViewModel {
     }
 
     fun saveReport() {
-        FileConverter.saveReportToFile(reportPath, _report.value)
+        FileUtils.saveReportToFile(reportPath, _report.value)
     }
 
-    val books get() = _books
-    val instances get() = _instances
-    val hashTable get() = _hashTable
-    val rows get() = _rows
-    val tree get() = _tree
-    val filterTree get() = _filterTree
+    val books get() = _books.value
+    val instances get() = _instances.value
+    val hashTable get() = _hashTable.value
+    val rows get() = _rows.value
+    val tree get() = _tree.value
+    val treeList get() = _treeList.value
+    val filterTree get() = _filterTree.value
     val report get() = _report
 
 }

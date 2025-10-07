@@ -7,8 +7,8 @@ import java.time.LocalDate
 import kotlin.random.Random
 
 class FileGenerator() {
-    val instanceFile = File(instancesPath)
-    val bookFile = File(booksPath)
+    val bookFile = File("src/main/resources/books.txt")
+    val instanceFile = File("src/main/resources/instances.txt")
     val booksISBNs = mutableListOf<String>()
 
     private val adjectives = listOf(
@@ -133,5 +133,5 @@ class FileGenerator() {
 
 fun main() {
     val fileGenerator = FileGenerator()
-    fileGenerator.generateFiles(30)
+    fileGenerator.generateFiles(6)
 }

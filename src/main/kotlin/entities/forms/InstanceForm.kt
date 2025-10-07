@@ -19,7 +19,7 @@ data class InstanceForm(
         isValid = false
 
         ISBN.validateISBN(isbn, errors)
-        if(vm.hashTable.value.get(isbn) == null){
+        if(vm.hashTable.get(isbn) == null){
             errors += "Нет книги с таким ISBN"
         }
 

@@ -1,34 +1,3 @@
-Время: Mon Sep 29 13:02:54 MSK 2025 Xt init completed in 2 ms
-Время: Mon Sep 29 13:02:54 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:02:54 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:03:03 MSK 2025 Xt init completed in 2 ms
-Время: Mon Sep 29 13:03:03 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:03:03 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:03:06 MSK 2025 Xt init completed in 2 ms
-Время: Mon Sep 29 13:03:06 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:03:06 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:03:09 MSK 2025 Xt init completed in 2 ms
-Время: Mon Sep 29 13:03:10 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:03:10 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:03:13 MSK 2025 Xt init completed in 2 ms
-Время: Mon Sep 29 13:03:13 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:03:13 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:03:17 MSK 2025 Xt init completed in 2 ms
-Время: Mon Sep 29 13:03:17 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:03:17 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:03:24 MSK 2025 Удаление книги: Book(isbn='978-4-775-19011-1', title='Исчезнувший лес легенда', author='Виталий Авдеева Громова')
-Время: Mon Sep 29 13:03:26 MSK 2025 Удаление книги: Book(isbn='978-7-213-66504-2', title='Мистический вампир голем', author='Сергей Ильин Данилова')
-Время: Mon Sep 29 13:03:27 MSK 2025 Удаление книги: Book(isbn='978-5-418-14352-5', title='Потерянный ключ кодекс', author='Галина Колесников Тарасов')
-Время: Mon Sep 29 13:03:28 MSK 2025 Удаление книги: Book(isbn='978-1-215-94619-2', title='Сапфировый пустыня династия', author='Геннадий Елисеев Рогов')
-Время: Mon Sep 29 13:12:37 MSK 2025 Xt init completed in 2 ms
-Время: Mon Sep 29 13:12:37 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:12:37 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:16:26 MSK 2025 Xt init completed in 2 ms
-Время: Mon Sep 29 13:16:26 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:16:26 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:17:25 MSK 2025 Xt init completed in 2 ms
-Время: Mon Sep 29 13:17:25 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:17:25 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:17:52 MSK 2025 Xt init completed in 2 ms
-Время: Mon Sep 29 13:17:52 MSK 2025 Tree init completed in 0 ms
-Время: Mon Sep 29 13:17:52 MSK 2025 Tree init completed in 0 ms
+Время: Mon Oct 06 05:38:17 MSK 2025 Xt init completed in 0 ms
+Время: Mon Oct 06 05:38:17 MSK 2025 Tree init completed in 0 ms
+Время: Mon Oct 06 05:38:17 MSK 2025 Tree init completed in 0 ms

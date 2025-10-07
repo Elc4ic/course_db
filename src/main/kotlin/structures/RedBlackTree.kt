@@ -13,7 +13,7 @@ class RedBlackTree<K : Comparable<K>>() {
 
     inner class Node(
         var key: K? = null,
-        val duplicates: LinkList<Int> =  LinkList(),
+        val duplicates: LinkList<Int> = LinkList(),
         var color: TreeColor = TreeColor.RED,
         var left: Node? = null,
         var right: Node? = null,
@@ -253,7 +253,8 @@ class RedBlackTree<K : Comparable<K>>() {
             x = if (newNode > x) x.right!!
             else x.left!!
         }
-        return y
+        if (key == y?.key) return y
+        return null
     }
 
     fun initFromArray(arr: Array<Instance?>, keyAction: (Instance) -> K) {
@@ -291,15 +292,15 @@ class RedBlackTree<K : Comparable<K>>() {
 
     override fun toString(): String {
         val str = StringBuilder()
-        toStringTree(root,"",str)
+        toStringTree(root, "", str)
         return str.toString()
     }
 
-    private fun toStringTree(node: Node?, indent: String,sb: StringBuilder) {
+    private fun toStringTree(node: Node?, indent: String, sb: StringBuilder) {
         if (node.isNullLeaf()) return
-        toStringTree(node?.right, "$indent          ",sb)
+        toStringTree(node?.right, "$indent          ", sb)
         sb.append("$indent $node\n")
-        toStringTree(node?.left, "$indent           ",sb)
+        toStringTree(node?.left, "$indent           ", sb)
     }
 
     private fun leftRightOrder(root: Node?) {

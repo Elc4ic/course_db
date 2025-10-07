@@ -60,7 +60,7 @@ fun TreeTextScreen(vm: AppViewModel) {
                 .padding(padding)
                 .fillMaxSize()
         ) {
-            items(vm.tree.toString().split("\n")) { line ->
+            items(vm.treeList) { line ->
                 Text(
                     text = line,
                     modifier = Modifier

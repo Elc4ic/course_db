@@ -46,3 +46,11 @@ bin/
 /.run/desktop.run.xml
 /src/main/resources/books.txt
 /src/main/resources/instances.txt
+/.idea/.name
+/.idea/AndroidProjectSystem.xml
+/.idea/codeStyles/codeStyleConfig.xml
+/.idea/gradle.xml
+/.idea/kotlinc.xml
+/.idea/misc.xml
+/.idea/vcs.xml
+/.idea/workspace.xml

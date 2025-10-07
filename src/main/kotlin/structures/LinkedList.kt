@@ -27,8 +27,9 @@ class LinkList<T>() : Iterable<T> {
         var cur = head
         var prev = head
         while (cur?.value != value) {
+            if (cur?.next == null) return
             prev = cur
-            cur = cur?.next
+            cur = cur.next
         }
         if (head == cur) {
             head = cur.next
@@ -37,6 +38,15 @@ class LinkList<T>() : Iterable<T> {
             prev?.next = cur.next
             cur.next = null
         }
+    }
+
+    fun update(old: T, new: T) {
+        var cur = head
+        while (cur?.value != old) {
+            if (cur?.next == null) return
+            cur = cur.next
+        }
+        cur.value = new
     }
 
     fun size(): Int {
@@ -77,9 +87,23 @@ class LinkList<T>() : Iterable<T> {
             return ret
         }
 
+        fun set(value: T) {
+            nextNodeToReturn?.value = value
+        }
     }
 
     override fun iterator(): Iterator<T> {
         return LLIterator() as Iterator<T>
     }
+}
+
+fun main() {
+    val ll = LinkList<Int>()
+    ll.add(1)
+    ll.add(3)
+    ll.add(2)
+    println(ll.toString())
+    ll.update(3,20)
+    ll.update(4,3)
+    print(ll.toString())
 }

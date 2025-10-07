@@ -16,6 +16,8 @@ class HashTable(val initSize: Int = 10, val resizeRationLow: Float = 0.25f, val 
 
     private var table: Array<Entry> = Array(size) { Entry(null, null) }
 
+    var en = Entry("ff",1)
+
     fun hash(key: String, j: Int = 0): Int {
         val hash = key.sumOf { it.code }
         return (hash + j) % size
@@ -114,5 +116,13 @@ class HashTable(val initSize: Int = 10, val resizeRationLow: Float = 0.25f, val 
     override fun toString(): String {
         return table.joinToString("\n", "Hashtable {\n", "\n}") { "${it.key}=${it.value} ${it.status}" }
     }
+}
+
+fun main() {
+    val table = HashTable()
+    table.put("s",0)
+    println(table.toString())
+    table.rows.last().value = 100
+    println(table.toString())
 }
 

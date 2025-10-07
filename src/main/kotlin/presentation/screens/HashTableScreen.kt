@@ -4,7 +4,9 @@ import androidx.compose.foundation.VerticalScrollbar
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollbarAdapter
@@ -15,11 +17,13 @@ import androidx.compose.material.TextField
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import entities.Book
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import presentation.components.AddBookDialog
 import presentation.components.DeleteBookDialog
+import presentation.components.HeaderTableRow
 import presentation.components.SearchBookDialog
 import presentation.components.TableRow
 import presentation.components.ToastDialog
@@ -65,16 +69,24 @@ fun HashTableScreen(vm: AppViewModel) {
 
         Box(modifier = Modifier.fillMaxSize()) {
             SelectionContainer {
+                HeaderTableRow()
                 LazyColumn(
-                    state = state
+                    state = state,
+                    modifier = Modifier.padding(top = 32.dp)
                 ) {
-                    itemsIndexed(vm.rows.value) { index, entry ->
+                    itemsIndexed(vm.rows) { i, entry ->
                         val ib = entry.value
-                        if (ib == null) TableRow(index, "", null, null){}
-                        else TableRow(index, ib.toString(), vm.books.value[ib], entry.status) {
+                        if (ib != null) TableRow(i, ib.toString(), vm.books[ib], entry.status) {
                             vm.deleteBook(it.isbn, it.title, it.author)
                         }
                     }
+//                    itemsIndexed(vm.rows) { index, entry ->
+//                        val ib = entry.value
+//                        if (ib == null) TableRow(index, "", null, null){}
+//                        else TableRow(index, ib.toString(), vm.books[ib], entry.status) {
+//                            vm.deleteBook(it.isbn, it.title, it.author)
+//                        }
+//                    }
                 }
             }
             VerticalScrollbar(

@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import entities.Book
 import entities.ReportField
@@ -30,11 +31,24 @@ fun TableRow(index: Int, value: String, book: Book?, status: Boolean?, onDelete:
         horizontalArrangement = Arrangement.SpaceBetween
     ) {
         TableCell(index.toString(), 0.1f)
-        TableCell(book?.isbn ?: "-", 0.5f, status == true)
+        TableCell(book?.isbn ?: "-", 0.7f, status == true)
         TableCell(value, 0.1f, status == true)
-        TableCell(book?.title ?: "-", 0.6f, status == true)
-        TableCell(book?.author ?: "-", 0.6f, status == true)
-        TableCell((if (status == true) "1 " else "0"), 0.1f, status == true)
+        TableCell(book?.title ?: "-", 0.7f, status == true)
+        TableCell(book?.author ?: "-", 0.7f, status == true)
+    }
+}
+
+@Composable
+fun HeaderTableRow() {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween
+    ) {
+        TableCell("№", 0.1f,true,2.dp)
+        TableCell("ISBN", 0.7f, true,2.dp)
+        TableCell("i", 0.1f, true,2.dp)
+        TableCell("Название", 0.7f, true,2.dp)
+        TableCell("Автор", 0.7f, true,2.dp)
     }
 }
 
@@ -55,14 +69,14 @@ fun TableReportRow(index: Int, row: ReportField) {
 }
 
 @Composable
-fun RowScope.TableCell(text: String, weight: Float, off: Boolean = true) {
+fun RowScope.TableCell(text: String, weight: Float, off: Boolean = true, border: Dp = 1.dp) {
     Text(
         overflow = TextOverflow.Ellipsis,
         maxLines = 1,
         text = text,
         color = if (off) Color.Black else Color.LightGray,
         modifier = Modifier
-            .border(1.dp, Color.Gray)
+            .border(border, Color.Gray)
             .padding(8.dp).weight(weight, true)
     )
 }
