@@ -47,17 +47,18 @@ class AppViewModel {
         _hashTable.value.clear()
         _hashTable.value.initFromArray(_books.value) { it.isbn }
         _rows.value = _hashTable.value.rows
+        LogsFile.writeln(_hashTable.value.toString())
     }
 
     private fun initTree() {
         _tree.value.initFromArray(_instances.value) { it.isbn }
         _treeList.value = _tree.value.toString().split("\n")
-        _tree.value.print()
+        LogsFile.writeln(_tree.value.toString())
     }
 
     private fun initFilterTree() {
         _filterTree.value.initFromArray(_instances.value) { it.dateF }
-        _filterTree.value.print()
+        LogsFile.writeln(_filterTree.value.toString())
     }
 
     //books functions
@@ -65,20 +66,20 @@ class AppViewModel {
         _books.value += book
         _hashTable.value.put(book.isbn, _books.value.size - 1)
         _rows.value = _hashTable.value.rows.clone()
+        LogsFile.writeln("Книга добавленна: $book")
     }
 
     fun deleteBook(isbn: String, title: String, author: String) {
         val index = _hashTable.value.get(isbn) ?: return
         val book = _books.value[index] ?: return
         if (book.title != title || book.author != author) return
-        LogsFile.writeln("Удаление книги: $book")
 
         val lastBook = _books.value.last()
         _hashTable.value.rows.first { it.key == lastBook?.isbn }.value = index
         _hashTable.value.remove(book.isbn, index)
         _books.value[index] = lastBook
         _books.value = _books.value.copyOfRange(0, _books.value.size - 1)
-
+        LogsFile.writeln("Удаление книги: $book")
         deleteInTreeByBook(isbn)
 
         _rows.value = _hashTable.value.rows
@@ -99,17 +100,21 @@ class AppViewModel {
     }
 
     fun searchBook(): Book? {
-        return _hashTable.value.get(bookField.value)?.let { _books.value[it] }
+        val book = _hashTable.value.get(bookField.value)?.let { _books.value[it] }
+        LogsFile.writeln("Найдена книга: $book")
+        return book
     }
 
     fun saveBooks() {
         FileUtils.saveBooksToFile(paths.first!!, _books.value)
+        LogsFile.writeln("Файл книг обновлен")
     }
 
     //instances functions
     fun addInstance(instance: Instance) {
         _instances.value += instance
         _tree.value.add(instance.isbn, _books.value.size - 1)
+        LogsFile.writeln("Экземпляр добавлен:${instance}")
     }
 
     fun deleteInstance(isbn: String, invNum: String) {
@@ -122,8 +127,8 @@ class AppViewModel {
             _instances.value.copyOfRange(0, _instances.value.size - 2)
             _tree.value.delete(isbn, it)
             instance?.dateF?.let { _filterTree.value.delete(it, index) }
+            LogsFile.writeln("Удаление экземпляра': $instance")
         }
-        _tree.value.print()
     }
 
     fun searchInstance(): List<Instance> {
@@ -136,11 +141,11 @@ class AppViewModel {
 
     fun saveInstances() {
         FileUtils.saveInstancesToFile(paths.second!!, _instances.value)
+        LogsFile.writeln("Файл экземпляров сохранен")
     }
 
     //filter functions
     fun filter() {
-        _filterTree.value.print()
         val arr = mutableListOf<ReportField>()
         _filterTree.value.filterRecursive(arr) { node, next, needCheck ->
             if (needCheck) {
@@ -182,9 +187,6 @@ class AppViewModel {
                 Check.RIGHT -> if (rightDateFlag) Check.RIGHT else Check.NONE
                 Check.NONE -> Check.NONE
             }
-            if (node.right?.key != null && node.left?.key != null) {
-                println("$n ${node.left?.key} ${node.right?.key}")
-            }
             n
         }
         _report.value = arr.toTypedArray()
@@ -192,6 +194,7 @@ class AppViewModel {
 
     fun saveReport() {
         FileUtils.saveReportToFile(reportPath, _report.value)
+        LogsFile.writeln("Файл экземпляров сохранен")
     }
 
     val books get() = _books.value

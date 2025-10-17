@@ -14,13 +14,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import presentation.viewmodel.WindowViewModel
 import java.io.File
 import java.nio.file.FileSystems
 import java.nio.file.Path
 import java.nio.file.StandardWatchEventKinds
 
 @Composable
-fun LogScreen(filePath: String) {
+fun LogScreen(key: String,filePath: String,wvm: WindowViewModel) {
     val file = remember(filePath) { File(filePath) }
     var lines by remember { mutableStateOf(listOf<String>()) }
     val scope = rememberCoroutineScope()
@@ -59,7 +60,7 @@ fun LogScreen(filePath: String) {
     }
 
     Scaffold(
-        topBar = { TopAppBar(title = { Text("File Watcher") }) }
+        topBar = { TopAppBar(title = { wvm.selector(key) }) }
     ) { padding ->
         LazyColumn(
             state = state,

@@ -1,3 +1,0 @@
-Время: Mon Oct 06 05:38:17 MSK 2025 Xt init completed in 0 ms
-Время: Mon Oct 06 05:38:17 MSK 2025 Tree init completed in 0 ms
-Время: Mon Oct 06 05:38:17 MSK 2025 Tree init completed in 0 ms

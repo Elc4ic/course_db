@@ -46,11 +46,12 @@ import presentation.components.ToolStrip
 import presentation.components.drawVisibleNodes
 import presentation.components.layoutTree
 import presentation.viewmodel.AppViewModel
+import presentation.viewmodel.WindowViewModel
 import kotlin.math.max
 import kotlin.math.min
 
 @Composable
-fun TreeDrawScreen(vm: AppViewModel) {
+fun TreeDrawScreen(key: String,vm: AppViewModel,wvm: WindowViewModel) {
     val showAddDialog = remember { mutableStateOf(false) }
     val showDeleteDialog = remember { mutableStateOf(false) }
     val showSearchDialog = remember { mutableStateOf(false) }
@@ -67,7 +68,7 @@ fun TreeDrawScreen(vm: AppViewModel) {
     Scaffold(
         topBar = {
             ToolStrip(
-                title = "Экземпляры",
+                windowSelector = {wvm.selector(key)},
                 onAdd = { showAddDialog.value = true },
                 onDelete = { showDeleteDialog.value = true },
                 onSearch = {

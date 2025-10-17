@@ -20,15 +20,16 @@ import presentation.components.TableReportRow
 import presentation.components.ToastDialog
 import presentation.components.ToolReportStrip
 import presentation.viewmodel.AppViewModel
+import presentation.viewmodel.WindowViewModel
 
 @Composable
-fun ReportScreen(vm: AppViewModel) {
+fun ReportScreen(key: String,vm: AppViewModel,wvm: WindowViewModel) {
     var toastMessage by remember { mutableStateOf("") }
     var showToast by remember { mutableStateOf(false) }
     Scaffold(
         topBar = {
             ToolReportStrip(
-                title = "Отчет",
+                windowSelector = {wvm.selector(key)},
                 onSearch = { vm.filter() },
                 onSave = { vm.saveReport() },
                 searchBar = {

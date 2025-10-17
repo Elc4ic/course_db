@@ -22,9 +22,10 @@ import entities.Instance
 import kotlinx.coroutines.delay
 import presentation.components.*
 import presentation.viewmodel.AppViewModel
+import presentation.viewmodel.WindowViewModel
 
 @Composable
-fun TreeTextScreen(vm: AppViewModel) {
+fun TreeTextScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
     val showAddDialog = remember { mutableStateOf(false) }
     val showDeleteDialog = remember { mutableStateOf(false) }
     val showSearchDialog = remember { mutableStateOf(false) }
@@ -37,7 +38,7 @@ fun TreeTextScreen(vm: AppViewModel) {
     Scaffold(
         topBar = {
             ToolStrip(
-                title = "Экземпляры",
+                windowSelector = { wvm.selector(key) },
                 onAdd = { showAddDialog.value = true },
                 onDelete = { showDeleteDialog.value = true },
                 onSearch = {
@@ -71,7 +72,11 @@ fun TreeTextScreen(vm: AppViewModel) {
         }
     }
     if (showAddDialog.value) {
-        AddInstanceDialog({ showAddDialog.value = false }, { showToast = true; toastMessage = "Экземпляр добавлен" }, vm)
+        AddInstanceDialog(
+            { showAddDialog.value = false },
+            { showToast = true; toastMessage = "Экземпляр добавлен" },
+            vm
+        )
     }
     if (showDeleteDialog.value) {
         DeleteInstanceDialog({ showDeleteDialog.value = false }, vm)

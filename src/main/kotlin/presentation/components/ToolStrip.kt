@@ -19,19 +19,20 @@ import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import java.nio.channels.Selector
 
 @Composable
 fun ToolStrip(
-    title: String,
     onAdd: () -> Unit = {},
     onDelete: () -> Unit = {},
     onSearch: () -> Unit = {},
     onSave: () -> Unit = {},
     searchBar: @Composable () -> Unit = {},
+    windowSelector: @Composable () -> Unit = {}
 ) {
     TopAppBar(
         title = {
-            Text(title)
+            windowSelector()
             IconButton(onClick = onSave) {
                 Icon(Icons.Default.Done, contentDescription = "Save")
             }
@@ -51,14 +52,14 @@ fun ToolStrip(
 
 @Composable
 fun ToolReportStrip(
-    title: String,
     onSearch: () -> Unit,
     onSave: () -> Unit,
     searchBar: @Composable () -> Unit = {},
+    windowSelector: @Composable () -> Unit = {}
 ) {
     TopAppBar(
         title = {
-            Text(title)
+            windowSelector()
             IconButton(onClick = onSave) {
                 Icon(Icons.Default.Done, contentDescription = "Save")
             }

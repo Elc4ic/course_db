@@ -15,7 +15,7 @@ import java.awt.FileDialog
 import java.awt.Frame
 
 @Composable
-fun OpenFile(avm: AppViewModel, wvm: WindowViewModel) {
+fun OpenFile(key: String, wvm: WindowViewModel) {
     var selectedBookStorage by remember { mutableStateOf(FileUtils.getPath(FileUtils.actualBooksStore)) }
     var selectedInstanceStorage by remember { mutableStateOf(FileUtils.getPath(FileUtils.actualInstanceStore)) }
     Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
@@ -49,7 +49,9 @@ fun OpenFile(avm: AppViewModel, wvm: WindowViewModel) {
             Button(onClick = {
                 if (selectedInstanceStorage != null && selectedBookStorage != null) {
                     FileUtils.setPaths(selectedBookStorage.toString(), selectedInstanceStorage.toString())
-                    wvm.openAfterLoad(avm)
+                    wvm.appUpdate()
+                    wvm.openWindow(wvm.getKeys().first())
+                    wvm.closeWindow(key)
                 }
             }) {
                 Text("Ввод")

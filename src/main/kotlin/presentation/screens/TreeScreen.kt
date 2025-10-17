@@ -20,9 +20,10 @@ import presentation.components.ToastDialog
 import presentation.components.ToolStrip
 import presentation.components.TreeRow
 import presentation.viewmodel.AppViewModel
+import presentation.viewmodel.WindowViewModel
 
 @Composable
-fun TreeScreen(vm: AppViewModel) {
+fun TreeScreen(key: String,vm: AppViewModel,wvm: WindowViewModel) {
     val showAddDialog = remember { mutableStateOf(false) }
     val showDeleteDialog = remember { mutableStateOf(false) }
     val showSearchDialog = remember { mutableStateOf(false) }
@@ -34,7 +35,7 @@ fun TreeScreen(vm: AppViewModel) {
     Scaffold(
         topBar = {
             ToolStrip(
-                title = "Экземпляры",
+                windowSelector = {wvm.selector(key)},
                 onAdd = { showAddDialog.value = true },
                 onDelete = { showDeleteDialog.value = true },
                 onSearch = {

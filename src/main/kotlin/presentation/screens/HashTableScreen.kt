@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollbarAdapter
@@ -21,17 +20,12 @@ import androidx.compose.ui.unit.dp
 import entities.Book
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import presentation.components.AddBookDialog
-import presentation.components.DeleteBookDialog
-import presentation.components.HeaderTableRow
-import presentation.components.SearchBookDialog
-import presentation.components.TableRow
-import presentation.components.ToastDialog
-import presentation.components.ToolStrip
+import presentation.components.*
 import presentation.viewmodel.AppViewModel
+import presentation.viewmodel.WindowViewModel
 
 @Composable
-fun HashTableScreen(vm: AppViewModel) {
+fun HashTableScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
     var showAddDialog by remember { mutableStateOf(false) }
     var showDeleteDialog by remember { mutableStateOf(false) }
     var showSearchDialog by remember { mutableStateOf(false) }
@@ -44,7 +38,6 @@ fun HashTableScreen(vm: AppViewModel) {
     Scaffold(
         topBar = {
             ToolStrip(
-                title = "Книги",
                 onAdd = { showAddDialog = true },
                 onDelete = { showDeleteDialog = true },
                 onSearch = {
@@ -62,7 +55,8 @@ fun HashTableScreen(vm: AppViewModel) {
                         onValueChange = { vm.bookField.value = it },
                         label = { Text("Введите ISBN") }
                     )
-                }
+                },
+                windowSelector = {wvm.selector(key)}
             )
         }
     ) {

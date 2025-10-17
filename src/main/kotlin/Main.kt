@@ -17,12 +17,13 @@ fun main() = application {
     val windowFocusRequestSharedFlow = remember { MutableSharedFlow<String>() }
     val avm = remember { AppViewModel() }
     val wvm = remember { WindowViewModel(avm) }
-
-    wvm.windows.value.forEach { windowType ->
+    wvm.windows.forEach { windowType ->
         key(windowType) {
             Window(
                 title = windowType.key,
-                onCloseRequest = ::exitApplication,
+                onCloseRequest = {
+                    wvm.closeWindow(windowType.key)
+                },
             ) {
                 LaunchedEffect(Unit) {
                     windowFocusRequestSharedFlow
@@ -30,7 +31,7 @@ fun main() = application {
                             window.toFront()
                         }
                 }
-                windowType.value.invoke()
+                windowType.value(windowType.key)
             }
         }
     }
