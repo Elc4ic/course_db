@@ -8,6 +8,7 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.ui.Alignment
 import data.logsPath
 import presentation.components.DropdownSelector
 import presentation.screens.HashTableScreen
@@ -27,10 +28,10 @@ class WindowViewModel(val avm: AppViewModel) {
         "Экземпляры3" to { TreeDrawScreen(it, avm, this) },
         "Отчет" to { ReportScreen(it, avm, this) },
         "Отладка" to { LogScreen(it, logsPath, this) })
-    val windows = mutableStateMapOf<String, @Composable (String) -> Unit>("Выберете файл" to { OpenFile(it,this) })
+    val windows = mutableStateMapOf<String, @Composable (String) -> Unit>("Выберете файл" to { OpenFile(it, this) })
 
     val selector: @Composable (String) -> Unit = { title ->
-        Row {
+        Row(verticalAlignment = Alignment.CenterVertically) {
             DropdownSelector(
                 "Окно",
                 items = getKeys(),
@@ -47,10 +48,6 @@ class WindowViewModel(val avm: AppViewModel) {
             }
         }
     }
-
-//    fun openChooseFiles(vm: AppViewModel) {
-//        windows.value = mutableMapOf("Файл" to { OpenFile(vm, this) })
-//    }
 
     fun openWindow(key: String) {
         println(map.count { it.first == key })

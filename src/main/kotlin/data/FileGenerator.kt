@@ -133,5 +133,5 @@ class FileGenerator() {
 
 fun main() {
     val fileGenerator = FileGenerator()
-    fileGenerator.generateFiles(30)
+    fileGenerator.generateFiles(10)
 }

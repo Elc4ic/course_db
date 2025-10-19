@@ -1,18 +1,7 @@
 package presentation.components
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
-import androidx.compose.material.Card
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.Slider
-import androidx.compose.material.Text
-import androidx.compose.material.TextButton
-import androidx.compose.material.TextField
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.runtime.*
@@ -22,7 +11,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import data.format
 import java.time.LocalDate
-import java.util.Date
+import java.time.YearMonth
+import java.util.*
+import kotlin.math.max
 
 @Composable
 fun DateInputField(
@@ -54,58 +45,50 @@ fun DateInputField(
 
     if (showDateSelector) {
         Dialog(onDismissRequest = { showDateSelector = false }) {
-            Card {
+            Card(modifier = Modifier.padding(16.dp)) {
                 Column(modifier = Modifier.padding(16.dp)) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        val ss = LocalDate.now().year
-                        Text("Year:", modifier = Modifier.width(80.dp))
-                        Slider(
-                            value = year.toFloat(),
-                            onValueChange = { year = it.toInt() },
-                            valueRange = 1900f..ss.toFloat(),
-                            steps = ss - 1900,
-                            modifier = Modifier.weight(1f)
-                        )
-                        Text(year.toString())
-                    }
+                    Text("Выбор даты")
+                    Spacer(Modifier.height(16.dp))
 
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text("Month:", modifier = Modifier.width(80.dp))
-                        Slider(
-                            value = month.toFloat(),
-                            onValueChange = { month = it.toInt() },
-                            valueRange = 1f..12f,
-                            steps = 11,
-                            modifier = Modifier.weight(1f)
-                        )
-                        Text(month.toString())
-                    }
+                    DropdownSelector(
+                        label = "Год",
+                        selected = max(1900, year).toString(),
+                        items = (1900..LocalDate.now().year).map { it.toString() }.reversed(),
+                        onSelect = {
+                            year = it.toInt(); if (day > YearMonth.of(year, month).lengthOfMonth()) day =
+                            YearMonth.of(year, month).lengthOfMonth()
+                        }
+                    )
 
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text("Day:", modifier = Modifier.width(80.dp))
-                        Slider(
-                            value = day.toFloat(),
-                            onValueChange = { day = it.toInt() },
-                            valueRange = 1f..daysInMonth.toFloat(),
-                            steps = daysInMonth - 1,
-                            modifier = Modifier.weight(1f)
-                        )
-                        Text(day.toString())
-                    }
+                    DropdownSelector(
+                        label = "Месяц",
+                        selected = month.toString(),
+                        items = (1..12).map { it.toString() },
+                        onSelect = {
+                            month = it.toInt(); if (day > YearMonth.of(year, month).lengthOfMonth()) day =
+                            YearMonth.of(year, month).lengthOfMonth()
+                        }
+                    )
+
+                    DropdownSelector(
+                        label = "День",
+                        selected = day.toString(),
+                        items = (1..daysInMonth).map { it.toString() },
+                        onSelect = { day = it.toInt() }
+                    )
+
+                    Spacer(Modifier.height(16.dp))
 
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         horizontalArrangement = Arrangement.End
                     ) {
-                        TextButton(onClick = { showDateSelector = false }) {
-                            Text("Отмена")
-                        }
-                        TextButton(onClick = {
-                            onDateSelected(Date(year - 1900, month, day))
+                        Button(onClick = { showDateSelector = false }) { Text("Отмена") }
+                        Button(onClick = {
+                            val date = Date(if (year > 1900) year - 1900 else 1900, month - 1, day)
+                            onDateSelected(date)
                             showDateSelector = false
-                        }) {
-                            Text("Применить")
-                        }
+                        }) { Text("Применить") }
                     }
                 }
             }

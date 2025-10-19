@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.onClick
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -74,9 +75,9 @@ fun RowScope.TableCell(text: String, weight: Float, off: Boolean = true, border:
         overflow = TextOverflow.Ellipsis,
         maxLines = 1,
         text = text,
-        color = if (off) Color.Black else Color.LightGray,
+        color = if (off) MaterialTheme.colors.onBackground else MaterialTheme.colors.onPrimary,
         modifier = Modifier
-            .border(border, Color.Gray)
+            .border(border, color = MaterialTheme.colors.onBackground)
             .padding(8.dp).weight(weight, true)
     )
 }
