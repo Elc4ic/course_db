@@ -104,7 +104,7 @@ fun DrawScope.drawVisibleNodes(
 
     val textLayout = textCache.getOrPut(node.node.key.toString()) {
         textMeasurer.measure(
-            text = node.node.key.toString(),
+            text = "${node.node.key}\n[${node.node.duplicates}]",
             style = TextStyle(
                 color = Color.White,
                 fontSize = 5.sp,

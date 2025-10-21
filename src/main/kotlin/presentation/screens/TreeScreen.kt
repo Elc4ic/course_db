@@ -80,7 +80,13 @@ fun TreeScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
         if (showSearchDialog) {
             SearchInstanceDialog(
                 { showSearchDialog = false },
-                { toaster("Экземпляры найдены", false) }, listInstance.value
+                { toaster("Экземпляры найдены", false) },
+                listInstance.value,
+                { instance ->
+                    vm.deleteInstance(instance.isbn, instance.inventoryNumber, scope, toast)?.let {
+                        scope.launch { toaster("Экземпляр удален", false) }
+                    }
+                }
             )
         }
     }

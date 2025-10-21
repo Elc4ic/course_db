@@ -6,12 +6,19 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.material.Icon
+import androidx.compose.material.IconButton
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Clear
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import data.LogsFile
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import presentation.viewmodel.WindowViewModel
@@ -21,7 +28,7 @@ import java.nio.file.Path
 import java.nio.file.StandardWatchEventKinds
 
 @Composable
-fun LogScreen(key: String,filePath: String,wvm: WindowViewModel) {
+fun LogScreen(key: String, filePath: String, wvm: WindowViewModel) {
     val file = remember(filePath) { File(filePath) }
     var lines by remember { mutableStateOf(listOf<String>()) }
     val scope = rememberCoroutineScope()
@@ -60,12 +67,28 @@ fun LogScreen(key: String,filePath: String,wvm: WindowViewModel) {
     }
 
     Scaffold(
-        topBar = { TopAppBar(title = { wvm.selector(key) }) }
+        topBar = {
+            TopAppBar(
+                title = { wvm.selector(key) },
+                actions = {
+                    IconButton(onClick = { lines = emptyList() }) {
+                        Icon(Icons.Default.Clear, contentDescription = "Очистить консоль")
+                    }
+                    IconButton(onClick = {
+                        lines = emptyList()
+                        LogsFile.clear()
+                    }) {
+                        Icon(Icons.Default.Delete, contentDescription = "Очистить логи")
+                    }
+                }
+            )
+        }
     ) { padding ->
         LazyColumn(
             state = state,
             modifier = Modifier
                 .padding(padding)
+                .padding(8.dp)
                 .fillMaxSize()
         ) {
             items(lines) { line ->

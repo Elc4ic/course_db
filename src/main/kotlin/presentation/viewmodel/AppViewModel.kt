@@ -136,11 +136,13 @@ class AppViewModel {
                 invNum == _instances.value[it]?.inventoryNumber
             }
             index?.let {
-                val instance = _instances.value[index]
-                _instances.value[index] = _instances.value.last()
-                _instances.value.copyOfRange(0, _instances.value.size - 2)
+                val lastInstance = _instances.value.last()
+                val instance = _instances.value[it]
+                _tree.value.search(lastInstance?.isbn!!)?.duplicates?.update(_instances.value.size - 1, it)
                 _tree.value.delete(isbn, it)
-                instance?.dateF?.let { date -> _filterTree.value.delete(date, index) }
+                _instances.value[it] = _instances.value.last()
+                _instances.value = _instances.value.copyOfRange(0, _instances.value.size - 1)
+                instance?.dateF?.let { date -> _filterTree.value.delete(date, it) }
                 LogsFile.writeln("Удаление экземпляра': $instance")
                 count++
             }

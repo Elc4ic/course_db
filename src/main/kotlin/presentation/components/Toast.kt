@@ -55,7 +55,7 @@ class ToastState {
         isVisible = false
     }
 
-    suspend fun error(message: String, durationMillis: Long = 5000) {
+    suspend fun error(message: String, durationMillis: Long = 3000) {
         this.message = message
         isVisible = true
         isError = true

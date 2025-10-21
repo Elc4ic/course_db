@@ -44,75 +44,62 @@ fun TreeDrawScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
     val textMeasurer = rememberTextMeasurer()
 
     ToastContainer { scope, toast, toaster ->
-        Scaffold(
-            topBar = {
-                ToolStrip(
-                    windowSelector = { wvm.selector(key) },
-                    onAdd = { showAddDialog = true },
-                    onAddFile = { wvm.openFilePicker() },
-                    onDelete = { showDeleteDialog = true },
-                    onSearch = {
-                        vm.searchInstance(scope, toast)?.let { listInstance.value = it }
-                    },
-                    onSave = { vm.saveInstances(scope, toast) },
-                    searchBar = {
-                        TextField(
-                            value = vm.instanceField.value,
-                            onValueChange = { vm.instanceField.value = it },
-                            label = { Text("Введите ISBN") }
-                        )
-                    }
-                )
-            },
-            floatingActionButton = {
-                Column(
-                    verticalArrangement = Arrangement.spacedBy(2.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally
-                ) {
-                    FloatingActionButton(onClick = { scale = min(scale * 1.2f, 3f) }) {
-                        Icon(Icons.Default.Add, contentDescription = "zoom+")
-                    }
-                    FloatingActionButton(onClick = {
-                        offset = -Offset(layout?.x ?: 0f, layout?.y ?: 0f) * scale
-                    }) {
-                        Icon(Icons.Default.Home, contentDescription = "go in root")
-                    }
-                    FloatingActionButton(onClick = { scale = max(scale * 0.8f, 0.0001f) }) {
-                        Icon(Icons.Default.Close, contentDescription = "zoom-")
-                    }
-                    Text("$offset")
+        Scaffold(topBar = {
+            ToolStrip(
+                windowSelector = { wvm.selector(key) },
+                onAdd = { showAddDialog = true },
+                onAddFile = { wvm.openFilePicker() },
+                onDelete = { showDeleteDialog = true },
+                onSearch = {
+                    vm.searchInstance(scope, toast)?.let { listInstance.value = it }
+                },
+                onSave = { vm.saveInstances(scope, toast) },
+                searchBar = {
+                    TextField(
+                        value = vm.instanceField.value,
+                        onValueChange = { vm.instanceField.value = it },
+                        label = { Text("Введите ISBN") })
+                })
+        }, floatingActionButton = {
+            Column(
+                verticalArrangement = Arrangement.spacedBy(2.dp), horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                FloatingActionButton(onClick = { scale = min(scale * 1.2f, 3f) }) {
+                    Icon(Icons.Default.Add, contentDescription = "zoom+")
+                }
+                FloatingActionButton(onClick = {
+                    offset = -Offset(layout?.x ?: 0f, layout?.y ?: 0f) * scale
+                }) {
+                    Icon(Icons.Default.Home, contentDescription = "go in root")
+                }
+                FloatingActionButton(onClick = { scale = max(scale * 0.8f, 0.0001f) }) {
+                    Icon(Icons.Default.Close, contentDescription = "zoom-")
+                }
+                Text("$offset")
+            }
+        }) {
+
+            val transformModifier = Modifier.fillMaxSize().pointerInput(Unit) {
+                detectTransformGestures { _, pan, zoom, _ ->
+                    scale = (scale * zoom).coerceIn(0.0001f, 5f)
+                    offset += pan
                 }
             }
-        ) {
-
-            val transformModifier = Modifier
-                .fillMaxSize()
-                .pointerInput(Unit) {
-                    detectTransformGestures { _, pan, zoom, _ ->
-                        scale = (scale * zoom).coerceIn(0.0001f, 5f)
-                        offset += pan
-                    }
-                }
 
             Box(modifier = transformModifier) {
-                Canvas(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .graphicsLayer {
-                            scaleX = scale
-                            scaleY = scale
-                            translationX = offset.x
-                            translationY = offset.y
+                Canvas(modifier = Modifier.fillMaxSize().graphicsLayer {
+                    scaleX = scale
+                    scaleY = scale
+                    translationX = offset.x
+                    translationY = offset.y
+                }.pointerInput(Unit) {
+                    detectTapGestures { offset ->
+                        vm.getInstances(layout?.clicked(offset))?.let {
+                            listInstance.value = it
+                            showSearchDialog = true
                         }
-                        .pointerInput(Unit) {
-                            detectTapGestures { offset ->
-                                vm.getInstances(layout?.clicked(offset))?.let {
-                                    listInstance.value = it
-                                    showSearchDialog = true
-                                }
-                            }
-                        }
-                ) {
+                    }
+                }) {
                     layout?.let {
                         drawVisibleNodes(it, textMeasurer)
                     }
@@ -121,20 +108,24 @@ fun TreeDrawScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
         }
         if (showAddDialog) {
             AddInstanceDialog(
-                { showAddDialog = false },
-                { toaster("Экземпляр добавлен", false) }, vm, scope, toast
+                { showAddDialog = false }, { toaster("Экземпляр добавлен", false) }, vm, scope, toast
             )
         }
         if (showDeleteDialog) {
             DeleteInstanceDialog(
-                { showDeleteDialog = false },
-                { toaster("Экземпляр удален", false) }, vm, scope, toast
+                { showDeleteDialog = false }, { toaster("Экземпляр удален", false) }, vm, scope, toast
             )
         }
         if (showSearchDialog) {
             SearchInstanceDialog(
                 { showSearchDialog = false },
-                { toaster("Экземпляры найдены", false) }, listInstance.value
+                { toaster("Экземпляры найдены", false) },
+                listInstance.value,
+                { instance ->
+                    vm.deleteInstance(instance.isbn, instance.inventoryNumber, scope, toast)?.let {
+                        scope.launch { toaster("Экземпляр удален", false) }
+                    }
+                }
             )
         }
     }
