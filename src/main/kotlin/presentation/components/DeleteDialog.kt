@@ -18,10 +18,15 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
+import kotlinx.coroutines.CoroutineScope
 import presentation.viewmodel.AppViewModel
 
 @Composable
-fun DeleteBookDialog(onDismiss: () -> Unit, vm: AppViewModel) {
+fun DeleteBookDialog(
+    onDismiss: () -> Unit,
+    showToast: () -> Unit,
+    vm: AppViewModel, scope: CoroutineScope, toast: ToastState
+) {
     var isbn by remember { mutableStateOf("") }
     var title by remember { mutableStateOf("") }
     var author by remember { mutableStateOf("") }
@@ -30,7 +35,7 @@ fun DeleteBookDialog(onDismiss: () -> Unit, vm: AppViewModel) {
     Dialog(onDismissRequest = onDismiss) {
         Surface(
             shape = RoundedCornerShape(16.dp),
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(32.dp)
         ) {
             Column(modifier = Modifier.padding(8.dp)) {
                 Text("Форма удаления книги", style = MaterialTheme.typography.h6)
@@ -52,7 +57,7 @@ fun DeleteBookDialog(onDismiss: () -> Unit, vm: AppViewModel) {
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Button(onClick = {
-                    vm.deleteBook(isbn, title, author)
+                    vm.deleteBook(isbn, title, author, scope, toast)?.let { if (it) showToast() }
                     onDismiss()
                 }) {
                     Text("Удалить")
@@ -63,7 +68,11 @@ fun DeleteBookDialog(onDismiss: () -> Unit, vm: AppViewModel) {
 }
 
 @Composable
-fun DeleteInstanceDialog(onDismiss: () -> Unit, vm: AppViewModel) {
+fun DeleteInstanceDialog(
+    onDismiss: () -> Unit,
+    showToast: () -> Unit,
+    vm: AppViewModel, scope: CoroutineScope, toast: ToastState
+) {
     var isbn by remember { mutableStateOf("") }
     var invNum by remember { mutableStateOf("") }
     var showErrors by remember { mutableStateOf(false) }
@@ -88,7 +97,7 @@ fun DeleteInstanceDialog(onDismiss: () -> Unit, vm: AppViewModel) {
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Button(onClick = {
-                    vm.deleteInstance(isbn, invNum)
+                    vm.deleteInstance(isbn, invNum, scope, toast)?.let { if (it) showToast() }
                     onDismiss()
                 }) {
                     Text("Удалить")

@@ -73,7 +73,6 @@ fun LogScreen(key: String,filePath: String,wvm: WindowViewModel) {
                     text = line,
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(8.dp)
                 )
             }
         }

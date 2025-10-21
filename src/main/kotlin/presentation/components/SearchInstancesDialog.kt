@@ -20,7 +20,12 @@ import androidx.compose.ui.window.Dialog
 import entities.Instance
 
 @Composable
-fun SearchInstanceDialog(onDismiss: () -> Unit, instances: List<Instance>) {
+fun SearchInstanceDialog(
+    onDismiss: () -> Unit,
+    showToast: () -> Unit,
+    instances: List<Instance>
+) {
+    showToast()
     Dialog(onDismissRequest = onDismiss) {
         Surface(
             shape = RoundedCornerShape(16.dp),

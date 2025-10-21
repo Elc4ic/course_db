@@ -7,6 +7,9 @@ internal val format = SimpleDateFormat("dd MMM yyyy", Locale.ENGLISH)
 internal const val logsPath = "src/main/resources/logs.txt"
 internal const val pathsFilePath = "src/main/resources/paths.txt"
 internal const val reportPath = "src/main/resources/report.txt"
+internal const val maxLines = 1000
+
+
 
 internal val status = listOf(
     "в наличии", "выдана", "в читальном зале", "на реставрации",

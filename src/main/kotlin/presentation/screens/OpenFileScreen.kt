@@ -9,17 +9,19 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import data.FileUtils
 import data.logsPath
-import presentation.viewmodel.AppViewModel
 import presentation.viewmodel.WindowViewModel
 import java.awt.FileDialog
 import java.awt.Frame
 
 @Composable
-fun OpenFile(key: String, wvm: WindowViewModel) {
+fun OpenFile(key: String, wvm: WindowViewModel, creator: Boolean = true) {
     var selectedBookStorage by remember { mutableStateOf(FileUtils.getPath(FileUtils.actualBooksStore)) }
     var selectedInstanceStorage by remember { mutableStateOf(FileUtils.getPath(FileUtils.actualInstanceStore)) }
     Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
-        Text("Выберите файлы:", modifier = Modifier.padding(8.dp))
+        Text(
+            if (creator) "Выберите файлы для открытия:" else "Выберите файлы для дополнения базы:",
+            modifier = Modifier.padding(8.dp)
+        )
         Text(selectedBookStorage ?: "-", modifier = Modifier.padding(8.dp))
         Button(onClick = {
             val dialog = FileDialog(null as Frame?, "Select a File")
@@ -48,7 +50,12 @@ fun OpenFile(key: String, wvm: WindowViewModel) {
         ) {
             Button(onClick = {
                 if (selectedInstanceStorage != null && selectedBookStorage != null) {
-                    FileUtils.setPaths(selectedBookStorage.toString(), selectedInstanceStorage.toString())
+                    if (creator) {
+                        FileUtils.setPaths(selectedBookStorage.toString(), selectedInstanceStorage.toString())
+                    } else {
+                        FileUtils.addBooksToFile(selectedBookStorage.toString())
+                        FileUtils.addInstancesToFile(selectedInstanceStorage.toString())
+                    }
                     wvm.appUpdate()
                     wvm.openWindow(wvm.getKeys().first())
                     wvm.closeWindow(key)
@@ -57,7 +64,5 @@ fun OpenFile(key: String, wvm: WindowViewModel) {
                 Text("Ввод")
             }
         }
-
     }
-
 }

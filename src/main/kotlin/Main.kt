@@ -12,7 +12,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
+import data.LogsFile
+import data.maxLines
 import kotlinx.coroutines.flow.MutableSharedFlow
+import presentation.components.ToastContainer
+import presentation.components.toastTemplate
 import presentation.screens.OpenFile
 import presentation.style.AppTheme
 import presentation.viewmodel.AppViewModel
@@ -23,10 +27,11 @@ fun main() = application {
     val windowFocusRequestSharedFlow = remember { MutableSharedFlow<String>() }
     val avm = remember { AppViewModel() }
     val wvm = remember { WindowViewModel(avm) }
+    LogsFile.cutHistory(maxLines)
 
+    avm.setToaster(toastTemplate)
     AppTheme {
         val windows by remember { derivedStateOf { wvm.windows.toMap() } }
-
         for ((key, content) in windows) {
             key(key) {
                 Window(
@@ -39,6 +44,7 @@ fun main() = application {
                                 if (target == key) window.toFront()
                             }
                         }
+
                         Surface(
                             modifier = Modifier.fillMaxSize(),
                             color = MaterialTheme.colors.background

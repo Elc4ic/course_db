@@ -17,8 +17,9 @@ import androidx.compose.ui.window.Dialog
 import entities.Book
 
 @Composable
-fun SearchBookDialog(onDismiss: () -> Unit, book: Book) {
+fun SearchBookDialog(onDismiss: () -> Unit, showToast: () -> Unit, book: Book) {
     Dialog(onDismissRequest = onDismiss) {
+        showToast()
         Surface(
             shape = RoundedCornerShape(16.dp),
             modifier = Modifier.padding(16.dp)

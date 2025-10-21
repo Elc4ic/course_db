@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.sp
 fun AppTheme(content: @Composable () -> Unit) {
 
     val colorScheme = Colors(
-        primary = Color(0xFF6537AD),
+        primary = Color(0xFF795CAF),
         onPrimary = Color.White,
         background = Color(0xFF313131),
         onBackground = Color.White,

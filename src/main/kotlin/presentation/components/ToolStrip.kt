@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Done
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -16,6 +15,7 @@ import androidx.compose.ui.unit.dp
 @Composable
 fun ToolStrip(
     onAdd: () -> Unit = {},
+    onAddFile: () -> Unit = {},
     onDelete: () -> Unit = {},
     onSearch: () -> Unit = {},
     onSave: () -> Unit = {},
@@ -49,6 +49,12 @@ fun ToolStrip(
                             onAdd()
                         }
                     ) { Text("Добавить") }
+                    DropdownMenuItem(
+                        onClick = {
+                            expanded = false
+                            onAddFile()
+                        }
+                    ) { Text("Добавить из файла") }
                     DropdownMenuItem(
                         onClick = {
                             expanded = false

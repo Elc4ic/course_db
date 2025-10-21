@@ -64,7 +64,6 @@ fun DrawScope.drawTreeNode(node: PositionedNode, textMeasurer: TextMeasurer) {
 fun DrawScope.drawVisibleNodes(
     node: PositionedNode,
     textMeasurer: TextMeasurer,
-    visibleRect: Rect,
     radius: Float = 40f,
     textCache: MutableMap<String, TextLayoutResult> = mutableMapOf(),
 ) {
@@ -74,15 +73,13 @@ fun DrawScope.drawVisibleNodes(
             Offset(min(node.x, left.x), min(node.y, left.y)),
             Offset(max(node.x, left.x), max(node.y, left.y))
         )
-        if (lineRect.overlaps(visibleRect)) {
             drawLine(
                 color = Color.Black,
                 start = Offset(node.x, node.y),
                 end = Offset(left.x, left.y),
                 strokeWidth = 2f
             )
-            drawVisibleNodes(left, textMeasurer, visibleRect, radius, textCache)
-        }
+            drawVisibleNodes(left, textMeasurer, radius, textCache)
     }
 
     node.right?.let { right ->
@@ -90,23 +87,14 @@ fun DrawScope.drawVisibleNodes(
             Offset(min(node.x, right.x), min(node.y, right.y)),
             Offset(max(node.x, right.x), max(node.y, right.y))
         )
-        if (lineRect.overlaps(visibleRect)) {
             drawLine(
                 color = Color.Black,
                 start = Offset(node.x, node.y),
                 end = Offset(right.x, right.y),
                 strokeWidth = 2f
             )
-            drawVisibleNodes(right, textMeasurer, visibleRect, radius, textCache)
-        }
+            drawVisibleNodes(right, textMeasurer, radius, textCache)
     }
-
-    val nodeRect = Rect(
-        Offset(node.x - radius, node.y - radius),
-        Size(radius * 2, radius * 2)
-    )
-
-    if (!nodeRect.overlaps(visibleRect)) return
 
     drawCircle(
         color = if (node.node.color == TreeColor.RED) Color.Red else Color.Black,

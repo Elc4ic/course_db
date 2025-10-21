@@ -1,5 +1,6 @@
 package presentation.components
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -18,19 +19,29 @@ import data.status
 import entities.Book
 import entities.forms.BookForm
 import entities.forms.InstanceForm
+import kotlinx.coroutines.CoroutineScope
 import presentation.viewmodel.AppViewModel
 
 @Composable
-fun AddBookDialog(onDismiss: () -> Unit, showToast: () -> Unit, vm: AppViewModel) {
+fun AddBookDialog(
+    onDismiss: () -> Unit,
+    showToast: () -> Unit,
+    vm: AppViewModel,
+    scope: CoroutineScope,
+    toast: ToastState
+) {
     var form by remember { mutableStateOf(BookForm()) }
     var showErrors by remember { mutableStateOf(false) }
 
     Dialog(onDismissRequest = onDismiss) {
         Surface(
             shape = RoundedCornerShape(16.dp),
-            modifier = Modifier.padding(16.dp)
+            modifier = Modifier.padding(32.dp)
         ) {
-            Column(modifier = Modifier.padding(8.dp)) {
+            Column(
+                modifier = Modifier.padding(8.dp),
+                verticalArrangement = Arrangement.spacedBy(4.dp)
+            ) {
                 Text("Форма ввода книги", style = MaterialTheme.typography.h6)
                 Spacer(modifier = Modifier.height(8.dp))
                 OutlinedTextField(
@@ -61,7 +72,7 @@ fun AddBookDialog(onDismiss: () -> Unit, showToast: () -> Unit, vm: AppViewModel
                     form.validate()
                     if (form.isValid) {
                         val book = Book(form.isbn, form.title, form.author)
-                        vm.addBook(book)
+                        vm.addBook(book, scope, toast)
                         showToast()
                         onDismiss()
                     }
@@ -76,7 +87,13 @@ fun AddBookDialog(onDismiss: () -> Unit, showToast: () -> Unit, vm: AppViewModel
 }
 
 @Composable
-fun AddInstanceDialog(onDismiss: () -> Unit, showToast: () -> Unit, vm: AppViewModel) {
+fun AddInstanceDialog(
+    onDismiss: () -> Unit,
+    showToast: () -> Unit,
+    vm: AppViewModel,
+    scope: CoroutineScope,
+    toast: ToastState
+) {
     var form by remember { mutableStateOf(InstanceForm()) }
     var showErrors by remember { mutableStateOf(false) }
 
@@ -85,7 +102,10 @@ fun AddInstanceDialog(onDismiss: () -> Unit, showToast: () -> Unit, vm: AppViewM
             shape = RoundedCornerShape(16.dp),
             modifier = Modifier.padding(16.dp)
         ) {
-            Column(modifier = Modifier.padding(8.dp)) {
+            Column(
+                modifier = Modifier.padding(8.dp),
+                verticalArrangement = Arrangement.spacedBy(4.dp)
+            ) {
                 Text("Форма ввода экземпляра", style = MaterialTheme.typography.h6)
                 Spacer(modifier = Modifier.height(8.dp))
                 OutlinedTextField(
@@ -123,7 +143,7 @@ fun AddInstanceDialog(onDismiss: () -> Unit, showToast: () -> Unit, vm: AppViewM
                     showErrors = false
                     form.validate(vm)
                     if (form.isValid) {
-                        vm.addInstance(form.getInstance())
+                        vm.addInstance(form.getInstance(), scope, toast)
                         showToast()
                         onDismiss()
                     }

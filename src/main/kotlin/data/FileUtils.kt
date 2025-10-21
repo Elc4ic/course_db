@@ -116,9 +116,54 @@ object FileUtils {
         }
     }
 
+    fun addBooksToFile(path: String) {
+        val books = initBooksFromFile(path)
+        val pathOld = getPaths().first!!
+        val file = File(pathOld)
+        val l = file.readLines()
+        file.printWriter().use { out ->
+            l.forEach { out.println(it) }
+            books.forEach {
+                it?.let {
+                    val str = "${it.isbn}|${it.title}|${it.author}"
+                    if (l.count { s -> s.contains(it.isbn) } == 0) {
+                        out.println(str)
+                    } else {
+                        LogsFile.writeln("Книга дубликат в добавочном файле: $str")
+                    }
+                }
+            }
+        }
+    }
+
     fun saveInstancesToFile(path: String, array: Array<Instance?>) {
-        File(path).printWriter().use { out ->
-            array.forEach { it?.let { out.println("${it.isbn}|${it.inventoryNumber}|${it.status}|${it.date}") } }
+        val file = File(path)
+        file.delete()
+        file.createNewFile()
+        file.printWriter().use { out ->
+            array.forEach {
+                it?.let { out.println("${it.isbn}|${it.inventoryNumber}|${it.status}|${it.date}") }
+            }
+        }
+    }
+
+    fun addInstancesToFile(path: String) {
+        val instance = initInstancesFromFile(path)
+        val pathOld = getPaths().second!!
+        val file = File(pathOld)
+        val l = file.readLines()
+        file.printWriter().use { out ->
+            l.forEach { out.println(it) }
+            instance.forEach {
+                it?.let {
+                    val str = "${it.isbn}|${it.inventoryNumber}|${it.status}|${it.date}"
+                    if (l.count { s -> s == str } == 0) {
+                        out.println(str)
+                    } else {
+                        LogsFile.writeln("Экземпляр дубликат в добавочном файле: $str")
+                    }
+                }
+            }
         }
     }
 

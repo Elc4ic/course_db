@@ -1,2274 +1,1046 @@
-Время: Fri Oct 17 09:43:15 MSK 2025 Xt init completed in 1 ms
-Время: Fri Oct 17 09:43:15 MSK 2025 Hashtable {
-978-2-172-90354-9=21 true
-978-0-578-18755-6=23 true
-978-5-663-97069-3=15 true
-978-6-407-77863-6=16 true
-978-2-997-57804-5=10 true
-978-4-769-77650-5=25 true
-978-5-796-39738-1=8 true
-978-6-432-87958-2=26 true
-978-8-669-89544-1=1 true
-978-6-503-69862-3=27 true
-978-9-979-67573-0=22 true
-978-2-979-90399-5=24 true
-978-5-304-89314-5=28 true
-978-1-588-63781-9=29 true
 null=null false
-null=null false
-978-0-501-91226-2=3 true
-null=null false
-978-0-451-80810-3=12 true
-null=null false
-null=null false
-null=null false
-978-0-429-20590-3=11 true
-978-1-717-71035-2=14 true
-978-7-601-23079-1=0 true
-978-6-193-62052-2=17 true
-null=null false
-null=null false
-null=null false
-null=null false
-978-1-459-36704-3=5 true
-978-1-329-53681-4=13 true
-978-1-770-90780-5=6 true
-978-5-219-62285-4=19 true
-978-5-257-81674-1=2 true
-978-7-390-53933-4=7 true
-978-0-372-68298-1=9 true
-978-5-144-37798-0=18 true
-978-5-789-51419-1=4 true
-978-7-516-67440-6=20 true
-}
-Время: Fri Oct 17 09:43:15 MSK 2025 Tree init completed in 0 ms
-Время: Fri Oct 17 09:43:15 MSK 2025                      978-7-601-23079-1 BLACK 3
-                                978-7-516-67440-6 RED 9->12
-           978-7-390-53933-4 BLACK 7->8->18
-                                978-6-503-69862-3 RED 14->28
-                      978-5-796-39738-1 BLACK 22
-                                 978-5-789-51419-1 RED 2
- 978-5-663-97069-3 BLACK 0
-                                978-5-304-89314-5 BLACK 10->15
-                                           978-5-257-81674-1 RED 19
-                      978-5-144-37798-0 RED 11->17->24
-                                 978-2-979-90399-5 BLACK 4
-            978-1-717-71035-2 BLACK 1
-                                           978-1-588-63781-9 RED 16->26
-                                 978-1-459-36704-3 BLACK 25
-                                            978-0-501-91226-2 RED 13->21->27
-                       978-0-451-80810-3 RED 6
-                                  978-0-429-20590-3 BLACK 5->29
-                                             978-0-372-68298-1 RED 20->23
-
-Время: Fri Oct 17 09:43:15 MSK 2025 Tree init completed in 0 ms
-Время: Fri Oct 17 09:43:15 MSK 2025                                          Thu Jan 18 00:00:00 MSK 2018 RED 16
-                               Tue Sep 01 00:00:00 MSK 2015 BLACK 4
-                     Sun Oct 11 00:00:00 MSD 2009 BLACK 7
-                                          Thu Feb 19 00:00:00 MSK 2009 RED 23
-                                Fri Oct 20 00:00:00 MSD 2006 BLACK 12
-           Wed Oct 04 00:00:00 MSD 2006 BLACK 1
-                                          Tue Jul 10 00:00:00 MSD 2001 RED 25
-                                Sun Nov 05 00:00:00 MSK 2000 BLACK 15
-                      Tue Jun 09 00:00:00 MSD 1998 BLACK 8
-                                 Fri Apr 28 00:00:00 MSD 1995 BLACK 20
- Sat Jan 28 00:00:00 MSK 1995 BLACK 3
-                                          Sun Jul 17 00:00:00 MSD 1994 BLACK 24
-                                                     Tue Apr 05 00:00:00 MSD 1994 RED 27
-                                Mon Jun 18 00:00:00 MSD 1990 RED 17
-                                           Fri Nov 11 00:00:00 MSK 1988 BLACK 19
-                      Mon Jan 18 00:00:00 MSK 1988 BLACK 6
-                                 Fri Apr 10 00:00:00 MSD 1987 BLACK 11
-            Fri Feb 27 00:00:00 MSK 1987 BLACK 0
-                                                     Thu Nov 01 00:00:00 MSK 1984 BLACK 21
-                                                                Tue Mar 27 00:00:00 MSK 1984 RED 29
-                                           Mon Mar 14 00:00:00 MSK 1983 RED 22
-                                                      Sun May 17 00:00:00 MSD 1981 BLACK 13
-                                 Thu May 14 00:00:00 MSD 1981 BLACK 14
-                                                      Sun Feb 18 00:00:00 MSK 1979 RED 28
-                                            Tue Aug 15 00:00:00 MSK 1978 BLACK 5
-                       Mon Sep 01 00:00:00 MSK 1975 RED 9
-                                                      Mon Mar 18 00:00:00 MSK 1974 RED 26
-                                            Thu Jul 06 00:00:00 MSK 1972 BLACK 2
-                                  Sat Jun 26 00:00:00 MSK 1971 BLACK 10
-                                             Fri Jun 12 00:00:00 MSK 1970 BLACK 18
-
-Время: Fri Oct 17 11:00:17 MSK 2025 Xt init completed in 0 ms
-Время: Fri Oct 17 11:00:17 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Fri Oct 17 11:00:17 MSK 2025 Tree init completed in 0 ms
-Время: Fri Oct 17 11:00:17 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 07:25:11 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 07:25:11 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7
+           978-9-379-62635-6 BLACK 8
+                      978-9-129-30480-0 RED 6
+ 978-6-978-63807-0 BLACK 1->4
+                      978-5-320-24568-3 RED 5
+            978-4-769-74064-3 BLACK 0
+                       978-1-820-27750-6 RED 9
 
-Время: Fri Oct 17 11:00:17 MSK 2025 Tree init completed in 0 ms
-Время: Fri Oct 17 11:00:17 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 07:25:11 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 07:25:11 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6
+           Sat Sep 29 00:00:00 MSD 2007 RED 7
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5
 
-Время: Fri Oct 17 11:03:01 MSK 2025 Ошибка ввода экземпляра книги: ISBN неправильная контрольная сумма
-Время: Fri Oct 17 11:03:01 MSK 2025 Ошибка ввода экземпляра книги: Нет книги с таким ISBN
-Время: Fri Oct 17 11:03:01 MSK 2025 Ошибка ввода экземпляра книги: Не валидный инвентарный номер
-Время: Fri Oct 17 11:03:01 MSK 2025 Ошибка ввода экземпляра книги: Нет статуса
-Время: Sun Oct 19 11:41:15 MSK 2025 Xt init completed in 10 ms
-Время: Sun Oct 19 11:41:15 MSK 2025 Hashtable {
+Время: Tue Oct 21 07:28:16 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 07:28:16 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
+null=null false
+978-6-978-63807-0=3 true
+null=null false
+978-9-379-62635-6=0 true
+978-9-129-30480-0=6 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
 null=null false
 null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-527-51760-3=4 true
 null=null false
 null=null false
 null=null false
+978-9-671-76996-6=5 true
 null=null false
-}
-Время: Sun Oct 19 11:41:15 MSK 2025 Tree init completed in 9 ms
-Время: Sun Oct 19 11:41:15 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 11:41:15 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 11:41:15 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 11:42:16 MSK 2025 Ошибка ввода экземпляра книги: ISBN пуст
-Время: Sun Oct 19 11:42:16 MSK 2025 Ошибка ввода экземпляра книги: Нет книги с таким ISBN
-Время: Sun Oct 19 11:42:16 MSK 2025 Ошибка ввода экземпляра книги: Не валидный инвентарный номер
-Время: Sun Oct 19 11:42:16 MSK 2025 Ошибка ввода экземпляра книги: Нет статуса
-Время: Sun Oct 19 11:42:43 MSK 2025 Ошибка ввода книги: ISBN неверный формат
-Время: Sun Oct 19 11:42:43 MSK 2025 Ошибка ввода книги: Нет названия
-Время: Sun Oct 19 11:42:43 MSK 2025 Ошибка ввода книги: Нет автора
-Время: Sun Oct 19 11:42:49 MSK 2025 Найдена книга: null
-Время: Sun Oct 19 11:42:50 MSK 2025 Найдена книга: null
-Время: Sun Oct 19 11:47:03 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 11:47:03 MSK 2025 Hashtable {
+978-4-173-14669-7=8 true
 null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 11:47:03 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 11:47:03 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 07:28:16 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 07:28:16 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7
+           978-9-379-62635-6 BLACK 8
+                      978-9-129-30480-0 RED 6
+ 978-6-978-63807-0 BLACK 1->4
+                      978-5-320-24568-3 RED 5
+            978-4-769-74064-3 BLACK 0
+                       978-1-820-27750-6 RED 9
 
-Время: Sun Oct 19 11:47:03 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 11:47:03 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 07:28:16 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 07:28:16 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6
+           Sat Sep 29 00:00:00 MSD 2007 RED 7
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5
 
-Время: Sun Oct 19 11:57:59 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 11:57:59 MSK 2025 Hashtable {
+Время: Tue Oct 21 07:28:52 MSK 2025 Найдена книга: null
+Время: Tue Oct 21 07:28:54 MSK 2025 Найдена книга: null
+Время: Tue Oct 21 07:28:56 MSK 2025 Найдена книга: null
+Время: Tue Oct 21 07:29:00 MSK 2025 Найдена книга: null
+Время: Tue Oct 21 07:29:02 MSK 2025 Найдена книга: null
+Время: Tue Oct 21 07:30:01 MSK 2025 Файл экземпляров сохранен
+Время: Tue Oct 21 07:30:38 MSK 2025 Удаление книги: Book(isbn='978-9-129-30480-0', title='Проклятый империя откровение', author='Семён Никифоров Гаврилова')
+Время: Tue Oct 21 07:30:38 MSK 2025 Также удаляется экземпляр: Instance(isbn='978-9-129-30480-0', inventoryNumber=6, status=на переплете, date='3 Jun 2022')
+Время: Tue Oct 21 07:30:50 MSK 2025 Удаление книги: Book(isbn='978-4-173-14669-7', title='Древний гора рай', author='Матвей Герасимова Антонов')
+Время: Tue Oct 21 07:31:19 MSK 2025 Удаление книги: Book(isbn='978-9-379-62635-6', title='Ангельский лес кристалл', author='Анфиса Попова Гаврилов')
+Время: Tue Oct 21 07:31:19 MSK 2025 Также удаляется экземпляр: Instance(isbn='978-9-379-62635-6', inventoryNumber=6, status=на списании, date='12 Nov 2004')
+Время: Tue Oct 21 07:31:29 MSK 2025 Удаление книги: Book(isbn='978-9-671-76996-6', title='Исчезнувший сад вампир', author='Владимир Калашникова Белова')
+Время: Tue Oct 21 07:31:29 MSK 2025 Также удаляется экземпляр: Instance(isbn='978-9-671-76996-6', inventoryNumber=2, status=на реставрации, date='13 Feb 2004')
+Время: Tue Oct 21 07:31:29 MSK 2025 Также удаляется экземпляр: Instance(isbn='978-9-671-76996-6', inventoryNumber=10, status=в читальном зале, date='2 Apr 1979')
+Время: Tue Oct 21 07:31:29 MSK 2025 Также удаляется экземпляр: Instance(isbn='978-9-671-76996-6', inventoryNumber=7, status=в наличии, date='29 Sep 2007')
+Время: Tue Oct 21 07:31:34 MSK 2025 Удаление книги: Book(isbn='978-1-820-27750-6', title='Изумрудный русалка', author='Григорий Куликов Субботина')
+Время: Tue Oct 21 07:31:34 MSK 2025 Также удаляется экземпляр: Instance(isbn='978-1-820-27750-6', inventoryNumber=7, status=заказана, date='6 Apr 1996')
+Время: Tue Oct 21 07:32:14 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 07:32:14 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
+null=null false
+978-6-978-63807-0=3 true
+null=null false
+978-9-379-62635-6=0 true
+978-9-129-30480-0=6 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
 null=null false
 null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 11:57:59 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 11:57:59 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 11:57:59 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 11:57:59 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 11:59:25 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 11:59:25 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-527-51760-3=4 true
 null=null false
 null=null false
 null=null false
+978-9-671-76996-6=5 true
+null=null false
+978-4-173-14669-7=8 true
+null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 11:59:25 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 11:59:25 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 07:32:14 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 07:32:14 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7
+           978-9-379-62635-6 BLACK 8
+                      978-9-129-30480-0 RED 6
+ 978-6-978-63807-0 BLACK 1->4
+                      978-5-320-24568-3 RED 5
+            978-4-769-74064-3 BLACK 0
+                       978-1-820-27750-6 RED 9
 
-Время: Sun Oct 19 11:59:25 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 11:59:25 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 07:32:14 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 07:32:14 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6
+           Sat Sep 29 00:00:00 MSD 2007 RED 7
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5
 
-Время: Sun Oct 19 12:01:00 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:01:00 MSK 2025 Hashtable {
+Время: Tue Oct 21 07:32:22 MSK 2025 Удаление книги: Book(isbn='978-5-320-24568-3', title='Пропавший знание зеркало', author='Алексей Цветкова Вишнякова')
+Время: Tue Oct 21 07:32:22 MSK 2025 Также удаляется экземпляр: Instance(isbn='978-5-320-24568-3', inventoryNumber=3, status=в хранилище, date='14 Jul 1974')
+Время: Tue Oct 21 07:33:43 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 07:33:43 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
+null=null false
+978-6-978-63807-0=3 true
+null=null false
+978-9-379-62635-6=0 true
+978-9-129-30480-0=6 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
 null=null false
 null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-527-51760-3=4 true
 null=null false
 null=null false
 null=null false
+978-9-671-76996-6=5 true
 null=null false
-}
-Время: Sun Oct 19 12:01:00 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:01:00 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 12:01:00 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:01:00 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 12:02:22 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:02:22 MSK 2025 Hashtable {
+978-4-173-14669-7=8 true
 null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 12:02:22 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:02:22 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 07:33:43 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 07:33:43 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7
+           978-9-379-62635-6 BLACK 8
+                      978-9-129-30480-0 RED 6
+ 978-6-978-63807-0 BLACK 1->4
+                      978-5-320-24568-3 RED 5
+            978-4-769-74064-3 BLACK 0
+                       978-1-820-27750-6 RED 9
 
-Время: Sun Oct 19 12:02:22 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:02:22 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 07:33:43 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 07:33:43 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6
+           Sat Sep 29 00:00:00 MSD 2007 RED 7
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5
 
-Время: Sun Oct 19 12:03:20 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:03:20 MSK 2025 Hashtable {
+Время: Tue Oct 21 07:39:08 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 07:39:08 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
+null=null false
+978-6-978-63807-0=3 true
+null=null false
+978-9-379-62635-6=0 true
+978-9-129-30480-0=6 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
 null=null false
 null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-527-51760-3=4 true
 null=null false
 null=null false
 null=null false
+978-9-671-76996-6=5 true
 null=null false
-}
-Время: Sun Oct 19 12:03:20 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:03:20 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 12:03:20 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:03:20 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 12:08:31 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:08:31 MSK 2025 Hashtable {
+978-4-173-14669-7=8 true
 null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 12:08:31 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:08:31 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 07:39:08 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 07:39:08 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7
+           978-9-379-62635-6 BLACK 8
+                      978-9-129-30480-0 RED 6
+ 978-6-978-63807-0 BLACK 1->4
+                      978-5-320-24568-3 RED 5
+            978-4-769-74064-3 BLACK 0
+                       978-1-820-27750-6 RED 9
 
-Время: Sun Oct 19 12:08:31 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:08:31 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 07:39:08 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 07:39:08 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6
+           Sat Sep 29 00:00:00 MSD 2007 RED 7
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5
 
-Время: Sun Oct 19 12:08:39 MSK 2025 Удаление книги: Book(isbn='978-5-330-69783-0', title='Воскресший ключ', author='Игорь Гаврилов Королева')
-Время: Sun Oct 19 12:15:41 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:15:42 MSK 2025 Hashtable {
+Время: Tue Oct 21 07:46:55 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 07:46:55 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
+null=null false
+978-6-978-63807-0=3 true
+null=null false
+978-9-379-62635-6=0 true
+978-9-129-30480-0=6 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
 null=null false
 null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-527-51760-3=4 true
 null=null false
 null=null false
 null=null false
+978-9-671-76996-6=5 true
 null=null false
-}
-Время: Sun Oct 19 12:15:42 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:15:42 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 12:15:42 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:15:42 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 12:16:02 MSK 2025 Найдена книга: null
-Время: Sun Oct 19 12:16:02 MSK 2025 Найдена книга: null
-Время: Sun Oct 19 12:16:03 MSK 2025 Найдена книга: null
-Время: Sun Oct 19 12:16:03 MSK 2025 Найдена книга: null
-Время: Sun Oct 19 12:16:04 MSK 2025 Найдена книга: null
-Время: Sun Oct 19 12:23:27 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:23:27 MSK 2025 Hashtable {
+978-4-173-14669-7=8 true
 null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 12:23:27 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:23:27 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 07:46:55 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 07:46:55 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7
+           978-9-379-62635-6 BLACK 8
+                      978-9-129-30480-0 RED 6
+ 978-6-978-63807-0 BLACK 1->4
+                      978-5-320-24568-3 RED 5
+            978-4-769-74064-3 BLACK 0
+                       978-1-820-27750-6 RED 9
 
-Время: Sun Oct 19 12:23:27 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:23:27 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 07:46:55 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 07:46:55 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6
+           Sat Sep 29 00:00:00 MSD 2007 RED 7
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5
 
-Время: Sun Oct 19 12:37:29 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:37:29 MSK 2025 Hashtable {
+Время: Tue Oct 21 07:48:34 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 07:48:34 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
+null=null false
+978-6-978-63807-0=3 true
+null=null false
+978-9-379-62635-6=0 true
+978-9-129-30480-0=6 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
 null=null false
 null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-527-51760-3=4 true
 null=null false
 null=null false
 null=null false
+978-9-671-76996-6=5 true
 null=null false
-}
-Время: Sun Oct 19 12:37:29 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:37:29 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 12:37:29 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:37:29 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 12:40:57 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:40:57 MSK 2025 Hashtable {
+978-4-173-14669-7=8 true
 null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 12:40:57 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:40:57 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 07:48:34 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 07:48:34 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7
+           978-9-379-62635-6 BLACK 8
+                      978-9-129-30480-0 RED 6
+ 978-6-978-63807-0 BLACK 1->4
+                      978-5-320-24568-3 RED 5
+            978-4-769-74064-3 BLACK 0
+                       978-1-820-27750-6 RED 9
 
-Время: Sun Oct 19 12:40:57 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:40:57 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 07:48:34 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 07:48:34 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6
+           Sat Sep 29 00:00:00 MSD 2007 RED 7
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5
 
-Время: Sun Oct 19 12:43:57 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:43:57 MSK 2025 Hashtable {
+Время: Tue Oct 21 08:08:30 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 08:08:30 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
+null=null false
+978-6-978-63807-0=3 true
+null=null false
+978-9-379-62635-6=0 true
+978-9-129-30480-0=6 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
 null=null false
 null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-527-51760-3=4 true
 null=null false
 null=null false
 null=null false
+978-9-671-76996-6=5 true
 null=null false
-}
-Время: Sun Oct 19 12:43:57 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:43:57 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 12:43:57 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:43:57 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 12:46:32 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:46:32 MSK 2025 Hashtable {
+978-4-173-14669-7=8 true
 null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 12:46:32 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:46:32 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 08:08:30 MSK 2025 Tree init completed in 2 ms
+Время: Tue Oct 21 08:08:30 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7
+           978-9-379-62635-6 BLACK 8
+                      978-9-129-30480-0 RED 6
+ 978-6-978-63807-0 BLACK 1->4
+                      978-5-320-24568-3 RED 5
+            978-4-769-74064-3 BLACK 0
+                       978-1-820-27750-6 RED 9
 
-Время: Sun Oct 19 12:46:32 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:46:32 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 08:08:30 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 08:08:30 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6
+           Sat Sep 29 00:00:00 MSD 2007 RED 7
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5
 
-Время: Sun Oct 19 12:47:29 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:47:29 MSK 2025 Hashtable {
+Время: Tue Oct 21 08:09:01 MSK 2025 Удаление книги: Book(isbn='978-9-129-30480-0', title='Проклятый империя откровение', author='Семён Никифоров Гаврилова')
+Время: Tue Oct 21 08:09:01 MSK 2025 Также удаляется экземпляр: Instance(isbn='978-9-129-30480-0', inventoryNumber=6, status=на переплете, date='3 Jun 2022')
+Время: Tue Oct 21 08:09:59 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 08:09:59 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
 null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-978-63807-0=3 true
+978-6-944-39655-3=10 true
+978-9-379-62635-6=0 true
 null=null false
 null=null false
 null=null false
 null=null false
-}
-Время: Sun Oct 19 12:47:29 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:47:29 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 12:47:29 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:47:29 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 12:49:35 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:49:35 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
 null=null false
 null=null false
 null=null false
+978-8-577-96674-5=15 true
+null=null false
+978-9-671-76996-6=5 true
+null=null false
+null=null false
+null=null false
+null=null false
+null=null false
+null=null false
+null=null false
+null=null false
+null=null false
+978-9-129-30480-0=6 true
+978-9-125-50176-0=16 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
+978-3-704-30595-4=11 true
+978-1-206-58738-0=14 true
+978-6-527-51760-3=4 true
+null=null false
+978-5-330-69783-0=13 true
+null=null false
+978-7-184-23808-5=12 true
+null=null false
+978-4-173-14669-7=8 true
+null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 12:49:35 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:49:35 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 08:09:59 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 08:09:59 MSK 2025 
+                     978-9-671-76996-6 BLACK 2->3->7->2->3->7
+           978-9-379-62635-6 BLACK 8->8
+                                978-9-215-86561-1 BLACK 12->13->17
+                      978-9-129-30480-0 RED 6
+                                           978-9-125-50176-0 RED 16
+                                 978-8-577-96674-5 BLACK 20
+                                            978-7-184-23808-5 RED 14->15->18
+ 978-6-978-63807-0 BLACK 1->4->1->4
+                                978-6-944-39655-3 RED 10
+                      978-5-320-24568-3 BLACK 5->5
+            978-4-769-74064-3 BLACK 0->0
+                                 978-2-867-66868-5 RED 19
+                       978-1-820-27750-6 BLACK 6->9
+                                  978-1-206-58738-0 RED 11
 
-Время: Sun Oct 19 12:49:35 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:49:35 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 08:09:59 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 08:09:59 MSK 2025 
+                                         Fri Jun 03 00:00:00 MSK 2022 RED 6
+                               Mon Sep 06 00:00:00 MSK 2021 BLACK 20
+                                          Sat Jan 28 00:00:00 MSK 2017 RED 14
+                     Sun Jul 17 00:00:00 MSK 2016 RED 12
+                                          Wed Sep 16 00:00:00 MSK 2015 RED 16
+                                Tue Jan 15 00:00:00 MSK 2008 BLACK 19
+                                           Sat Sep 29 00:00:00 MSD 2007 RED 7->7
+           Fri Nov 12 00:00:00 MSK 2004 BLACK 8->8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2->2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1->1
+                                          Sun Mar 11 00:00:00 MSK 2001 RED 13
+                                Sun Oct 06 00:00:00 MSD 1996 BLACK 10
+                      Sat Apr 06 00:00:00 MSD 1996 BLACK 9->9
+                                 Wed Jul 29 00:00:00 MSD 1992 BLACK 4->4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0->0
+                                 Thu May 24 00:00:00 MSD 1990 BLACK 11
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3->3
+                                            Mon Nov 27 00:00:00 MSK 1978 BLACK 17
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5->5
+                                             Sun Jun 24 00:00:00 MSK 1973 BLACK 15
+                                                        Sat Feb 03 00:00:00 MSK 1973 RED 18
 
-Время: Sun Oct 19 12:50:35 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:50:35 MSK 2025 Hashtable {
+Время: Tue Oct 21 08:10:57 MSK 2025 Книга дубликат в добавочном файле: 978-6-944-39655-3|Последний диск|Артём Кононова Миронов
+Время: Tue Oct 21 08:10:57 MSK 2025 Книга дубликат в добавочном файле: 978-3-704-30595-4|Мистический русалка гора|Елена Дьячкова Анисимова
+Время: Tue Oct 21 08:10:57 MSK 2025 Книга дубликат в добавочном файле: 978-7-184-23808-5|Демонический река|Герман Устинов Никифоров
+Время: Tue Oct 21 08:10:57 MSK 2025 Книга дубликат в добавочном файле: 978-5-330-69783-0|Воскресший ключ|Игорь Гаврилов Королева
+Время: Tue Oct 21 08:10:57 MSK 2025 Книга дубликат в добавочном файле: 978-1-206-58738-0|Невидимый храм лабиринт|Елизавета Муравьев Ларионов
+Время: Tue Oct 21 08:10:57 MSK 2025 Книга дубликат в добавочном файле: 978-8-577-96674-5|Лунный ключ|Макар Никифоров Зуев
+Время: Tue Oct 21 08:10:57 MSK 2025 Книга дубликат в добавочном файле: 978-9-125-50176-0|Мистический алтарь|Альберт Фомичева Филатова
+Время: Tue Oct 21 08:10:57 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 08:10:57 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
 null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-978-63807-0=3 true
+978-6-944-39655-3=10 true
+978-9-379-62635-6=0 true
 null=null false
 null=null false
 null=null false
 null=null false
-}
-Время: Sun Oct 19 12:50:35 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:50:35 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 12:50:35 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:50:35 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 12:51:25 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:51:25 MSK 2025 Hashtable {
 null=null false
 null=null false
-978-6-944-39655-3=0 true
 null=null false
-978-9-125-50176-0=6 true
+978-8-577-96674-5=15 true
 null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-9-671-76996-6=5 true
 null=null false
 null=null false
 null=null false
 null=null false
-}
-Время: Sun Oct 19 12:51:25 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:51:25 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 12:51:25 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:51:25 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 12:52:00 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:52:00 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
 null=null false
 null=null false
 null=null false
+null=null false
+null=null false
+978-9-129-30480-0=6 true
+978-9-125-50176-0=16 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
+978-3-704-30595-4=11 true
+978-1-206-58738-0=14 true
+978-6-527-51760-3=4 true
+null=null false
+978-5-330-69783-0=13 true
+null=null false
+978-7-184-23808-5=12 true
+null=null false
+978-4-173-14669-7=8 true
+null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 12:52:00 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:52:00 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 08:10:57 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 08:10:57 MSK 2025 
+                     978-9-671-76996-6 BLACK 2->3->7->2->3->7->2->3->7
+           978-9-379-62635-6 BLACK 8->8->8
+                                978-9-215-86561-1 BLACK 12->13->17->12->13->17->23->24->28
+                      978-9-129-30480-0 RED 6->6
+                                           978-9-125-50176-0 RED 16->16->27
+                                 978-8-577-96674-5 BLACK 20->20->31
+                                            978-7-184-23808-5 RED 14->15->18->14->15->18->25->26->29
+ 978-6-978-63807-0 BLACK 1->4->1->4->1->4
+                                978-6-944-39655-3 RED 10->10->21
+                      978-5-320-24568-3 BLACK 5->5->5
+            978-4-769-74064-3 BLACK 0->0->0
+                                 978-2-867-66868-5 RED 19->19->30
+                       978-1-820-27750-6 BLACK 6->9->9
+                                  978-1-206-58738-0 RED 11->11->22
 
-Время: Sun Oct 19 12:52:00 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:52:00 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 08:10:57 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 08:10:57 MSK 2025 
+                                         Fri Jun 03 00:00:00 MSK 2022 RED 6->6
+                               Mon Sep 06 00:00:00 MSK 2021 BLACK 20->20->31
+                                          Sat Jan 28 00:00:00 MSK 2017 RED 14->14->25
+                     Sun Jul 17 00:00:00 MSK 2016 RED 12->12->23
+                                          Wed Sep 16 00:00:00 MSK 2015 RED 16->16->27
+                                Tue Jan 15 00:00:00 MSK 2008 BLACK 19->19->30
+                                           Sat Sep 29 00:00:00 MSD 2007 RED 7->7->7
+           Fri Nov 12 00:00:00 MSK 2004 BLACK 8->8->8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2->2->2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1->1->1
+                                          Sun Mar 11 00:00:00 MSK 2001 RED 13->13->24
+                                Sun Oct 06 00:00:00 MSD 1996 BLACK 10->10->21
+                      Sat Apr 06 00:00:00 MSD 1996 BLACK 9->9->9
+                                 Wed Jul 29 00:00:00 MSD 1992 BLACK 4->4->4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0->0->0
+                                 Thu May 24 00:00:00 MSD 1990 BLACK 11->11->22
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3->3->3
+                                            Mon Nov 27 00:00:00 MSK 1978 BLACK 17->17->28
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5->5->5
+                                             Sun Jun 24 00:00:00 MSK 1973 BLACK 15->15->26
+                                                        Sat Feb 03 00:00:00 MSK 1973 RED 18->18->29
 
-Время: Sun Oct 19 12:52:17 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 12:52:17 MSK 2025 Hashtable {
+Время: Tue Oct 21 10:52:50 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 10:52:50 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
 null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-978-63807-0=3 true
+978-6-944-39655-3=10 true
+978-9-379-62635-6=0 true
 null=null false
 null=null false
 null=null false
+null=null false
+null=null false
+null=null false
+null=null false
+978-8-577-96674-5=15 true
+null=null false
+978-9-671-76996-6=5 true
+null=null false
+null=null false
+null=null false
+null=null false
+null=null false
+null=null false
+null=null false
+null=null false
+null=null false
+978-9-129-30480-0=6 true
+978-9-125-50176-0=16 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
+978-3-704-30595-4=11 true
+978-1-206-58738-0=14 true
+978-6-527-51760-3=4 true
+null=null false
+978-5-330-69783-0=13 true
+null=null false
+978-7-184-23808-5=12 true
+null=null false
+978-4-173-14669-7=8 true
+null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 12:52:17 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:52:17 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 10:52:50 MSK 2025 Tree init completed in 2 ms
+Время: Tue Oct 21 10:52:50 MSK 2025 
+                     978-9-671-76996-6 BLACK 2->3->7
+           978-9-379-62635-6 BLACK 8
+                                978-9-215-86561-1 BLACK 12->13->17->23->24->28
+                      978-9-129-30480-0 RED 6
+                                           978-9-125-50176-0 RED 16->27
+                                 978-8-577-96674-5 BLACK 20->31
+                                            978-7-184-23808-5 RED 14->15->18->25->26->29
+ 978-6-978-63807-0 BLACK 1->4
+                                978-6-944-39655-3 RED 10->21
+                      978-5-320-24568-3 BLACK 5
+            978-4-769-74064-3 BLACK 0
+                                 978-2-867-66868-5 RED 19->30
+                       978-1-820-27750-6 BLACK 9
+                                  978-1-206-58738-0 RED 11->22
 
-Время: Sun Oct 19 12:52:17 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 12:52:17 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 10:52:50 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 10:52:50 MSK 2025 
+                               Fri Jun 03 00:00:00 MSK 2022 BLACK 6
+                                          Mon Sep 06 00:00:00 MSK 2021 RED 20->31
+                     Sat Jan 28 00:00:00 MSK 2017 RED 14->25
+                                          Sun Jul 17 00:00:00 MSK 2016 RED 12->23
+                                Wed Sep 16 00:00:00 MSK 2015 BLACK 16->27
+                                           Tue Jan 15 00:00:00 MSK 2008 RED 19->30
+           Sat Sep 29 00:00:00 MSD 2007 BLACK 7
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1
+                                          Sun Mar 11 00:00:00 MSK 2001 RED 13->24
+                                Sun Oct 06 00:00:00 MSD 1996 BLACK 10->21
+                      Sat Apr 06 00:00:00 MSD 1996 BLACK 9
+                                 Wed Jul 29 00:00:00 MSD 1992 BLACK 4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0
+                                 Thu May 24 00:00:00 MSD 1990 BLACK 11->22
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3
+                                            Mon Nov 27 00:00:00 MSK 1978 BLACK 17->28
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5
+                                             Sun Jun 24 00:00:00 MSK 1973 BLACK 15->26
+                                                        Sat Feb 03 00:00:00 MSK 1973 RED 18->29
 
-Время: Sun Oct 19 13:02:47 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:02:47 MSK 2025 Hashtable {
+Время: Tue Oct 21 10:54:30 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 10:54:30 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
+null=null false
+978-6-978-63807-0=3 true
+null=null false
+978-9-379-62635-6=0 true
+978-9-129-30480-0=6 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
 null=null false
 null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-527-51760-3=4 true
 null=null false
 null=null false
 null=null false
+978-9-671-76996-6=5 true
+null=null false
+978-4-173-14669-7=8 true
+null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 13:02:47 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:02:47 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 10:54:30 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 10:54:30 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7
+           978-9-379-62635-6 BLACK 8
+                      978-9-129-30480-0 RED 6
+ 978-6-978-63807-0 BLACK 1->4
+                      978-5-320-24568-3 RED 5
+            978-4-769-74064-3 BLACK 0
+                       978-1-820-27750-6 RED 9
 
-Время: Sun Oct 19 13:02:47 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:02:47 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 10:54:30 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 10:54:30 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6
+           Sat Sep 29 00:00:00 MSD 2007 RED 7
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5
 
-Время: Sun Oct 19 13:03:59 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:03:59 MSK 2025 Hashtable {
+Время: Tue Oct 21 10:54:42 MSK 2025 Книга дубликат в добавочном файле: 978-9-379-62635-6|Ангельский лес кристалл|Анфиса Попова Гаврилов
+Время: Tue Oct 21 10:54:42 MSK 2025 Книга дубликат в добавочном файле: 978-5-320-24568-3|Пропавший знание зеркало|Алексей Цветкова Вишнякова
+Время: Tue Oct 21 10:54:42 MSK 2025 Книга дубликат в добавочном файле: 978-8-703-58943-5|Лунный артефакт артефакт|Александра Попова Богданов
+Время: Tue Oct 21 10:54:42 MSK 2025 Книга дубликат в добавочном файле: 978-6-978-63807-0|Непостижимый открытие открытие|Алевтина Лукина Филатова
+Время: Tue Oct 21 10:54:42 MSK 2025 Книга дубликат в добавочном файле: 978-6-527-51760-3|Рубиновый знание|Вячеслав Беляев Романова
+Время: Tue Oct 21 10:54:42 MSK 2025 Книга дубликат в добавочном файле: 978-9-671-76996-6|Исчезнувший сад вампир|Владимир Калашникова Белова
+Время: Tue Oct 21 10:54:42 MSK 2025 Книга дубликат в добавочном файле: 978-9-129-30480-0|Проклятый империя откровение|Семён Никифоров Гаврилова
+Время: Tue Oct 21 10:54:42 MSK 2025 Книга дубликат в добавочном файле: 978-4-769-74064-3|Пропавший клятва|Арсений Крылова Ситников
+Время: Tue Oct 21 10:54:42 MSK 2025 Книга дубликат в добавочном файле: 978-4-173-14669-7|Древний гора рай|Матвей Герасимова Антонов
+Время: Tue Oct 21 10:54:42 MSK 2025 Книга дубликат в добавочном файле: 978-1-820-27750-6|Изумрудный русалка|Григорий Куликов Субботина
+Время: Tue Oct 21 10:54:42 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 10:54:42 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
+null=null false
+978-6-978-63807-0=3 true
+null=null false
+978-9-379-62635-6=0 true
+978-9-129-30480-0=6 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
 null=null false
 null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-527-51760-3=4 true
 null=null false
 null=null false
 null=null false
+978-9-671-76996-6=5 true
+null=null false
+978-4-173-14669-7=8 true
+null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 13:03:59 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:03:59 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 10:54:42 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 10:54:42 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7->2->3->7->12->13->17
+           978-9-379-62635-6 BLACK 8->8->18
+                      978-9-129-30480-0 RED 6->6->16
+ 978-6-978-63807-0 BLACK 1->4->1->4->11->14
+                      978-5-320-24568-3 RED 5->5->15
+            978-4-769-74064-3 BLACK 0->0->10
+                       978-1-820-27750-6 RED 9->9->19
 
-Время: Sun Oct 19 13:03:59 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:03:59 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 10:54:42 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 10:54:42 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6->6->16
+           Sat Sep 29 00:00:00 MSD 2007 RED 7->7->17
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8->8->18
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2->2->12
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1->1->11
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9->9->19
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4->4->14
+            Wed Sep 04 00:00:00 MSD 1991 RED 0->0->10
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3->3->13
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5->5->15
 
-Время: Sun Oct 19 13:07:00 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:07:00 MSK 2025 Hashtable {
+Время: Tue Oct 21 10:57:05 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 10:57:05 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
+null=null false
+978-6-978-63807-0=3 true
+null=null false
+978-9-379-62635-6=0 true
+978-9-129-30480-0=6 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
 null=null false
 null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-527-51760-3=4 true
 null=null false
 null=null false
 null=null false
+978-9-671-76996-6=5 true
+null=null false
+978-4-173-14669-7=8 true
+null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 13:07:00 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:07:00 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 10:57:05 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 10:57:05 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7
+           978-9-379-62635-6 BLACK 8
+                      978-9-129-30480-0 RED 6
+ 978-6-978-63807-0 BLACK 1->4
+                      978-5-320-24568-3 RED 5
+            978-4-769-74064-3 BLACK 0
+                       978-1-820-27750-6 RED 9
 
-Время: Sun Oct 19 13:07:00 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:07:00 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 10:57:05 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 10:57:05 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6
+           Sat Sep 29 00:00:00 MSD 2007 RED 7
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5
 
-Время: Sun Oct 19 13:08:16 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:08:17 MSK 2025 Hashtable {
+Время: Tue Oct 21 10:57:10 MSK 2025 Книга дубликат в добавочном файле: 978-9-379-62635-6|Ангельский лес кристалл|Анфиса Попова Гаврилов
+Время: Tue Oct 21 10:57:10 MSK 2025 Книга дубликат в добавочном файле: 978-5-320-24568-3|Пропавший знание зеркало|Алексей Цветкова Вишнякова
+Время: Tue Oct 21 10:57:10 MSK 2025 Книга дубликат в добавочном файле: 978-8-703-58943-5|Лунный артефакт артефакт|Александра Попова Богданов
+Время: Tue Oct 21 10:57:10 MSK 2025 Книга дубликат в добавочном файле: 978-6-978-63807-0|Непостижимый открытие открытие|Алевтина Лукина Филатова
+Время: Tue Oct 21 10:57:10 MSK 2025 Книга дубликат в добавочном файле: 978-6-527-51760-3|Рубиновый знание|Вячеслав Беляев Романова
+Время: Tue Oct 21 10:57:10 MSK 2025 Книга дубликат в добавочном файле: 978-9-671-76996-6|Исчезнувший сад вампир|Владимир Калашникова Белова
+Время: Tue Oct 21 10:57:10 MSK 2025 Книга дубликат в добавочном файле: 978-9-129-30480-0|Проклятый империя откровение|Семён Никифоров Гаврилова
+Время: Tue Oct 21 10:57:10 MSK 2025 Книга дубликат в добавочном файле: 978-4-769-74064-3|Пропавший клятва|Арсений Крылова Ситников
+Время: Tue Oct 21 10:57:10 MSK 2025 Книга дубликат в добавочном файле: 978-4-173-14669-7|Древний гора рай|Матвей Герасимова Антонов
+Время: Tue Oct 21 10:57:10 MSK 2025 Книга дубликат в добавочном файле: 978-1-820-27750-6|Изумрудный русалка|Григорий Куликов Субботина
+Время: Tue Oct 21 10:57:10 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 10:57:10 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
+null=null false
+978-6-978-63807-0=3 true
+null=null false
+978-9-379-62635-6=0 true
+978-9-129-30480-0=6 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
 null=null false
 null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-527-51760-3=4 true
 null=null false
 null=null false
 null=null false
+978-9-671-76996-6=5 true
+null=null false
+978-4-173-14669-7=8 true
+null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 13:08:17 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:08:17 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 10:57:10 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 10:57:10 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7->2->3->7->12->13->17
+           978-9-379-62635-6 BLACK 8->8->18
+                      978-9-129-30480-0 RED 6->6->16
+ 978-6-978-63807-0 BLACK 1->4->1->4->11->14
+                      978-5-320-24568-3 RED 5->5->15
+            978-4-769-74064-3 BLACK 0->0->10
+                       978-1-820-27750-6 RED 9->9->19
 
-Время: Sun Oct 19 13:08:17 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:08:17 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 10:57:10 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 10:57:10 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6->6->16
+           Sat Sep 29 00:00:00 MSD 2007 RED 7->7->17
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8->8->18
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2->2->12
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1->1->11
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9->9->19
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4->4->14
+            Wed Sep 04 00:00:00 MSD 1991 RED 0->0->10
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3->3->13
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5->5->15
 
-Время: Sun Oct 19 13:08:52 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:08:52 MSK 2025 Hashtable {
+Время: Tue Oct 21 10:58:15 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 10:58:15 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
+null=null false
+978-6-978-63807-0=3 true
+null=null false
+978-9-379-62635-6=0 true
+978-9-129-30480-0=6 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
 null=null false
 null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-527-51760-3=4 true
 null=null false
 null=null false
 null=null false
+978-9-671-76996-6=5 true
+null=null false
+978-4-173-14669-7=8 true
+null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 13:08:52 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:08:52 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 10:58:15 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 10:58:15 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7
+           978-9-379-62635-6 BLACK 8
+                      978-9-129-30480-0 RED 6
+ 978-6-978-63807-0 BLACK 1->4
+                      978-5-320-24568-3 RED 5
+            978-4-769-74064-3 BLACK 0
+                       978-1-820-27750-6 RED 9
 
-Время: Sun Oct 19 13:08:52 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:08:52 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 10:58:15 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 10:58:15 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6
+           Sat Sep 29 00:00:00 MSD 2007 RED 7
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5
 
-Время: Sun Oct 19 13:10:58 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:10:58 MSK 2025 Hashtable {
+Время: Tue Oct 21 10:58:19 MSK 2025 Книга дубликат в добавочном файле: 978-9-379-62635-6|Ангельский лес кристалл|Анфиса Попова Гаврилов
+Время: Tue Oct 21 10:58:19 MSK 2025 Книга дубликат в добавочном файле: 978-5-320-24568-3|Пропавший знание зеркало|Алексей Цветкова Вишнякова
+Время: Tue Oct 21 10:58:19 MSK 2025 Книга дубликат в добавочном файле: 978-8-703-58943-5|Лунный артефакт артефакт|Александра Попова Богданов
+Время: Tue Oct 21 10:58:19 MSK 2025 Книга дубликат в добавочном файле: 978-6-978-63807-0|Непостижимый открытие открытие|Алевтина Лукина Филатова
+Время: Tue Oct 21 10:58:19 MSK 2025 Книга дубликат в добавочном файле: 978-6-527-51760-3|Рубиновый знание|Вячеслав Беляев Романова
+Время: Tue Oct 21 10:58:19 MSK 2025 Книга дубликат в добавочном файле: 978-9-671-76996-6|Исчезнувший сад вампир|Владимир Калашникова Белова
+Время: Tue Oct 21 10:58:19 MSK 2025 Книга дубликат в добавочном файле: 978-9-129-30480-0|Проклятый империя откровение|Семён Никифоров Гаврилова
+Время: Tue Oct 21 10:58:19 MSK 2025 Книга дубликат в добавочном файле: 978-4-769-74064-3|Пропавший клятва|Арсений Крылова Ситников
+Время: Tue Oct 21 10:58:19 MSK 2025 Книга дубликат в добавочном файле: 978-4-173-14669-7|Древний гора рай|Матвей Герасимова Антонов
+Время: Tue Oct 21 10:58:19 MSK 2025 Книга дубликат в добавочном файле: 978-1-820-27750-6|Изумрудный русалка|Григорий Куликов Субботина
+Время: Tue Oct 21 10:58:19 MSK 2025 Экземпляр дубликат в добавочном файле: 978-4-769-74064-3|5|временное отсутствие|4 Sep 1991
+Время: Tue Oct 21 10:58:19 MSK 2025 Экземпляр дубликат в добавочном файле: 978-6-978-63807-0|6|в транспорте|3 Jul 2001
+Время: Tue Oct 21 10:58:19 MSK 2025 Экземпляр дубликат в добавочном файле: 978-9-671-76996-6|2|на реставрации|13 Feb 2004
+Время: Tue Oct 21 10:58:19 MSK 2025 Экземпляр дубликат в добавочном файле: 978-9-671-76996-6|10|в читальном зале|2 Apr 1979
+Время: Tue Oct 21 10:58:19 MSK 2025 Экземпляр дубликат в добавочном файле: 978-6-978-63807-0|4|в хранилище|29 Jul 1992
+Время: Tue Oct 21 10:58:19 MSK 2025 Экземпляр дубликат в добавочном файле: 978-5-320-24568-3|3|в хранилище|14 Jul 1974
+Время: Tue Oct 21 10:58:19 MSK 2025 Экземпляр дубликат в добавочном файле: 978-9-129-30480-0|6|на переплете|3 Jun 2022
+Время: Tue Oct 21 10:58:19 MSK 2025 Экземпляр дубликат в добавочном файле: 978-9-671-76996-6|7|в наличии|29 Sep 2007
+Время: Tue Oct 21 10:58:19 MSK 2025 Экземпляр дубликат в добавочном файле: 978-9-379-62635-6|6|на списании|12 Nov 2004
+Время: Tue Oct 21 10:58:19 MSK 2025 Экземпляр дубликат в добавочном файле: 978-1-820-27750-6|7|заказана|6 Apr 1996
+Время: Tue Oct 21 10:58:19 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 10:58:19 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
+null=null false
+978-6-978-63807-0=3 true
+null=null false
+978-9-379-62635-6=0 true
+978-9-129-30480-0=6 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
 null=null false
 null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-527-51760-3=4 true
 null=null false
 null=null false
 null=null false
+978-9-671-76996-6=5 true
+null=null false
+978-4-173-14669-7=8 true
+null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 13:10:58 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:10:58 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 10:58:19 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 10:58:19 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7->2->3->7
+           978-9-379-62635-6 BLACK 8->8
+                      978-9-129-30480-0 RED 6->6
+ 978-6-978-63807-0 BLACK 1->4->1->4
+                      978-5-320-24568-3 RED 5->5
+            978-4-769-74064-3 BLACK 0->0
+                       978-1-820-27750-6 RED 9->9
 
-Время: Sun Oct 19 13:10:58 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:10:58 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 10:58:19 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 10:58:19 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6->6
+           Sat Sep 29 00:00:00 MSD 2007 RED 7->7
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8->8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2->2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1->1
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9->9
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4->4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0->0
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3->3
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5->5
 
-Время: Sun Oct 19 13:11:32 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:11:32 MSK 2025 Hashtable {
+Время: Tue Oct 21 10:59:53 MSK 2025 Файл книг обновлен
+Время: Tue Oct 21 10:59:57 MSK 2025 Файл книг обновлен
+Время: Tue Oct 21 11:00:01 MSK 2025 Ошибка ввода книги: ISBN неверный формат
+Время: Tue Oct 21 11:00:01 MSK 2025 Ошибка ввода книги: Нет названия
+Время: Tue Oct 21 11:00:01 MSK 2025 Ошибка ввода книги: Нет автора
+Время: Tue Oct 21 11:00:18 MSK 2025 Ошибка ввода экземпляра книги: ISBN неверный формат
+Время: Tue Oct 21 11:00:18 MSK 2025 Ошибка ввода экземпляра книги: Нет книги с таким ISBN
+Время: Tue Oct 21 11:00:18 MSK 2025 Ошибка ввода экземпляра книги: Не валидный инвентарный номер
+Время: Tue Oct 21 11:00:18 MSK 2025 Ошибка ввода экземпляра книги: Нет статуса
+Время: Tue Oct 21 11:01:41 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 11:01:41 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
+null=null false
+978-6-978-63807-0=3 true
+null=null false
+978-9-379-62635-6=0 true
+978-9-129-30480-0=6 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
 null=null false
 null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-527-51760-3=4 true
 null=null false
 null=null false
 null=null false
+978-9-671-76996-6=5 true
+null=null false
+978-4-173-14669-7=8 true
+null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 13:11:32 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:11:32 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 11:01:41 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 11:01:41 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7
+           978-9-379-62635-6 BLACK 8
+                      978-9-129-30480-0 RED 6
+ 978-6-978-63807-0 BLACK 1->4
+                      978-5-320-24568-3 RED 5
+            978-4-769-74064-3 BLACK 0
+                       978-1-820-27750-6 RED 9
 
-Время: Sun Oct 19 13:11:32 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:11:32 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 11:01:41 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 11:01:41 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6
+           Sat Sep 29 00:00:00 MSD 2007 RED 7
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5
 
-Время: Sun Oct 19 13:12:35 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:12:35 MSK 2025 Hashtable {
+Время: Tue Oct 21 11:03:02 MSK 2025 Xt init completed in 0 ms
+Время: Tue Oct 21 11:03:02 MSK 2025 Hashtable {
+978-8-703-58943-5=2 true
+null=null false
+978-6-978-63807-0=3 true
+null=null false
+978-9-379-62635-6=0 true
+978-9-129-30480-0=6 true
+978-5-320-24568-3=1 true
+978-1-820-27750-6=9 true
 null=null false
 null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
+978-6-527-51760-3=4 true
 null=null false
 null=null false
 null=null false
+978-9-671-76996-6=5 true
+null=null false
+978-4-173-14669-7=8 true
+null=null false
+978-4-769-74064-3=7 true
 null=null false
 }
-Время: Sun Oct 19 13:12:35 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:12:35 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
+Время: Tue Oct 21 11:03:02 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 11:03:02 MSK 2025 
+                     978-9-671-76996-6 RED 2->3->7
+           978-9-379-62635-6 BLACK 8
+                      978-9-129-30480-0 RED 6
+ 978-6-978-63807-0 BLACK 1->4
+                      978-5-320-24568-3 RED 5
+            978-4-769-74064-3 BLACK 0
+                       978-1-820-27750-6 RED 9
 
-Время: Sun Oct 19 13:12:35 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:12:35 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:14:16 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:14:16 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:14:16 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:14:16 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:14:16 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:14:16 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:14:24 MSK 2025 Найдена книга: null
-Время: Sun Oct 19 13:14:24 MSK 2025 Найдена книга: null
-Время: Sun Oct 19 13:14:24 MSK 2025 Найдена книга: null
-Время: Sun Oct 19 13:18:58 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:18:58 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:18:58 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:18:58 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:18:58 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:18:58 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:26:13 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:26:13 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:26:13 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:26:13 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:26:13 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:26:13 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:26:20 MSK 2025 Файл экземпляров сохранен
-Время: Sun Oct 19 13:27:25 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:27:25 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:27:25 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:27:25 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:27:25 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:27:25 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:27:47 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:27:47 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:27:47 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:27:47 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:27:47 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:27:47 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:29:43 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:29:43 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:29:43 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:29:43 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:29:43 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:29:43 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:31:31 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:31:31 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:31:31 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:31:31 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:31:31 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:31:31 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:31:56 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:31:56 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:31:56 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:31:56 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:31:56 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:31:56 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:33:28 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:33:28 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:33:28 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:33:28 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:33:28 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:33:28 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:34:54 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:34:54 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:34:54 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:34:54 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:34:54 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:34:54 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:35:14 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:35:14 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:35:14 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:35:14 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:35:14 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:35:14 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:36:38 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:36:38 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:36:38 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:36:38 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:36:38 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:36:38 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:40:27 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:40:27 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:40:27 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:40:27 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:40:27 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:40:27 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:41:01 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:41:01 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:41:01 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:41:01 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:41:01 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:41:01 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:47:54 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:47:54 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:47:54 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:47:54 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:47:54 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:47:54 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:52:45 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:52:45 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:52:45 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:52:45 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:52:45 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:52:45 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 13:54:04 MSK 2025 Файл экземпляров сохранен
-Время: Sun Oct 19 13:55:14 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 13:55:14 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 13:55:14 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:55:14 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 13:55:14 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 13:55:14 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 14:00:23 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 14:00:23 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 14:00:23 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 14:00:23 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 14:00:23 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 14:00:23 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 14:01:09 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 14:01:09 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 14:01:09 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 14:01:09 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 14:01:09 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 14:01:09 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 14:05:58 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 14:05:58 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 14:05:58 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 14:05:58 MSK 2025                      978-9-215-86561-1 RED 2->3->7
-           978-9-125-50176-0 BLACK 6
-                      978-7-184-23808-5 RED 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 14:05:58 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 14:05:58 MSK 2025                      Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
-
-Время: Sun Oct 19 14:19:30 MSK 2025 Файл экземпляров сохранен
-Время: Sun Oct 19 14:19:51 MSK 2025 Экземпляр добавлен:Instance(isbn='978-8-577-96674-5', inventoryNumber=6, status=в наличии, date='06 Sep 2021')
-Время: Sun Oct 19 14:28:04 MSK 2025 Файл экземпляров сохранен
-Время: Sun Oct 19 14:28:48 MSK 2025 Xt init completed in 0 ms
-Время: Sun Oct 19 14:28:48 MSK 2025 Hashtable {
-null=null false
-null=null false
-978-6-944-39655-3=0 true
-null=null false
-978-9-125-50176-0=6 true
-null=null false
-978-4-847-72557-9=9 true
-null=null false
-978-3-704-30595-4=1 true
-978-1-206-58738-0=8 true
-978-2-867-66868-5=4 true
-null=null false
-978-5-330-69783-0=3 true
-978-8-577-96674-5=5 true
-978-7-184-23808-5=2 true
-978-9-215-86561-1=7 true
-null=null false
-null=null false
-null=null false
-null=null false
-}
-Время: Sun Oct 19 14:28:48 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 14:28:48 MSK 2025                      978-9-215-86561-1 BLACK 2->3->7
-           978-9-125-50176-0 RED 6
-                                978-8-577-96674-5 RED 10
-                      978-7-184-23808-5 BLACK 4->5->8
- 978-6-944-39655-3 BLACK 0
-                      978-2-867-66868-5 RED 9
-            978-1-206-58738-0 BLACK 1
-
-Время: Sun Oct 19 14:28:48 MSK 2025 Tree init completed in 0 ms
-Время: Sun Oct 19 14:28:48 MSK 2025                                Mon Sep 06 00:00:00 MSK 2021 RED 10
-                     Sat Jan 28 00:00:00 MSK 2017 BLACK 4
-           Sun Jul 17 00:00:00 MSK 2016 RED 2
-                                Wed Sep 16 00:00:00 MSK 2015 RED 6
-                      Tue Jan 15 00:00:00 MSK 2008 BLACK 9
-                                 Sun Mar 11 00:00:00 MSK 2001 RED 3
- Sun Oct 06 00:00:00 MSD 1996 BLACK 0
-                      Thu May 24 00:00:00 MSD 1990 BLACK 1
-            Mon Nov 27 00:00:00 MSK 1978 RED 7
-                       Sun Jun 24 00:00:00 MSK 1973 BLACK 5
-                                  Sat Feb 03 00:00:00 MSK 1973 RED 8
+Время: Tue Oct 21 11:03:02 MSK 2025 Tree init completed in 0 ms
+Время: Tue Oct 21 11:03:02 MSK 2025 
+                     Fri Jun 03 00:00:00 MSK 2022 BLACK 6
+           Sat Sep 29 00:00:00 MSD 2007 RED 7
+                                Fri Nov 12 00:00:00 MSK 2004 RED 8
+                      Fri Feb 13 00:00:00 MSK 2004 BLACK 2
+ Tue Jul 03 00:00:00 MSD 2001 BLACK 1
+                                Sat Apr 06 00:00:00 MSD 1996 RED 9
+                      Wed Jul 29 00:00:00 MSD 1992 BLACK 4
+            Wed Sep 04 00:00:00 MSD 1991 RED 0
+                       Mon Apr 02 00:00:00 MSK 1979 BLACK 3
+                                  Sun Jul 14 00:00:00 MSK 1974 RED 5
 

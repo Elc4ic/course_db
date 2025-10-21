@@ -15,77 +15,92 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import data.Errors
 import entities.Instance
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import presentation.components.*
 import presentation.viewmodel.AppViewModel
 import presentation.viewmodel.WindowViewModel
 
 @Composable
 fun TreeTextScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
-    val showAddDialog = remember { mutableStateOf(false) }
-    val showDeleteDialog = remember { mutableStateOf(false) }
-    val showSearchDialog = remember { mutableStateOf(false) }
+    var showAddDialog by remember { mutableStateOf(false) }
+    var showDeleteDialog by remember { mutableStateOf(false) }
+    var showSearchDialog by remember { mutableStateOf(false) }
     val listInstance = remember { mutableStateOf<List<Instance>>(emptyList()) }
-    var toastMessage by remember { mutableStateOf("") }
-    var showToast by remember { mutableStateOf(false) }
 
     val state = rememberLazyListState()
 
-    Scaffold(
-        topBar = {
-            ToolStrip(
-                windowSelector = { wvm.selector(key) },
-                onAdd = { showAddDialog.value = true },
-                onDelete = { showDeleteDialog.value = true },
-                onSearch = {
-                    listInstance.value = vm.searchInstance()
-                },
-                onSave = { vm.saveInstances() },
-                searchBar = {
-                    TextField(
-                        value = vm.instanceField.value,
-                        onValueChange = { vm.instanceField.value = it },
-                        label = { Text("Введите ISBN") }
+    val toast = rememberToastState()
+    val scope = rememberCoroutineScope()
+
+    ToastContainer { scope, toast, toaster ->
+        Scaffold(
+            topBar = {
+                ToolStrip(
+                    windowSelector = { wvm.selector(key) },
+                    onAdd = { showAddDialog = true },
+                    onAddFile = { wvm.openFilePicker() },
+                    onDelete = { showDeleteDialog = true },
+                    onSearch = {
+                        vm.searchInstance(scope, toast)?.let {
+                            if (it.isEmpty()) toaster(Errors.NO_SUCH_INSTANCES, true)
+                            else {
+                                listInstance.value = it
+                                showSearchDialog = true
+                            }
+                        }
+
+                    },
+                    onSave = { vm.saveInstances(scope, toast)?.let { if (it) toaster("Файл обновлен", false) } },
+                    searchBar = {
+                        TextField(
+                            value = vm.instanceField.value,
+                            onValueChange = { vm.instanceField.value = it },
+                            label = { Text("Введите ISBN") }
+                        )
+                    }
+                )
+            },
+        ) { padding ->
+            LazyColumn(
+                state = state,
+                modifier = Modifier
+                    .padding(padding)
+                    .fillMaxSize()
+            ) {
+                items(vm.treeList) { line ->
+                    Text(
+                        text = line,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(8.dp)
                     )
                 }
-            )
-        },
-    ) { padding ->
-        LazyColumn(
-            state = state,
-            modifier = Modifier
-                .padding(padding)
-                .fillMaxSize()
-        ) {
-            items(vm.treeList) { line ->
-                Text(
-                    text = line,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(8.dp)
-                )
             }
         }
-    }
-    if (showAddDialog.value) {
-        AddInstanceDialog(
-            { showAddDialog.value = false },
-            { showToast = true; toastMessage = "Экземпляр добавлен" },
-            vm
-        )
-    }
-    if (showDeleteDialog.value) {
-        DeleteInstanceDialog({ showDeleteDialog.value = false }, vm)
-    }
-    if (showSearchDialog.value) {
-        SearchInstanceDialog({ showSearchDialog.value = false }, listInstance.value)
-    }
-    if (showToast) {
-        ToastDialog(toastMessage) { showToast = false }
-        LaunchedEffect(Unit) { delay(1000); showToast = false }
+        if (showAddDialog) {
+            AddInstanceDialog(
+                { showAddDialog = false },
+                { toaster("Экземпляр добавлен", false) }, vm, scope, toast
+            )
+        }
+        if (showDeleteDialog) {
+            DeleteInstanceDialog(
+                { showDeleteDialog = false },
+                { toaster("Экземпляр удален", false) }, vm, scope, toast
+            )
+        }
+        if (showSearchDialog) {
+            SearchInstanceDialog(
+                { showSearchDialog = false },
+                { toaster("Экземпляры найдены", false) }, listInstance.value
+            )
+        }
     }
 }

@@ -1,6 +1,8 @@
 package presentation.viewmodel
 
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.icons.Icons
@@ -9,6 +11,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import data.logsPath
 import presentation.components.DropdownSelector
 import presentation.screens.HashTableScreen
@@ -21,6 +25,8 @@ import presentation.screens.TreeTextScreen
 
 class WindowViewModel(val avm: AppViewModel) {
 
+    val fileKey = "Выберете файл"
+    val filePicker: Pair<String, @Composable (String) -> Unit> = fileKey to { OpenFile(it, this,false) }
     val map: Array<Pair<String, @Composable (String) -> Unit>> = arrayOf(
         "Книги" to { HashTableScreen(it, avm, this) },
         "Экземпляры1" to { TreeTextScreen(it, avm, this) },
@@ -31,9 +37,11 @@ class WindowViewModel(val avm: AppViewModel) {
     val windows = mutableStateMapOf<String, @Composable (String) -> Unit>("Выберете файл" to { OpenFile(it, this) })
 
     val selector: @Composable (String) -> Unit = { title ->
-        Row(verticalAlignment = Alignment.CenterVertically) {
+        Row(
+            verticalAlignment = Alignment.CenterVertically
+        ) {
             DropdownSelector(
-                "Окно",
+                label = "Окно",
                 items = getKeys(),
                 selected = title,
                 onSelect = { str ->
@@ -50,12 +58,19 @@ class WindowViewModel(val avm: AppViewModel) {
     }
 
     fun openWindow(key: String) {
-        println(map.count { it.first == key })
         windows += map.first { it.first == key }
+    }
+
+    fun openFilePicker() {
+        windows += filePicker
     }
 
     fun closeWindow(key: String) {
         windows.remove(key)
+    }
+
+    fun addToFiles() {
+
     }
 
     fun appUpdate() {
