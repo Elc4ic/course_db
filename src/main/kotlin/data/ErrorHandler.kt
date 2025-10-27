@@ -12,6 +12,10 @@ fun <T> withToastHandling(
     }
 }
 
+fun Boolean?.letIfTrue(show: () -> Unit) {
+    this?.let { if (it) show() }
+}
+
 object Errors {
     //ADD
     const val ADD_BOOK = "Ошибка добавления книги"

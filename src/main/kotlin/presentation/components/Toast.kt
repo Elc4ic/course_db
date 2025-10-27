@@ -81,8 +81,8 @@ var toastTemplate: (CoroutineScope, ToastState) -> (String, Boolean) -> Unit = {
 fun ToastContainer(
     scope: CoroutineScope = rememberCoroutineScope(),
     toast: ToastState = rememberToastState(),
-    content: @Composable (CoroutineScope, ToastState, (String, Boolean) -> Unit) -> Unit
+    content: @Composable (CoroutineScope, (String, Boolean) -> Unit) -> Unit
 ) {
-    content(scope, toast, toastTemplate(scope, toast))
+    content(scope,toastTemplate(scope, toast))
     ToastHost(toast)
 }

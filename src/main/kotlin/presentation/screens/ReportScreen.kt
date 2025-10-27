@@ -20,6 +20,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import data.letIfTrue
 import data.reportPath
 import kotlinx.coroutines.launch
 import presentation.components.DateRangePicker
@@ -36,25 +37,24 @@ fun ReportScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
     val nothing = "Ничего не найдено"
     var info by remember { mutableStateOf(nothing) }
 
-
-    ToastContainer { scope,toast, toaster ->
+    ToastContainer { scope, toaster ->
         Scaffold(
             topBar = {
                 ToolReportStrip(
                     windowSelector = { wvm.selector(key) },
                     onSearch = {
-                        vm.filter(scope, toast)
+                        vm.filter(toaster).letIfTrue {
+                            toaster("Поиск прошел успешно", false)
+                        }
                         info =
                             "Фильтры: ${vm.filterAuthorField.value}, " +
                                     "${vm.filterInvNumField.value}, " +
                                     "${vm.filterFromField.value} -- " +
                                     "${vm.filterToField.value}.\n " +
                                     "Поиск: $nothing"
-                        toaster("Поиск прошел успешно", false)
                     },
                     onSave = {
-                        vm.saveReport(scope, toast)
-                        toaster("Отчет сохранен по пути: $reportPath", false)
+                        vm.saveReport(toaster).letIfTrue { toaster("Отчет сохранен по пути: $reportPath", false) }
                     },
                     searchBar = {
                         Column(

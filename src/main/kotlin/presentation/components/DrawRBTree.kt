@@ -69,10 +69,6 @@ fun DrawScope.drawVisibleNodes(
 ) {
 
     node.left?.let { left ->
-        val lineRect = Rect(
-            Offset(min(node.x, left.x), min(node.y, left.y)),
-            Offset(max(node.x, left.x), max(node.y, left.y))
-        )
             drawLine(
                 color = Color.Black,
                 start = Offset(node.x, node.y),
@@ -83,10 +79,6 @@ fun DrawScope.drawVisibleNodes(
     }
 
     node.right?.let { right ->
-        val lineRect = Rect(
-            Offset(min(node.x, right.x), min(node.y, right.y)),
-            Offset(max(node.x, right.x), max(node.y, right.y))
-        )
             drawLine(
                 color = Color.Black,
                 start = Offset(node.x, node.y),

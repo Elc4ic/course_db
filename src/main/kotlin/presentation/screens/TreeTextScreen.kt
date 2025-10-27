@@ -11,17 +11,14 @@ import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import data.Errors
+import data.letIfTrue
 import entities.Instance
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import presentation.components.*
 import presentation.viewmodel.AppViewModel
@@ -33,13 +30,12 @@ fun TreeTextScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
     var showDeleteDialog by remember { mutableStateOf(false) }
     var showSearchDialog by remember { mutableStateOf(false) }
     val listInstance = remember { mutableStateOf<List<Instance>>(emptyList()) }
+    var version by vm.treeVersion
+    val treeList by remember(version) { mutableStateOf(vm.tree.toString().split("\n")) }
+
 
     val state = rememberLazyListState()
-
-    val toast = rememberToastState()
-    val scope = rememberCoroutineScope()
-
-    ToastContainer { scope, toast, toaster ->
+    ToastContainer { scope, toaster ->
         Scaffold(
             topBar = {
                 ToolStrip(
@@ -48,16 +44,12 @@ fun TreeTextScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
                     onAddFile = { wvm.openFilePicker() },
                     onDelete = { showDeleteDialog = true },
                     onSearch = {
-                        vm.searchInstance(scope, toast)?.let {
-                            if (it.isEmpty()) toaster(Errors.NO_SUCH_INSTANCES, true)
-                            else {
-                                listInstance.value = it
-                                showSearchDialog = true
-                            }
+                        vm.searchInstance(toaster)?.let {
+                            listInstance.value = it
+                            showSearchDialog = true
                         }
-
                     },
-                    onSave = { vm.saveInstances(scope, toast)?.let { if (it) toaster("Файл обновлен", false) } },
+                    onSave = { vm.saveInstances(toaster)?.let { if (it) toaster("Файл обновлен", false) } },
                     searchBar = {
                         TextField(
                             value = vm.instanceField.value,
@@ -74,7 +66,7 @@ fun TreeTextScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
                     .padding(padding)
                     .fillMaxSize()
             ) {
-                items(vm.treeList) { line ->
+                items(treeList) { line ->
                     Text(
                         text = line,
                         modifier = Modifier
@@ -87,13 +79,13 @@ fun TreeTextScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
         if (showAddDialog) {
             AddInstanceDialog(
                 { showAddDialog = false },
-                { toaster("Экземпляр добавлен", false) }, vm, scope, toast
+                { toaster("Экземпляр добавлен", false) }, vm, toaster
             )
         }
         if (showDeleteDialog) {
             DeleteInstanceDialog(
                 { showDeleteDialog = false },
-                { toaster("Экземпляр удален", false) }, vm, scope, toast
+                { toaster("Экземпляр удален", false) }, vm, toaster
             )
         }
         if (showSearchDialog) {
@@ -102,7 +94,7 @@ fun TreeTextScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
                 { toaster("Экземпляры найдены", false) },
                 listInstance.value,
                 { instance ->
-                    vm.deleteInstance(instance.isbn, instance.inventoryNumber, scope, toast)?.let {
+                    vm.deleteInstance(instance.isbn, instance.inventoryNumber, toaster).letIfTrue {
                         scope.launch { toaster("Экземпляр удален", false) }
                     }
                 }

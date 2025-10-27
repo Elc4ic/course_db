@@ -15,6 +15,7 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
+import data.letIfTrue
 import data.status
 import entities.Book
 import entities.forms.BookForm
@@ -27,8 +28,7 @@ fun AddBookDialog(
     onDismiss: () -> Unit,
     showToast: () -> Unit,
     vm: AppViewModel,
-    scope: CoroutineScope,
-    toast: ToastState
+    t: (String, Boolean) -> Unit
 ) {
     var form by remember { mutableStateOf(BookForm()) }
     var showErrors by remember { mutableStateOf(false) }
@@ -72,8 +72,7 @@ fun AddBookDialog(
                     form.validate()
                     if (form.isValid) {
                         val book = Book(form.isbn, form.title, form.author)
-                        vm.addBook(book, scope, toast)
-                        showToast()
+                        vm.addBook(book, t).letIfTrue { showToast() }
                         onDismiss()
                     }
                     form = form.copy()
@@ -91,8 +90,7 @@ fun AddInstanceDialog(
     onDismiss: () -> Unit,
     showToast: () -> Unit,
     vm: AppViewModel,
-    scope: CoroutineScope,
-    toast: ToastState
+    t: (String, Boolean) -> Unit
 ) {
     var form by remember { mutableStateOf(InstanceForm()) }
     var showErrors by remember { mutableStateOf(false) }
@@ -143,9 +141,7 @@ fun AddInstanceDialog(
                     showErrors = false
                     form.validate(vm)
                     if (form.isValid) {
-                        vm.addInstance(form.getInstance(), scope, toast)
-                        showToast()
-                        onDismiss()
+                        vm.addInstance(form.getInstance(), t).letIfTrue { showToast() }
                     }
                     form = form.copy()
                     showErrors = true

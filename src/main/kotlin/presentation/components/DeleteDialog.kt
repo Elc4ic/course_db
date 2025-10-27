@@ -18,6 +18,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
+import data.letIfTrue
 import kotlinx.coroutines.CoroutineScope
 import presentation.viewmodel.AppViewModel
 
@@ -25,7 +26,8 @@ import presentation.viewmodel.AppViewModel
 fun DeleteBookDialog(
     onDismiss: () -> Unit,
     showToast: () -> Unit,
-    vm: AppViewModel, scope: CoroutineScope, toast: ToastState
+    vm: AppViewModel,
+    t: (String, Boolean) -> Unit
 ) {
     var isbn by remember { mutableStateOf("") }
     var title by remember { mutableStateOf("") }
@@ -57,7 +59,7 @@ fun DeleteBookDialog(
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Button(onClick = {
-                    vm.deleteBook(isbn, title, author, scope, toast)?.let { if (it) showToast() }
+                    vm.deleteBook(isbn, title, author, t).letIfTrue { showToast() }
                     onDismiss()
                 }) {
                     Text("Удалить")
@@ -71,7 +73,8 @@ fun DeleteBookDialog(
 fun DeleteInstanceDialog(
     onDismiss: () -> Unit,
     showToast: () -> Unit,
-    vm: AppViewModel, scope: CoroutineScope, toast: ToastState
+    vm: AppViewModel,
+    t: (String, Boolean) -> Unit
 ) {
     var isbn by remember { mutableStateOf("") }
     var invNum by remember { mutableStateOf("") }
@@ -97,7 +100,7 @@ fun DeleteInstanceDialog(
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Button(onClick = {
-                    vm.deleteInstance(isbn, invNum, scope, toast)?.let { if (it) showToast() }
+                    vm.deleteInstance(isbn, invNum, t).letIfTrue { showToast() }
                     onDismiss()
                 }) {
                     Text("Удалить")

@@ -13,6 +13,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -21,6 +22,7 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.unit.dp
+import data.letIfTrue
 import entities.Instance
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -39,11 +41,13 @@ fun TreeDrawScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
 
     var scale by remember { mutableStateOf(1f) }
     var offset by remember { mutableStateOf(Offset.Zero) }
-    val root by remember { mutableStateOf(vm.tree.nodes) }
-    val layout = remember(root) { layoutTree(root).first }
+    var showLeaf by remember { mutableStateOf(false) }
+    var version by vm.treeVersion
+    var root by remember(version) { mutableStateOf(vm.tree.nodes) }
+    val layout = remember(version) { layoutTree(root, showLeaf = showLeaf).first }
     val textMeasurer = rememberTextMeasurer()
 
-    ToastContainer { scope, toast, toaster ->
+    ToastContainer { scope, toaster ->
         Scaffold(topBar = {
             ToolStrip(
                 windowSelector = { wvm.selector(key) },
@@ -51,19 +55,29 @@ fun TreeDrawScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
                 onAddFile = { wvm.openFilePicker() },
                 onDelete = { showDeleteDialog = true },
                 onSearch = {
-                    vm.searchInstance(scope, toast)?.let { listInstance.value = it }
+                    vm.searchInstance(toaster)?.let {
+                        listInstance.value = it
+                        if (!listInstance.value.isEmpty()) {
+                            showSearchDialog = true
+                        }
+                    }
                 },
-                onSave = { vm.saveInstances(scope, toast) },
+                onSave = { vm.saveInstances(toaster).letIfTrue { toaster("Файл обновлен", false) } },
                 searchBar = {
                     TextField(
                         value = vm.instanceField.value,
                         onValueChange = { vm.instanceField.value = it },
-                        label = { Text("Введите ISBN") })
-                })
+                        label = { Text("Введите ISBN") }
+                    )
+                }
+            )
         }, floatingActionButton = {
             Column(
                 verticalArrangement = Arrangement.spacedBy(2.dp), horizontalAlignment = Alignment.CenterHorizontally
             ) {
+                FloatingActionButton(onClick = { showLeaf = !showLeaf; version++ }) {
+                    Icon(Icons.Default.MoreVert, contentDescription = "show leaf")
+                }
                 FloatingActionButton(onClick = { scale = min(scale * 1.2f, 3f) }) {
                     Icon(Icons.Default.Add, contentDescription = "zoom+")
                 }
@@ -85,14 +99,13 @@ fun TreeDrawScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
                     offset += pan
                 }
             }
-
             Box(modifier = transformModifier) {
                 Canvas(modifier = Modifier.fillMaxSize().graphicsLayer {
                     scaleX = scale
                     scaleY = scale
                     translationX = offset.x
                     translationY = offset.y
-                }.pointerInput(Unit) {
+                }.pointerInput(version) {
                     detectTapGestures { offset ->
                         vm.getInstances(layout?.clicked(offset))?.let {
                             listInstance.value = it
@@ -108,12 +121,12 @@ fun TreeDrawScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
         }
         if (showAddDialog) {
             AddInstanceDialog(
-                { showAddDialog = false }, { toaster("Экземпляр добавлен", false) }, vm, scope, toast
+                { showAddDialog = false }, { toaster("Экземпляр добавлен", false); }, vm, toaster
             )
         }
         if (showDeleteDialog) {
             DeleteInstanceDialog(
-                { showDeleteDialog = false }, { toaster("Экземпляр удален", false) }, vm, scope, toast
+                { showDeleteDialog = false }, { toaster("Экземпляр удален", false); }, vm, toaster
             )
         }
         if (showSearchDialog) {
@@ -122,7 +135,7 @@ fun TreeDrawScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
                 { toaster("Экземпляры найдены", false) },
                 listInstance.value,
                 { instance ->
-                    vm.deleteInstance(instance.isbn, instance.inventoryNumber, scope, toast)?.let {
+                    vm.deleteInstance(instance.isbn, instance.inventoryNumber, toaster).letIfTrue {
                         scope.launch { toaster("Экземпляр удален", false) }
                     }
                 }

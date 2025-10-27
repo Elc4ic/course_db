@@ -11,6 +11,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import data.letIfTrue
 import entities.Instance
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -30,9 +31,10 @@ fun TreeScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
     var showDeleteDialog by remember { mutableStateOf(false) }
     var showSearchDialog by remember { mutableStateOf(false) }
     val listInstance = remember { mutableStateOf<List<Instance>>(emptyList()) }
-    val root by remember { mutableStateOf(vm.tree.nodes) }
+    var version by vm.treeVersion
+    val root by remember(version) { mutableStateOf(vm.tree.nodes) }
 
-    ToastContainer { scope, toast, toaster ->
+    ToastContainer { scope, toaster ->
         Scaffold(
             topBar = {
                 ToolStrip(
@@ -41,9 +43,12 @@ fun TreeScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
                     onAddFile = { wvm.openFilePicker() },
                     onDelete = { showDeleteDialog = true },
                     onSearch = {
-                        vm.searchInstance(scope, toast)?.let { listInstance.value = it }
+                        vm.searchInstance(toaster)?.let {
+                            listInstance.value = it
+                            showSearchDialog = true
+                        }
                     },
-                    onSave = { vm.saveInstances(scope, toast) },
+                    onSave = { vm.saveInstances(toaster).letIfTrue { toaster("Файл обновлен", false) } },
                     searchBar = {
                         TextField(
                             value = vm.instanceField.value,
@@ -54,7 +59,6 @@ fun TreeScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
                 )
             },
         ) {
-
             Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
                 TreeRow(node = root, onSearch = {
                     vm.getInstances(it)?.let { list -> listInstance.value = list }
@@ -68,13 +72,13 @@ fun TreeScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
         if (showAddDialog) {
             AddInstanceDialog(
                 { showAddDialog = false },
-                { toaster("Экземпляр добавлен", false) }, vm, scope, toast
+                { toaster("Экземпляр добавлен", false) }, vm, toaster
             )
         }
         if (showDeleteDialog) {
             DeleteInstanceDialog(
                 { showDeleteDialog = false },
-                { toaster("Экземпляр удален", false) }, vm, scope, toast
+                { toaster("Экземпляр удален", false) }, vm, toaster
             )
         }
         if (showSearchDialog) {
@@ -83,7 +87,7 @@ fun TreeScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
                 { toaster("Экземпляры найдены", false) },
                 listInstance.value,
                 { instance ->
-                    vm.deleteInstance(instance.isbn, instance.inventoryNumber, scope, toast)?.let {
+                    vm.deleteInstance(instance.isbn, instance.inventoryNumber, toaster).letIfTrue {
                         scope.launch { toaster("Экземпляр удален", false) }
                     }
                 }

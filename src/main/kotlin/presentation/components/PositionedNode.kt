@@ -26,12 +26,13 @@ fun layoutTree(
     xOffset: Float = 0f,
     xStep: Float = 50f,
     yStep: Float = 80f,
+    showLeaf: Boolean = false
 ): Pair<PositionedNode?, Float> {
     if (node == null) return null to xOffset
 
-    val (leftNode, leftX) = layoutTree(node.left, depth + 1, xOffset, xStep, yStep)
+    val (leftNode, leftX) = layoutTree(node.left, depth + 1, xOffset, xStep, yStep, showLeaf)
     var centerX = if (leftNode == null) xOffset else leftX + xStep
-    val (rightNode, rightX) = layoutTree(node.right, depth + 1, centerX + xStep, xStep, yStep)
+    val (rightNode, rightX) = layoutTree(node.right, depth + 1, centerX + xStep, xStep, yStep, showLeaf)
 
     val positioned = PositionedNode(
         node,
@@ -40,6 +41,6 @@ fun layoutTree(
         left = leftNode,
         right = rightNode
     )
-
-    return return positioned to (rightNode?.let { rightX } ?: centerX)
+    if (node.left == null && node.right == null && !showLeaf) return null to xOffset
+    return positioned to (rightNode?.let { rightX } ?: centerX)
 }

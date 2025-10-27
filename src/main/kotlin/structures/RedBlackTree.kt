@@ -13,7 +13,7 @@ class RedBlackTree<K : Comparable<K>>() {
 
     inner class Node(
         var key: K? = null,
-        val duplicates: LinkList<Int> = LinkList(),
+        var duplicates: LinkList<Int> = LinkList(),
         var color: TreeColor = TreeColor.RED,
         var left: Node? = null,
         var right: Node? = null,
@@ -23,6 +23,15 @@ class RedBlackTree<K : Comparable<K>>() {
             this.key = key
             this.left = Node(color = TreeColor.BLACK)
             this.right = Node(color = TreeColor.BLACK)
+        }
+
+        constructor(node: Node) : this() {
+            this.key = node.key
+            this.left = node.left
+            this.right = node.right
+            this.duplicates = node.duplicates
+            this.parent = node.parent
+            this.color = node.color
         }
 
         operator fun compareTo(other: Node): Int {
@@ -41,6 +50,10 @@ class RedBlackTree<K : Comparable<K>>() {
     }
 
     private var root: Node = Node()
+
+    fun updateRoot() {
+        root = Node(root)
+    }
 
     private fun Node?.isNullLeaf() = this != null && key == null
     private fun Node.uncleL(): Node? = this.parent?.parent?.left

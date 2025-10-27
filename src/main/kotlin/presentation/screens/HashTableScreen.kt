@@ -18,6 +18,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import data.Errors
+import data.letIfTrue
 import entities.Book
 import kotlinx.coroutines.launch
 import presentation.components.*
@@ -32,7 +33,7 @@ fun HashTableScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
     var searchBook by remember { mutableStateOf(Book("", "", "")) }
     val state = rememberLazyListState()
 
-    ToastContainer { scope, toast, toaster ->
+    ToastContainer { scope, toaster ->
         Scaffold(
             topBar = {
                 ToolStrip(
@@ -41,7 +42,7 @@ fun HashTableScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
                     onAddFile = { wvm.openFilePicker() },
                     onSearch = {
                         scope.launch {
-                            val book = vm.searchBook(scope, toast)
+                            val book = vm.searchBook(toaster)
                             if (book == null) toaster(Errors.NO_SUCH_BOOK, true)
                             else {
                                 searchBook = book
@@ -50,7 +51,7 @@ fun HashTableScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
                         }
                     },
                     onSave = {
-                        vm.saveBooks(scope, toast)?.let { if (it) toaster("Файл обновлен", false) }
+                        vm.saveBooks(toaster).letIfTrue { toaster("Файл обновлен", false) }
                     },
                     searchBar = {
                         TextField(
@@ -73,8 +74,7 @@ fun HashTableScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
                         itemsIndexed(vm.rows) { i, entry ->
                             val ib = entry.value
                             if (ib != null) TableRow(i, ib.toString(), vm.books[ib], entry.status) {
-                                vm.deleteBook(it.isbn, it.title, it.author,scope, toast)
-                                toaster("Книга удалена", false)
+                                vm.deleteBook(it.isbn, it.title, it.author, toaster).letIfTrue { toaster("Книга удалена", false) }
                             }
                         }
                     }
@@ -89,13 +89,13 @@ fun HashTableScreen(key: String, vm: AppViewModel, wvm: WindowViewModel) {
             if (showAddDialog) {
                 AddBookDialog(
                     { showAddDialog = false },
-                    { toaster("Книга добавлена", false) }, vm,scope,toast
+                    { toaster("Книга добавлена", false) }, vm, toaster
                 )
             }
             if (showDeleteDialog) {
                 DeleteBookDialog(
                     { showDeleteDialog = false },
-                    { toaster("Книга удалена", false) }, vm,scope,toast
+                    { toaster("Книга удалена", false) }, vm, toaster
                 )
             }
             if (showSearchDialog) {

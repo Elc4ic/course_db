@@ -32,7 +32,8 @@ class AppViewModel {
     private val _hashTable = mutableStateOf(HashTable())
     private val _rows = mutableStateOf(arrayOf<Entry>())
     private val _tree = mutableStateOf(RedBlackTree<String>())
-    private val _treeList = mutableStateOf(listOf<String>())
+    var treeVersion = mutableStateOf(0)
+        private set
     private val _filterTree = mutableStateOf(RedBlackTree<Date>())
 
     fun update() {
@@ -45,21 +46,20 @@ class AppViewModel {
     }
 
     private fun initHashTable() {
-        _hashTable.value.clear()
-        _hashTable.value.initFromArray(_books.value) { it.isbn }
-        _rows.value = _hashTable.value.rows
-        LogsFile.writeln(_hashTable.value.toString())
+        hashTable.clear()
+        hashTable.initFromArray(books) { it.isbn }
+        _rows.value = hashTable.rows
+        LogsFile.writeln(hashTable.toString())
     }
 
     private fun initTree() {
-        _tree.value.initFromArray(_instances.value) { it.isbn }
-        _treeList.value = _tree.value.toString().split("\n")
-        LogsFile.writeln("\n" + _tree.value.toString())
+        tree.initFromArray(_instances.value) { it.isbn }
+        LogsFile.writeln("\n" + tree.toString())
     }
 
     private fun initFilterTree() {
-        _filterTree.value.initFromArray(_instances.value) { it.dateF }
-        LogsFile.writeln("\n" + _filterTree.value.toString())
+        filterTree.initFromArray(_instances.value) { it.dateF }
+        LogsFile.writeln("\n" + filterTree.toString())
     }
 
     fun setToaster(toaster: (CoroutineScope, ToastState) -> (String, Boolean) -> Unit) {
@@ -67,113 +67,127 @@ class AppViewModel {
     }
 
     //books functions
-    fun addBook(book: Book, scope: CoroutineScope, toast: ToastState) = withToastHandling(toaster(scope, toast)) {
+    fun addBook(book: Book, t: (String, Boolean) -> Unit) = withToastHandling(t) {
+        if (hashTable.get(book.isbn) != null) throw DuplicateFormatFlagsException("Введеная книга дубликат существующей")
         _books.value += book
-        _hashTable.value.put(book.isbn, _books.value.size - 1)
-        _rows.value = _hashTable.value.rows.clone()
+        hashTable.put(book.isbn, books.size - 1)
+        _rows.value = hashTable.rows.clone()
         LogsFile.writeln("Книга добавленна: $book")
         true
     }
 
-    fun deleteBook(isbn: String, title: String, author: String, scope: CoroutineScope, toast: ToastState) =
-        withToastHandling(toaster(scope, toast)) {
-            val index = _hashTable.value.get(isbn) ?: throw NoSuchElementException("Такой книги нет")
-            val book = _books.value[index] ?: throw NoSuchElementException("Такой книги нет в базе")
+    fun deleteBook(isbn: String, title: String, author: String, t: (String, Boolean) -> Unit) =
+        withToastHandling(t) {
+            val index = hashTable.get(isbn) ?: throw NoSuchElementException("Такой книги нет")
+            val book = books[index] ?: throw NoSuchElementException("Такой книги нет в базе")
             if (book.title != title || book.author != author) throw NoSuchElementException("Автор или название не соответствуют указанному ISBN")
 
-            val lastBook = _books.value.last()
-            _hashTable.value.rows.first { it.key == lastBook?.isbn }.value = index
-            _hashTable.value.remove(book.isbn, index)
-            _books.value[index] = lastBook
-            _books.value = _books.value.copyOfRange(0, _books.value.size - 1)
+            val lastBook = books.last()
+            hashTable.rows.first { it.key == lastBook?.isbn }.value = index
+            hashTable.remove(book.isbn, index)
+            books[index] = lastBook
+            _books.value = books.copyOfRange(0, books.size - 1)
             LogsFile.writeln("Удаление книги: $book")
             deleteInTreeByBook(isbn)
 
-            _rows.value = _hashTable.value.rows
+            _rows.value = hashTable.rows
             true
         }
 
     private fun deleteInTreeByBook(isbn: String) {
-        _tree.value.search(isbn)?.duplicates?.forEach { ni ->
+        tree.search(isbn)?.duplicates?.forEach { ni ->
             val lastInstance = _instances.value.last()
             val instance = _instances.value[ni]
-            LogsFile.writeln("Также удаляется экземпляр: $instance")
-            _tree.value.search(lastInstance?.isbn!!)?.duplicates?.update(_instances.value.size - 1, ni)
-            _tree.value.delete(isbn, ni)
+            tree.search(lastInstance?.isbn!!)?.duplicates?.update(_instances.value.size - 1, ni)
+            tree.delete(isbn, ni)
+            instance?.dateF?.let {
+                filterTree.search(lastInstance.dateF!!)?.duplicates?.update(_instances.value.size - 1, ni)
+                filterTree.delete(it, ni)
+            }
             _instances.value[ni] = _instances.value.last()
             _instances.value = _instances.value.copyOfRange(0, _instances.value.size - 1)
-            instance?.dateF?.let { _filterTree.value.delete(it, ni) }
+            LogsFile.writeln("Также удаляется экземпляр: $instance")
         }
-        _treeList.value = _tree.value.toString().split("\n")
     }
 
-    fun searchBook(scope: CoroutineScope, toast: ToastState) = withToastHandling(toaster(scope, toast)) {
-        val book = _hashTable.value.get(bookField.value)?.let { _books.value[it] }
+    fun searchBook(t: (String, Boolean) -> Unit) = withToastHandling(t) {
+        val book = hashTable.get(bookField.value)?.let { books[it] }
             ?: throw NoSuchElementException("Нет такой книги")
         LogsFile.writeln("Найдена книга: $book")
         book
     }
 
-    fun saveBooks(scope: CoroutineScope, toast: ToastState) = withToastHandling(toaster(scope, toast)) {
-        FileUtils.saveBooksToFile(paths.first!!, _books.value)
+    fun saveBooks(t: (String, Boolean) -> Unit) = withToastHandling(t) {
+        FileUtils.saveBooksToFile(paths.first!!, books)
         LogsFile.writeln("Файл книг обновлен")
         true
     }
 
-    //instances functions
-    fun addInstance(instance: Instance, scope: CoroutineScope, toast: ToastState) =
-        withToastHandling(toaster(scope, toast)) {
-            _instances.value += instance
-            _tree.value.add(instance.isbn, _books.value.size - 1)
-            LogsFile.writeln("Экземпляр добавлен:${instance}")
-            true
-        }
+    fun checkInstanceOnDuplicate(instance: Instance): Boolean {
+        val node = tree.search(instance.isbn)
+        return node?.duplicates?.any { instances[it] == instance } ?: false
+    }
 
-    fun deleteInstance(isbn: String, invNum: String, scope: CoroutineScope, toast: ToastState) =
-        withToastHandling(toaster(scope, toast)) {
+    //instances functions
+    fun addInstance(instance: Instance, t: (String, Boolean) -> Unit) = withToastHandling(t) {
+        if (checkInstanceOnDuplicate(instance)) throw DuplicateFormatFlagsException("Введеный экземпляр дубликат существующего")
+        _instances.value += instance
+        tree.add(instance.isbn, instances.size - 1)
+        filterTree.add(instance.dateF, instances.size - 1)
+        LogsFile.writeln("Экземпляр добавлен:${instance}")
+        treeVersion.value++
+        true
+    }
+
+
+    fun deleteInstance(isbn: String, invNum: String, t: (String, Boolean) -> Unit) =
+        withToastHandling(t) {
             var count = 0
-            val index = _tree.value.search(isbn)?.duplicates?.first {
+            val index = tree.search(isbn)?.duplicates?.first {
                 invNum == _instances.value[it]?.inventoryNumber
             }
             index?.let {
                 val lastInstance = _instances.value.last()
                 val instance = _instances.value[it]
-                _tree.value.search(lastInstance?.isbn!!)?.duplicates?.update(_instances.value.size - 1, it)
-                _tree.value.delete(isbn, it)
+                tree.search(lastInstance?.isbn!!)?.duplicates?.update(_instances.value.size - 1, it)
+                tree.delete(isbn, it)
+                instance?.dateF?.let { date ->
+                    filterTree.search(lastInstance.dateF!!)?.duplicates?.update(_instances.value.size - 1, it)
+                    filterTree.delete(date, it)
+                }
                 _instances.value[it] = _instances.value.last()
                 _instances.value = _instances.value.copyOfRange(0, _instances.value.size - 1)
-                instance?.dateF?.let { date -> _filterTree.value.delete(date, it) }
                 LogsFile.writeln("Удаление экземпляра': $instance")
                 count++
             }
             if (count == 0) throw NoSuchElementException("Нет таких экземпляров")
+            else treeVersion.value++
             true
         }
 
-    fun searchInstance(scope: CoroutineScope, toast: ToastState) = withToastHandling(toaster(scope, toast)) {
-        getInstances(_tree.value.search(instanceField.value))
-            ?: throw NoSuchElementException("Нет таких экземпляров")
+    fun searchInstance(t: (String, Boolean) -> Unit) = withToastHandling(t) {
+        getInstances(tree.search(instanceField.value)) ?: throw NoSuchElementException("Нет таких экземпляров")
     }
 
     fun getInstances(node: RedBlackTree<*>.Node?) =
         node?.duplicates?.mapNotNull { _instances.value[it] }
 
-    fun saveInstances(scope: CoroutineScope, toast: ToastState) = withToastHandling(toaster(scope, toast)) {
+    fun saveInstances(t: (String, Boolean) -> Unit) = withToastHandling(t) {
         FileUtils.saveInstancesToFile(paths.second!!, _instances.value)
         LogsFile.writeln("Файл экземпляров сохранен")
         true
     }
 
     //filter functions
-    fun filter(scope: CoroutineScope, toast: ToastState) = withToastHandling(toaster(scope, toast)) {
+    fun filter(t: (String, Boolean) -> Unit) = withToastHandling(t) {
         val arr = mutableListOf<ReportField>()
-        _filterTree.value.filterRecursive(arr) { node, next, needCheck ->
+        filterTree.filterRecursive(arr) { node, next, needCheck ->
             if (needCheck) {
                 for (i in node.duplicates) {
                     try {
-                        val instance = _instances.value[i] ?: continue
-                        val bookIndex = _hashTable.value.get(instance.isbn)
-                        val book = _books.value[bookIndex!!] ?: continue
+                        val instance = instances[i] ?: continue
+                        val bookIndex = hashTable.get(instance.isbn)
+                        val book = books[bookIndex!!] ?: continue
                         if (instance.inventoryNumber == filterInvNumField.value &&
                             book.author == filterAuthorField.value &&
                             instance.dateF >= filterFromField.value &&
@@ -195,7 +209,7 @@ class AppViewModel {
             }
             val rightDateFlag = node.right?.key != null && node.right?.key!! <= filterToField.value
             val leftDateFlag = node.left?.key != null && node.left?.key!! >= filterFromField.value
-            var n = when (next) {
+            val n = when (next) {
                 Check.All -> {
                     if (leftDateFlag && rightDateFlag) Check.All
                     else if (leftDateFlag) Check.LEFT
@@ -210,11 +224,13 @@ class AppViewModel {
             n
         }
         _report.value = arr.toTypedArray()
+        true
     }
 
-    fun saveReport(scope: CoroutineScope, toast: ToastState) = withToastHandling(toaster(scope, toast)) {
+    fun saveReport(t: (String, Boolean) -> Unit) = withToastHandling(t) {
         FileUtils.saveReportToFile(reportPath, _report.value)
         LogsFile.writeln("Файл экземпляров сохранен")
+        true
     }
 
     val books get() = _books.value
@@ -222,7 +238,6 @@ class AppViewModel {
     val hashTable get() = _hashTable.value
     val rows get() = _rows.value
     val tree get() = _tree.value
-    val treeList get() = _treeList.value
     val filterTree get() = _filterTree.value
     val report get() = _report
 

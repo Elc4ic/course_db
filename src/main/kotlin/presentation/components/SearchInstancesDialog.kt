@@ -25,7 +25,6 @@ fun SearchInstanceDialog(
     onDelete: (Instance) -> Unit
 ) {
     var list by remember { mutableStateOf(instances) }
-    showToast()
     Dialog(onDismissRequest = onDismiss) {
         Surface(
             shape = RoundedCornerShape(16.dp),
@@ -57,6 +56,7 @@ fun SearchInstanceDialog(
             }
         }
     }
+    if (list.isEmpty()) onDismiss()
 }
 
 @Composable

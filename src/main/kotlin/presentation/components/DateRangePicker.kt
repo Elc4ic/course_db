@@ -52,11 +52,15 @@ fun DateRangeDialog(
     if (!show) return
 
     var startYear by remember { mutableStateOf(startDate?.year ?: LocalDate.now().year) }
-    var startMonth by remember { mutableStateOf(startDate?.month ?: LocalDate.now().monthValue) }
+    var startMonth by remember {
+        mutableStateOf(
+            (startDate?.month?.plus(1) ?: LocalDate.now().monthValue).coerceIn(1, 12)
+        )
+    }
     var startDay by remember { mutableStateOf(startDate?.day ?: 1) }
 
     var endYear by remember { mutableStateOf(endDate?.year ?: LocalDate.now().year) }
-    var endMonth by remember { mutableStateOf(endDate?.month ?: LocalDate.now().monthValue) }
+    var endMonth by remember { mutableStateOf((endDate?.month?.plus(1) ?: LocalDate.now().monthValue).coerceIn(1, 12)) }
     var endDay by remember { mutableStateOf(endDate?.day ?: LocalDate.now().dayOfMonth) }
 
     var showErrors by remember { mutableStateOf(false) }
@@ -148,8 +152,8 @@ fun DateRangeDialog(
                 ) {
                     Button(onClick = onDismiss) { Text("Отмена") }
                     Button(onClick = {
-                        val start = Date(if (startYear > 1900) startYear - 1900 else 1900, startMonth - 1, startDay)
-                        val end = Date(if (endYear > 1900) endYear - 1900 else 1900, endMonth - 1, endDay)
+                        val start = Date(if (startYear > 1900) startYear - 1900 else 0, startMonth - 1, startDay)
+                        val end = Date(if (endYear > 1900) endYear - 1900 else 0, endMonth - 1, endDay)
                         if (start > end) {
                             errors.add("Невозможный период")
                             showErrors = true

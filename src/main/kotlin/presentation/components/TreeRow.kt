@@ -1,6 +1,7 @@
 package presentation.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -28,31 +29,39 @@ import structures.RedBlackTree.TreeColor
 @Composable
 fun TreeRow(node: RedBlackTree<*>.Node?, onSearch: (RedBlackTree<*>.Node?) -> Unit) {
     var expanded by remember { mutableStateOf(false) }
-    Row(modifier = Modifier
-        .background(
-            if (node?.color == TreeColor.RED) {
-                Color.Red.copy(alpha = 0.2f)
-            } else {
-                Color.Black.copy(alpha = 0.2f)
+    Column {
+        if (expanded) {
+            Row(modifier = Modifier.fillMaxWidth().padding(start = 34.dp)) {
+                node?.right?.let { TreeRow(it, onSearch) }
             }
-        )
-        .clickable {
-            onSearch(node)
         }
-        .padding(4.dp)
-
-    ) {
-        IconButton(onClick = { expanded = !expanded }) {
-            Icon(imageVector = if(expanded) Icons.Default.KeyboardArrowDown else Icons.Default.KeyboardArrowRight, contentDescription = "Expand")
+        Row(
+            modifier = Modifier
+                .background(
+                    if (node?.color == TreeColor.RED) {
+                        Color.Red.copy(alpha = 0.5f)
+                    } else {
+                        Color.Black.copy(alpha = 0.5f)
+                    },
+                    RoundedCornerShape(4.dp)
+                ).clickable {
+                    onSearch(node)
+                }.padding(4.dp)
+        ) {
+            IconButton(onClick = { expanded = !expanded }) {
+                Icon(
+                    imageVector = if (expanded) Icons.Default.KeyboardArrowDown else Icons.Default.KeyboardArrowRight,
+                    contentDescription = "Expand"
+                )
+            }
+            SelectionContainer {
+                Text(node?.key.toString() + " " + node?.duplicates.toString())
+            }
         }
-        SelectionContainer{
-            Text(node?.key.toString() + " " + node?.duplicates.toString())
-        }
-    }
-    if (expanded) {
-        Column(modifier = Modifier.fillMaxWidth().padding(start = 20.dp)) {
-            node?.left?.let { TreeRow(it, onSearch) }
-            node?.right?.let { TreeRow(it, onSearch) }
+        if (expanded) {
+            Row(modifier = Modifier.fillMaxWidth().padding(start = 34.dp)) {
+                node?.left?.let { TreeRow(it, onSearch) }
+            }
         }
     }
 
